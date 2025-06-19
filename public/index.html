@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Fonts: Custom + Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=YourCustomFontName&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
 
   <link href="./css/output.css" rel="stylesheet">
-    <link href="./css/styles.css" rel="stylesheet">
 </head>
-<body class="index">
-  <header class="w-full px-6 py-4 flex items-center justify-between z-8">
+
+
+<body class="index" data-scroll-container>
+
+    <!-- <img src="images/Variant7.jpg" class="fixed w-full h-full top-0 left-0 z-35 opacity-50" /> -->
+  <header class="header" data-scroll>
   <!-- Left: Menu Icon & Menu Items -->
   <div class="flex items-center gap-6">
     <!-- Menu Icon -->
@@ -17,64 +22,107 @@
       ☰
     </button>
     <!-- Menu List (Hidden on small screens) -->
-    <nav class="hidden md:flex gap-6 text-lg font-medium">
-      <a href="#" class="hover:text-blue-600 ">Home</a>
-      <a href="#" class="hover:text-blue-600">About Us</a>
-      <a href="#" class="hover:text-blue-600">Collection</a>
-      <a href="#" class="hover:text-blue-600">Contact Us</a>
+    <nav class="hidden md:flex gap-[3rem] text-lg font-medium">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">About Us</a>
+      <a href="#" class="nav-link">Collection</a>
+      <a href="#" class="nav-link">Contact Us</a>
     </nav>
   </div>
  
   <!-- Center: Logo -->
   <div class="absolute left-1/2 transform -translate-x-1/2">
-    <img src="your-logo.png" alt="Logo" class="h-10">
+    <img src="images/logo.svg" alt="Logo" class="w-[8rem]">
   </div>
 
   <!-- Right: CTAs -->
-  <div class="flex items-center gap-[1.5vw]">
-    <a href="#" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-sm font-medium">
-      Download
+  <div class="flex items-center gap-[10px]">
+    <a href="#" class="btn btn-primary bg-gray-200 rounded hover:bg-gray-300 text-sm font-medium ">
+      Download Catalogue
     </a>
-    <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium">
+    <a href="#" class="btn btn-primary-outline card">
       Enquire Now
     </a>
   </div>
 </header>
 
-<!-- 
-  <div class="intro fixed w-full h-screen flex items-center justify-center top-0 left-0 z-10 bg-[#d1c7a3]">
+
+
+
+
+
+  <!-- <div class="intro fixed w-full h-screen flex items-center justify-center top-0 left-0 z-30 bg-[#d1c7a3]">
   <div class="intro__fader"></div>
-              <ul class="intro__hold">
+              <ul class="intro__hold relative">
     <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/SolaceEnv06.jpg" alt=""></div>
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/6.jpg" alt=""></div>
     </li>
     <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/LIGHT_F1.png" alt=""></div>
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/1.jpg" alt=""></div>
     </li>
     <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/DECOR_D.jpg" alt=""></div>
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/5.jpg" alt=""></div>
     </li>
     <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/SCENE01_1.jpg" alt=""></div>
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/4.jpg" alt=""></div>
     </li>
     <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/LIGHT_D1.png" alt=""></div>
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/2.jpg" alt=""></div>
     </li>
     <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/SCENE05_v.jpg" alt=""></div>
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/3.jpg" alt=""></div>
     </li>
     <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/DECOR_H1.jpg" alt=""></div>
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/4.jpg" alt=""></div>
     </li>
   </ul>
-</div> -->
+</div>  -->
 
-<main  data-scroll-container>
+<main>
+
+
+    <section class="relative w-full h-screen" data-scroll>
+  <!-- Background Image -->
+  <img 
+    src="images/IMG_0134-1.jpg" 
+    alt="Hero Background" 
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  />
+
+  <!-- Tint Overlay -->
+  <div class="absolute inset-0 bg-[#7B7458] opacity-70   z-10"></div>
+
+  <!-- Centered Title -->
+  <div class="relative z-20 flex items-center justify-center h-full flex-col">
+    
+    <div class="text-clipath">
+ <h1 class="text-white text-[6.25vw] font-normal text-center leading-30">
+      Redefine Your <br/>
+        Space with Classic <br/>
+        Timeless Decor
+    </h1>
+    </div>
+
+    <a href="#" class="btn btn-primary btn-lg mt-[8vh] block text-center">
+     Explore Collection
+    </a>
+
+  </div>
+</section>
+
+<nav class="categories__nav">
+    <a href="#">Sofa</a>
+    <a href="#">Tables</a>
+    <a href="#">Chairs</a>
+    <a href="#">Consoles</a>
+    <a href="#">Benches</a>
+    <a href="#">Poufs</a>
+</nav>
 
 <div class="grid gap-[1.5vw] 
               grid-cols-1 
               sm:grid-cols-2 
-              md:grid-cols-3 
+              md:grid-cols-4
               lg:grid-cols-[10vw_20vw_35vw_20vw_10vw]">
     
     <!-- Column 1 (stacked 2) -->

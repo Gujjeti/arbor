@@ -17,17 +17,17 @@ window.addEventListener("load", () => {
   });
 
 
-    tl.to(".intro", {
-      y: "-100%",
- clipPath: "inset(0% 0% 100% 0%)",
-      opacity: 1,
-      ease: "power2.out",
-      delay: 0.8,
-           duration: 2.5,
-    });
-       tl.to(".intro__fader", {
-        opacity: 1,
-        },"=-2.5");
+//     tl.to(".intro", {
+//       y: "-100%",
+//  clipPath: "inset(0% 0% 100% 0%)",
+//       opacity: 1,
+//       ease: "power2.out",
+//       delay: 0.8,
+//            duration: 2.5,
+//     });
+//        tl.to(".intro__fader", {
+//         opacity: 1,
+//         },"=-2.5");
 
 //   tl.to(".intro", {
 //       y: "-100%",
