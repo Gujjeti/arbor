@@ -6,6 +6,8 @@
 <!-- Google Fonts: Custom + Poppins -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=YourCustomFontName&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link href="./css/output.css" rel="stylesheet">
 </head>
@@ -96,21 +98,32 @@
   <div class="relative z-20 flex items-center justify-center h-full flex-col">
     
     <div class="text-clipath">
- <h1 class="text-white text-[6.25vw] font-normal text-center leading-30">
+ <h1 class="heading-1 text-white text-center">
       Redefine Your <br/>
         Space with Classic <br/>
         Timeless Decor
     </h1>
     </div>
 
-    <a href="#" class="btn btn-primary btn-lg mt-[8vh] block text-center">
+    <a href="#" class="btn btn-primary btn-lg mt-[8vh] block text-center explore__CTA">
      Explore Collection
     </a>
 
   </div>
+
+      <!-- <nav class="categories__nav" data-scroll>
+    <a href="#">Sofa</a>
+    <a href="#">Tables</a>
+    <a href="#">Chairs</a>
+    <a href="#">Consoles</a>
+    <a href="#">Benches</a>
+    <a href="#">Poufs</a>
+</nav> -->
 </section>
 
-<nav class="categories__nav">
+<div class="cat-wrapper fixed w-full z-45">
+ <div class="cat-nav-inner">
+    <nav class="categories__nav" data-scroll>
     <a href="#">Sofa</a>
     <a href="#">Tables</a>
     <a href="#">Chairs</a>
@@ -118,8 +131,108 @@
     <a href="#">Benches</a>
     <a href="#">Poufs</a>
 </nav>
+ </div>
+<section class="categories-sec h-full bg-img bg-[url(../images/white-textture-bg.png)]" >
+<div class="swiper mySwiper p-4" id="thumbSlider">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide flex flex-col items-center text-center">
+        <div class="p-6">
+        <h4 class="text-secondary text-[2rem] font-light">001</h4>
+        <span class="text-secondary text-[2rem]">Sofa</span>
+     </div>
+      <img src="images/cat/1.jpg" alt="Thumbnail 1" class="rounded shadow w-full">
+    </div>
 
-<div class="grid gap-[1.5vw] 
+    <!-- Slide 2 -->
+    <div class="swiper-slide flex flex-col items-center text-center">
+         <div class="p-6">
+        <h4 class="text-secondary text-[2rem] font-light">001</h4>
+        <span class="text-secondary text-[2rem]">Sofa</span>
+     </div>
+      <img src="images/cat/1.jpg" alt="Thumbnail 2" class="rounded shadow w-full">
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="swiper-slide flex flex-col items-center text-center">
+         <div class="p-6">
+        <h4 class="text-secondary text-[2rem] font-light">001</h4>
+        <span class="text-secondary text-[2rem]">Sofa</span>
+     </div>
+      <img src="images/cat/1.jpg" alt="Thumbnail 3" class="rounded shadow w-full">
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="swiper-slide flex flex-col items-center text-center">
+         <div class="p-6">
+        <h4 class="text-secondary text-[2rem] font-light">001</h4>
+        <span class="text-secondary text-[2rem]">Sofa</span>
+     </div>
+      <img src="images/cat/1.jpg" alt="Thumbnail 4" class="rounded shadow w-full">
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="swiper-slide flex flex-col items-center text-center">
+         <div class="p-6">
+        <h4 class="text-secondary text-[2rem] font-light">001</h4>
+        <span class="text-secondary text-[2rem]">Sofa</span>
+     </div>
+      <img src="images/cat/1.jpg" alt="Thumbnail 5" class="rounded shadow w-full">
+     
+    </div>
+
+
+       <div class="swiper-slide flex flex-col items-center text-center">
+         <div class="p-6">
+        <h4 class="text-secondary text-[2rem] font-light">001</h4>
+        <span class="text-secondary text-[2rem]">Sofa</span>
+     </div>
+      <img src="images/cat/1.jpg" alt="Thumbnail 5" class="rounded shadow w-full">
+     
+    </div>
+  </div>
+
+
+</div>
+
+</section>
+</div>
+
+
+
+<section id="aboutArbor" class="aboutArbor px-[8rem]  relative w-full h-screen bg-img bg-[url(../images/white-textture-bg.png)] pt-[10rem]" >
+ <div class="grid grid-cols-1 md:grid-cols-[25%_75%] gap-[4vw] p-[2vw] items-start justify-items-end">
+
+
+  <!-- Left Side -->
+  <div class="flex flex-col items-start space-y-4">
+    <!-- Image -->
+    <img src="images/chair.png" alt="" class=" ">
+
+    <!-- Below Image Content -->
+    <div class="text-secondary mt-[2rem]">
+      <p class="mt-2text-[1.125rem] font-light">
+‘Arbor’ stands for foundation, our<br/> entire idea revolves around creating<br/> bespoke luxury furniture that is<br/> functional & visually aesthetic.      </p>
+    </div>
+  </div>
+
+  <!-- Right Side Content -->
+  <div class="text-gray-800 text-left">
+    <small class="text-secondary mb-[3rem] block">About arbor Decor</small>
+    <h2 class="heading-1 text-secondary">
+        Design is not just what<br/> it looks like, Design is<br/> also how its works.
+    </h2>
+
+    <a href="btn-link">Read Our Story</a>
+    
+  </div>
+</div>
+
+
+</section>
+
+
+<div class="hidden grid gap-[1.5vw] 
               grid-cols-1 
               sm:grid-cols-2 
               md:grid-cols-4
@@ -166,6 +279,9 @@
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <script src="js/locomotive-scroll.min.js"></script>
 <script src="js/main.js"></script>
 </body>
