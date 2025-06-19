@@ -1,9 +1,21 @@
- const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-  });
+
 
 window.addEventListener("load", () => {
+
+
+     const scrollContainer = document.querySelector("[data-scroll-container]");
+  if (scrollContainer) {
+    const scroll = new LocomotiveScroll({
+      el: scrollContainer,
+      smooth: true,
+    });
+
+    // Optionally store scroll globally if used elsewhere
+    window.locomotive = scroll;
+  } else {
+    console.error("Missing [data-scroll-container]");
+  }
+
   const tl = gsap.timeline();
 
 

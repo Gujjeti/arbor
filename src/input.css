@@ -182,7 +182,8 @@ header .nav-link {
  
 
  .btn-link{
-    @apply text-secondary text-[1.25rem] font-bold uppercase tracking-wider transition-colors duration-300 hover:text-primary before:content-[''] before:absolute before:w-0 before:h-[2px] before:bg-primary before:transition-all before:duration-300 before:bottom-0 before:left-0 hover:before:w-full relative inline-block
+    @apply text-secondary text-[1rem] font-bold uppercase tracking-wider transition-colors duration-300 hover:text-primary border-b-1 border-[#CECBC5] pb-1
+
  }
 
 
