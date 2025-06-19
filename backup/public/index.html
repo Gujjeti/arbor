@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
+
+  <link href="./css/output.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+</head>
+<body class="index">
+  <header class="w-full px-6 py-4 flex items-center justify-between">
+  <!-- Left: Menu Icon & Menu Items -->
+  <div class="flex items-center gap-6">
+    <!-- Menu Icon -->
+    <button class="text-2xl md:hidden">
+      ☰
+    </button>
+    <!-- Menu List (Hidden on small screens) -->
+    <nav class="hidden md:flex gap-6 text-lg font-medium">
+      <a href="#" class="hover:text-blue-600">Home</a>
+      <a href="#" class="hover:text-blue-600">About Us</a>
+      <a href="#" class="hover:text-blue-600">Collection</a>
+      <a href="#" class="hover:text-blue-600">Contact Us</a>
+    </nav>
+  </div>
+ 
+  <!-- Center: Logo -->
+  <div class="absolute left-1/2 transform -translate-x-1/2">
+    <img src="your-logo.png" alt="Logo" class="h-10">
+  </div>
+
+  <!-- Right: CTAs -->
+  <div class="flex items-center gap-4">
+    <a href="#" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-sm font-medium">
+      Download
+    </a>
+    <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium">
+      Enquire Now
+    </a>
+  </div>
+</header>
+
+<main  data-scroll-container>
+
+    <img src="images/intro/placeholder.png"
+    style="position: fixed; z-index: 99;top:0; left:0; width:100%; height:100%; object-fit: cover; object-position: center; opacity: 0.5;"
+    />
+    <div class="intro fixed w-full h-screen flex items-center justify-center top-0 left-0 z-10 bg-[#d1c7a3]">
+  <div class="intro__fader"></div>
+              <ul class="intro__hold">
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/SolaceEnv06.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/LIGHT_F1.png" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/DECOR_D.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/SCENE01_1.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/LIGHT_D1.png" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/SCENE05_v.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/DECOR_H1.jpg" alt=""></div>
+    </li>
+  </ul>
+</div>
+
+    <section data-scroll-section>
+<div >
+        <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+        <p data-scroll data-scroll-speed="2">😬</p>
+    </div>
+</section>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="js/locomotive-scroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

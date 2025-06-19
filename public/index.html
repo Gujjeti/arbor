@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
+
+  <link href="./css/output.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+</head>
+<body class="index">
+  <header class="w-full px-6 py-4 flex items-center justify-between z-8">
+  <!-- Left: Menu Icon & Menu Items -->
+  <div class="flex items-center gap-6">
+    <!-- Menu Icon -->
+    <button class="text-2xl md:hidden">
+      ☰
+    </button>
+    <!-- Menu List (Hidden on small screens) -->
+    <nav class="hidden md:flex gap-6 text-lg font-medium">
+      <a href="#" class="hover:text-blue-600 ">Home</a>
+      <a href="#" class="hover:text-blue-600">About Us</a>
+      <a href="#" class="hover:text-blue-600">Collection</a>
+      <a href="#" class="hover:text-blue-600">Contact Us</a>
+    </nav>
+  </div>
+ 
+  <!-- Center: Logo -->
+  <div class="absolute left-1/2 transform -translate-x-1/2">
+    <img src="your-logo.png" alt="Logo" class="h-10">
+  </div>
+
+  <!-- Right: CTAs -->
+  <div class="flex items-center gap-[1.5vw]">
+    <a href="#" class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-sm font-medium">
+      Download
+    </a>
+    <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium">
+      Enquire Now
+    </a>
+  </div>
+</header>
+
+<!-- 
+  <div class="intro fixed w-full h-screen flex items-center justify-center top-0 left-0 z-10 bg-[#d1c7a3]">
+  <div class="intro__fader"></div>
+              <ul class="intro__hold">
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/SolaceEnv06.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/LIGHT_F1.png" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/DECOR_D.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/SCENE01_1.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/LIGHT_D1.png" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/SCENE05_v.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/DECOR_H1.jpg" alt=""></div>
+    </li>
+  </ul>
+</div> -->
+
+<main  data-scroll-container>
+
+<div class="grid gap-[1.5vw] 
+              grid-cols-1 
+              sm:grid-cols-2 
+              md:grid-cols-3 
+              lg:grid-cols-[10vw_20vw_35vw_20vw_10vw]">
+    
+    <!-- Column 1 (stacked 2) -->
+    <div class="flex flex-col gap-[1.5vw]">
+      <div class="bg-black w-full h-[50vh]"></div>
+      <div class="bg-black w-full h-[50vh]"></div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="flex items-center ">
+      <div class="bg-red-700 h-[60vh] w-full"></div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="flex items-end ">
+      <div class="bg-black h-[70vh] w-full"></div>
+    </div>
+
+    <!-- Column 4 (stacked 2) -->
+    <div class="flex flex-col gap-[1.5vw] justify-end">
+      <div class="bg-black w-full h-[50vh]"></div>
+      <div class="bg-black w-full h-[40vh]"></div>
+    </div>
+
+    <!-- Column 5 (stacked 2) -->
+    <div class="flex flex-col gap-[1.5vw]">
+      <div class="bg-black w-full h-[30vh]"></div>
+      <div class="bg-black w-full h-[70vh]"></div>
+    </div>
+
+  </div>
+
+  
+<!-- 
+    <section data-scroll-section>
+<div >
+        <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+        <p data-scroll data-scroll-speed="2">😬</p>
+    </div>
+</section> -->
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="js/locomotive-scroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
