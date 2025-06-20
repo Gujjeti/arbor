@@ -136,12 +136,9 @@ slider.addEventListener("mouseleave", () => {
 $(document).ready(function () {
   $(".categories__nav a").click(function (e) {
     e.preventDefault();
-
-    const $nav = $(".categories__nav");
-    const $section = $(".categories-sec");
-
-    // Hide nav with animation
-    $nav.addClass("active");
+   $('.categories-sec').show()
+    const $section = $(".cat-wrapper");
+$section.removeClass("hide");
 
     // Show and animate category section
     $section.removeClass("active");
@@ -150,19 +147,19 @@ $(document).ready(function () {
   });
 // Hide when clicking outside
 $(document).on("click", function (e) {
-  const $nav = $(".categories__nav");
-  const $section = $(".categories-sec");
+  const $section = $(".cat-wrapper");
 
   // If section is active and click is outside both
   if (
     $section.hasClass("active") &&
     !$section.is(e.target) &&
-    !$section.has(e.target).length &&
-    !$nav.is(e.target) &&
-    !$nav.has(e.target).length
+    !$section.has(e.target).length 
   ) {
-    $nav.removeClass("active");
-    $section.removeClass("active");
+    $section.addClass("hide");
+    setTimeout(() => {
+   $('.categories-sec').hide()
+
+    }, 500); // match the transition duration
   }
 });
 
