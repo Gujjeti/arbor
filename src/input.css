@@ -2,6 +2,7 @@
 @theme {
   --color-primary: #EBBF80;
   --color-secondary: #51483F;
+  --color-olive-drab:#7B7458
 }
 
 
@@ -34,11 +35,13 @@ html{
 
 h1, h2, h3, h4 {
     font-family: 'voyageregular', sans-serif;
+   
   }
 
 body{
     font-size: 1rem;
     font-weight: 700;
+  color: #51483F;
 }
 
 
@@ -107,7 +110,7 @@ header .nav-link {
 }
 
 .categories__nav{
-   @apply flex items-center justify-between w-[90%] bg-white m-auto absolute z-30 p-10 px-20 gap-[3rem] text-secondary uppercase bottom-0 left-0 right-0 translate-y-[50px] transition-all duration-1000 ease-in-out opacity-100;
+   @apply flex items-center justify-between w-[90%] bg-white m-auto absolute z-30 p-10 px-20 gap-[3rem] text-secondary uppercase bottom-0 left-0 right-0 translate-y-[0px] transition-all duration-1000 ease-in-out opacity-100;
 
 }
 
@@ -187,6 +190,12 @@ header .nav-link {
  }
 
 
+ @media (max-width: 640px) {
+  .parallax-section > div.relative.z-10 > div {
+    position: static !important;
+    margin: 1rem auto;
+  }
+}
 
 
 

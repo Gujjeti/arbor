@@ -66,6 +66,27 @@ const swiper = new Swiper(".mySwiper", {
   }
 });
 
+
+const ProductsSlider = new Swiper('.ProductsSlider', {
+     slidesPerView: 1,
+    spaceBetween: 80,
+    slidesOffsetBefore: 140, 
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        slidesOffsetBefore: 10,
+      },
+      1024: {
+        slidesPerView: 4,
+        slidesOffsetBefore: 140,
+      },
+    },
+  });
+
 const slider = document.getElementById("thumbSlider");
 let hoverZone = null;
 

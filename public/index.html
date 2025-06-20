@@ -92,7 +92,7 @@
   />
 
   <!-- Tint Overlay -->
-  <div class="absolute inset-0 bg-[#7B7458] opacity-70   z-10"></div>
+  <div class="absolute inset-0 bg-olive-drab opacity-70   z-10"></div>
 
   <!-- Centered Title -->
   <div class="relative z-20 flex items-center justify-center h-full flex-col">
@@ -105,9 +105,11 @@
     </h1>
     </div>
 
-    <a href="#" class="btn btn-primary btn-lg mt-[8vh] block text-center explore__CTA">
+   <div class="explore__CTA">
+     <a href="#" class="btn btn-primary btn-lg mt-[8vh] block text-center ">
      Explore Collection
     </a>
+   </div>
 
   </div>
 
@@ -200,7 +202,7 @@
 
 
 
-<section id="aboutArbor" class="aboutArbor px-[8rem]  relative w-full h-screen bg-img bg-[url(../images/white-textture-bg.png)] pt-[10rem]" >
+<section id="aboutArbor" class="aboutArbor px-[10rem]  relative w-full h-screen bg-img bg-[url(../images/white-textture-bg.png)] pt-[10rem]" >
  <div class="grid grid-cols-1 md:grid-cols-[25%_75%] gap-[4vw] p-[2vw] items-start justify-items-end">
 
 
@@ -217,9 +219,9 @@
   </div>
 
   <!-- Right Side Content -->
-  <div class="text-gray-800 text-left">
-    <small class="text-secondary mb-[3rem] block">About arbor Decor</small>
-    <h2 class="heading-1 text-secondary">
+  <div class="text-left">
+    <small class="text-olive-drab mb-[3rem] block">About arbor Decor</small>
+    <h2 class="heading-1 text-olive-drab">
         Design is not just what<br/> it looks like, Design is<br/> also how its works.
     </h2>
 
@@ -235,58 +237,162 @@
 
 
 
-<section class="px-[8rem] relative h-[120vh]  w-full  overflow-hidden" >
-  <!-- Parallax Image (looks like background) -->
-  <div
-    data-scroll
-    data-scroll-speed="-2"
-    class="absolute inset-0 z-0"
-  >
+<section class="relative h-[120vh] w-full overflow-hidden parallax-section">
+  <!-- Parallax Image -->
+  <div data-scroll data-scroll-speed="-2" class="absolute inset-0 z-0">
     <img src="images/flower-bg.jpg" alt="" class="w-full h-full object-cover" />
   </div>
 
-  <!-- Foreground content -->
-  <div class="relative z-10 flex items-center justify-center h-full text-white text-center">
-    <h1 class="text-[3vw] font-bold">Parallax with IMG</h1>
+  <!-- Cards -->
+  <div class="relative z-10 h-full flex flex-col items-center justify-center">
+    <!-- Left Top Card -->
+    <div class="bg-white  p-4 sm:p-6 absolute top-[8rem] left-[10rem] max-w-[23.75rem] flex flex-col items-start space-y-6 shadow-lg">
+      <img src="images/hinoki-wood.jpg" alt="Card 1" class="w-full " />
+      <p class="text-olive-drab">Hinoki Wood Onigiri Mould</p>
+    </div>
+
+    <!-- Right Bottom Card -->
+    <div class="bg-white  p-4 sm:p-6 absolute bottom-[8rem] right-[10rem] max-w-[23.75rem] flex flex-col items-start space-y-6 shadow-lg">
+      <img src="images/hinoki-wood2.jpg" alt="Card 2" class="w-full " />
+      <p class="text-olive-drab">Hinoki Wood Onigiri Mould</p>
+    </div>
   </div>
-</section> 
+</section>
 
 
-<div class="hidden grid gap-[1.5vw] 
-              grid-cols-1 
-              sm:grid-cols-2 
-              md:grid-cols-4
-              lg:grid-cols-[10vw_20vw_35vw_20vw_10vw]">
-    
-    <!-- Column 1 (stacked 2) -->
-    <div class="flex flex-col gap-[1.5vw]">
-      <div class="bg-black w-full h-[50vh]"></div>
-      <div class="bg-black w-full h-[50vh]"></div>
+
+<!-- Section -->
+<section class="relative w-full  bg-img bg-[url('../images/white-textture-bg.png')] pt-[10rem] pb-[8rem]">
+
+    <div class="px-[10rem] relative">
+             <small class="text-olive-drab mb-[3rem] block">Products</small>
+
+  <!-- Header: Left title, Right button -->
+  <div class="flex justify-between items-start">
+       <h2 class="heading-1 text-olive-drab">Signature collection</h2>
+    <a class="btn-link" href="#">
+      View All
+    </a>
+  </div>
+
+  <span class="absolute right-[20%] -top-15 z-20" data-scroll data-scroll-speed="-2">
+    <img src="images/wood.png" alt="" class="w-50" />
+  </span>
     </div>
 
-    <!-- Column 2 -->
-    <div class="flex items-center ">
-      <div class="bg-red-700 h-[60vh] w-full"></div>
-    </div>
 
-    <!-- Column 3 -->
-    <div class="flex items-end ">
-      <div class="bg-black h-[70vh] w-full"></div>
-    </div>
+  <!-- Swiper Slider -->
+  <div class="pt-[5rem] ">
+    <div class="swiper ProductsSlider">
+      <div class="swiper-wrapper">
 
-    <!-- Column 4 (stacked 2) -->
-    <div class="flex flex-col gap-[1.5vw] justify-end">
-      <div class="bg-black w-full h-[50vh]"></div>
-      <div class="bg-black w-full h-[40vh]"></div>
-    </div>
+        <!-- Single Card Slide -->
+        <div class="swiper-slide">
+         
+            <img src="images/products/1.jpg" alt="Product" class="w-full object-cover" />
+            <p class="text-olive-drab text-[1.2rem] mt-4 font-bold">
+             Hinoki Wood Onigiri Mould
+            </p>
+          
+        </div>
 
-    <!-- Column 5 (stacked 2) -->
-    <div class="flex flex-col gap-[1.5vw]">
-      <div class="bg-black w-full h-[30vh]"></div>
-      <div class="bg-black w-full h-[70vh]"></div>
+        <!-- Add more .swiper-slide blocks as needed -->
+        <div class="swiper-slide">
+         
+            <img src="images/products/2.jpg" alt="Product" class="w-full object-cover" />
+            <p class="text-olive-drab text-[1.2rem] mt-4 font-bold">
+             Hinoki Wood Onigiri Mould
+            </p>
+          
+        </div>
+
+        <div class="swiper-slide">
+         
+            <img src="images/products/3.jpg" alt="Product" class="w-full object-cover" />
+            <p class="text-olive-drab text-[1.2rem] mt-4 font-bold">
+             Hinoki Wood Onigiri Mould
+            </p>
+          
+        </div>
+
+         <div class="swiper-slide">
+         
+            <img src="images/products/1.jpg" alt="Product" class="w-full object-cover" />
+            <p class="text-olive-drab text-[1.2rem] mt-4 font-bold">
+             Hinoki Wood Onigiri Mould
+            </p>
+          
+        </div>
+
+
+         <div class="swiper-slide">
+         
+            <img src="images/products/2.jpg" alt="Product" class="w-full object-cover" />
+            <p class="text-olive-drab text-[1.2rem] mt-4 font-bold">
+             Hinoki Wood Onigiri Mould
+            </p>
+          
+        </div>
+
+         <div class="swiper-slide">
+         
+            <img src="images/products/3.jpg" alt="Product" class="w-full object-cover" />
+            <p class="text-olive-drab text-[1.2rem] mt-4 font-bold">
+             Hinoki Wood Onigiri Mould
+            </p>
+         
+        </div>
+
+      </div>
+
     </div>
+  </div>
+</section>
+
+
+<section class="relative px-[10rem] w-full  bg-img bg-[url('../images/white-textture-bg.png')] pt-[10rem] pb-[8rem]">
+       <small class="text-olive-drab mb-[4rem] block">Features</small>
+
+<div class="grid grid-cols-2 gap-6">
+  <div class="p-4">
+        <h2 class="heading-1 text-olive-drab">Why Arbor<br/> Decor</h2>
+        <div class="py-[6rem] px-10">
+            <img src="images/arbor-decor.png" alt="Arbor Decor" class="w-[15rem] ">
+        </div>
+  </div>
+  <div class="p-4">
+    <ul class="divide-y divide-secondary">
+  <li class="pb-10">
+    <h6 class="text-olive-drab font-bold text-[1.3rem] mb-4">Premium Craftsmanship</h6>
+    <p class="text-olive-drab font-light">
+       Vivamus ut finibus orci. Sed sed turpis tincidunt, scelerisque libero sit amet,<br/> pharetra lorem. Vivamus sollicitudin, elit at.
+    </p>
+  </li>
+  <li class="py-10">
+    <h6 class="text-olive-drab font-bold text-[1.3rem] mb-4">Ethically Sourced Materials</h6>
+    <p class="text-olive-drab font-light">
+       Vivamus ut finibus orci. Sed sed turpis tincidunt, scelerisque libero sit amet,<br/> pharetra lorem. Vivamus sollicitudin, elit at.
+    </p>
+  </li>
+  <li class="py-10">
+    <h6 class="text-olive-drab font-bold text-[1.3rem] mb-4">Custom Finishing</h6>
+    <p class="text-olive-drab font-light">
+       Vivamus ut finibus orci. Sed sed turpis tincidunt, scelerisque libero sit amet,<br/> pharetra lorem. Vivamus sollicitudin, elit at.
+    </p>
+  </li>
+  <li class="py-10">
+    <h6 class="text-olive-drab font-bold text-[1.3rem] mb-4">Pan-India Delivery</h6>
+    <p class="text-olive-drab font-light">
+       Vivamus ut finibus orci. Sed sed turpis tincidunt, scelerisque libero sit amet,<br/> pharetra lorem. Vivamus sollicitudin, elit at.
+    </p>
+  </li>
+</ul>
 
   </div>
+</div>
+
+</section>
+
 
   
 <!-- 
