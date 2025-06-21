@@ -201,7 +201,13 @@ const inspirationSlider = new Swiper('#inspirationSlider', {
   slidesPerView: 1,
   spaceBetween: 40,
   slidesOffsetBefore: 140, 
-    allowTouchMove: true,
+  speed: 3000, // adjust as needed
+  loop: true,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     640: {
       slidesPerView: 2,
@@ -257,5 +263,62 @@ slider.addEventListener("mousemove", (e) => {
 slider.addEventListener("mouseleave", () => {
   hoverZone = null;
 });
+
+
+
+let swiperInstance = null;
+
+function initTickerOrSwiper() {
+  const container = document.getElementById('scrollTickerContainer');
+  const track = container.querySelector('.ticker-track');
+
+  if (window.innerWidth < 768) {
+    // Mobile: Swiper
+    if (!swiperInstance) {
+      // Remove ticker animation
+      track.style.animation = 'none';
+      track.classList.remove('ticker-track');
+ track.classList.remove('flex-wrap');
+      // Add Swiper classes
+      container.classList.add('swiper');
+      track.classList.add('swiper-wrapper');
+      Array.from(track.children).forEach(slide => slide.classList.add('swiper-slide'));
+
+      // Init Swiper
+      swiperInstance = new Swiper('.swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        loop: false,
+        speed: 3000,
+       
+      });
+    }
+  } else {
+    // Desktop: Ticker
+    if (swiperInstance) {
+      swiperInstance.destroy(true, true);
+      swiperInstance = null;
+
+      // Remove Swiper classes
+      container.classList.remove('swiper');
+      track.classList.remove('swiper-wrapper');
+      Array.from(track.children).forEach(slide => slide.classList.remove('swiper-slide'));
+
+      // Restore ticker
+      track.classList.add('ticker-track');
+      track.style.animation = 'scrollTicker 20s linear infinite';
+ track.classList.remove('flex-wrap');
+      // Optionally duplicate content if needed
+      if (track.children.length < 6) { // if not already duplicated
+        track.innerHTML += track.innerHTML;
+      }
+    }
+  }
+}
+
+// Run on load + resize
+window.addEventListener('load', initTickerOrSwiper);
+window.addEventListener('resize', initTickerOrSwiper);
+
 
 });

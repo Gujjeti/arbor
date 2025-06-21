@@ -219,6 +219,21 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+#scrollTickerContainer .ticker-track {
+  display: flex;
+  width: 200%; /* because we will duplicate content via JS or manually */
+  animation: scrollTicker 20s linear infinite;
+}
+
 
 
 
