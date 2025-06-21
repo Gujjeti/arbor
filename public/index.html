@@ -13,11 +13,12 @@
 </head>
 
 
-<body class="index" data-scroll-container>
+<body class="index" >
 
     <!-- <img src="images/Variant7.jpg" class="fixed w-full h-full top-0 left-0 z-35 opacity-50" /> -->
   <header class="header" data-scroll>
-  <!-- Left: Menu Icon & Menu Items -->
+<nav class="w-full  flex items-center justify-between navbar">
+      <!-- Left: Menu Icon & Menu Items -->
   <div class="flex items-center gap-6">
     <!-- Menu Icon -->
     <button class="text-2xl md:hidden">
@@ -34,7 +35,7 @@
  
   <!-- Center: Logo -->
   <div class="absolute left-1/2 transform -translate-x-1/2">
-    <img src="images/logo.svg" alt="Logo" class="w-[8rem]">
+    <img src="images/logo.svg" alt="Logo" class="w-[8rem] logo transition-all duration-300 ease-in-out  ">
   </div>
 
   <!-- Right: CTAs -->
@@ -46,6 +47,7 @@
       Enquire Now
     </a>
   </div>
+</nav>
 </header>
 
 
@@ -80,7 +82,7 @@
   </ul>
 </div>  -->
 
-<main>
+<main data-scroll-container>
 
 
     <section class="relative w-full h-screen" data-scroll>
@@ -123,9 +125,9 @@
 </nav> -->
 </section>
 
-<div class="cat-wrapper fixed w-full z-45 top-0  bg-img bg-[url(../images/white-textture-bg.png)]">
+<div class="cat-wrapper fixed w-full z-45 top-0  bg-img bg-[url(../images/white-textture-bg.png)]" data-scroll>
  <div class="cat-nav-inner">
-    <nav class="categories__nav" data-scroll>
+    <nav class="categories__nav" >
     <a href="#">Sofa</a>
     <a href="#">Tables</a>
     <a href="#">Chairs</a>
@@ -209,7 +211,7 @@
   <!-- Left Side -->
   <div class="flex flex-col items-start space-y-4">
     <!-- Image -->
-    <img src="images/chair.png" alt="" class=" ">
+    <img src="images/chair.png" alt="" class=" "  data-scroll data-scroll-speed="-1">
 
     <!-- Below Image Content -->
     <div class="text-secondary mt-[2rem]">
@@ -219,7 +221,7 @@
   </div>
 
   <!-- Right Side Content -->
-  <div class="text-left">
+  <div class="text-left" data-scroll data-scroll-speed="-2">
     <small class="text-olive-drab mb-[3rem] block">About arbor Decor</small>
     <h2 class="heading-1 text-olive-drab">
         Design is not just what<br/> it looks like, Design is<br/> also how its works.
@@ -350,19 +352,53 @@
 </section>
 
 
-<section class="relative px-[10rem] w-full  bg-img bg-[url('../images/white-textture-bg.png')] pt-[10rem] pb-[8rem]">
+
+
+<section  class="relative px-[10rem] w-full  bg-img bg-[url('../images/white-textture-bg.png')] pt-[10rem] pb-[8rem]">
        <small class="text-olive-drab mb-[4rem] block">Features</small>
 
-<div class="grid grid-cols-2 gap-6">
-  <div class="p-4">
+    <div class="relative flex flex-col lg:flex-row gap-6" id="sticky-target">
+
+  <div class="p-4  left-0 lg:w-1/2 w-full"
+  
+      id="sticky-content"
+      
+  >
         <h2 class="heading-1 text-olive-drab">Why Arbor<br/> Decor</h2>
         <div class="py-[6rem] px-10">
             <img src="images/arbor-decor.png" alt="Arbor Decor" class="w-[15rem] ">
         </div>
   </div>
-  <div class="p-4">
-    <ul class="divide-y divide-secondary">
+  <div class="p-4 lg:w-1/2 w-full"  
+   >
+    <ul class="divide-y divide-secondary" >
   <li class="pb-10">
+    <h6 class="text-olive-drab font-bold text-[1.3rem] mb-4">Premium Craftsmanship</h6>
+    <p class="text-olive-drab font-light">
+       Vivamus ut finibus orci. Sed sed turpis tincidunt, scelerisque libero sit amet,<br/> pharetra lorem. Vivamus sollicitudin, elit at.
+    </p>
+  </li>
+  <li class="py-10">
+    <h6 class="text-olive-drab font-bold text-[1.3rem] mb-4">Ethically Sourced Materials</h6>
+    <p class="text-olive-drab font-light">
+       Vivamus ut finibus orci. Sed sed turpis tincidunt, scelerisque libero sit amet,<br/> pharetra lorem. Vivamus sollicitudin, elit at.
+    </p>
+  </li>
+  <li class="py-10">
+    <h6 class="text-olive-drab font-bold text-[1.3rem] mb-4">Custom Finishing</h6>
+    <p class="text-olive-drab font-light">
+       Vivamus ut finibus orci. Sed sed turpis tincidunt, scelerisque libero sit amet,<br/> pharetra lorem. Vivamus sollicitudin, elit at.
+    </p>
+  </li>
+  <li class="py-10">
+    <h6 class="text-olive-drab font-bold text-[1.3rem] mb-4">Pan-India Delivery</h6>
+    <p class="text-olive-drab font-light">
+       Vivamus ut finibus orci. Sed sed turpis tincidunt, scelerisque libero sit amet,<br/> pharetra lorem. Vivamus sollicitudin, elit at.
+    </p>
+  </li>
+
+
+   <li class="py-10">
     <h6 class="text-olive-drab font-bold text-[1.3rem] mb-4">Premium Craftsmanship</h6>
     <p class="text-olive-drab font-light">
        Vivamus ut finibus orci. Sed sed turpis tincidunt, scelerisque libero sit amet,<br/> pharetra lorem. Vivamus sollicitudin, elit at.
@@ -394,21 +430,50 @@
 </section>
 
 
-  
-<!-- 
-    <section data-scroll-section>
-<div >
-        <h2 data-scroll data-scroll-speed="1">What's up?</h2>
-        <p data-scroll data-scroll-speed="2">😬</p>
+<section class="relative w-full h-screen  bg-red-500 pt-[10rem] pb-[8rem]">
+  <div class="px-[10rem] relative">
+    <small class="text-olive-drab mb-[3rem] block">Testimonials</small>
+    <h2 class="heading-1 text-olive-drab">What Our Clients Say</h2>
+  </div>
+
+  <!-- Swiper Slider -->
+  <div class="pt-[5rem] ">
+    <div class="swiper TestimonialsSlider">
+      <div class="swiper-wrapper">
+
+        <!-- Single Testimonial Slide -->
+        <div class="swiper-slide">
+          <p class="text-olive-drab text-[1.2rem] mt-4 font-light">
+            "Arbor Decor transformed my living space with their exquisite furniture. The quality and design are unmatched!"
+          </p>
+          <p class="text-secondary mt-4 font-bold">- John Doe</p>
+        </div>
+
+        <!-- Add more .swiper-slide blocks as needed -->
+        <div class="swiper-slide">
+          <p class="text-olive-drab text-[1.2rem] mt-4 font-light">
+            "The attention to detail in Arbor's furniture is incredible. I couldn't be happier with my purchase."
+          </p>
+          <p class="text-secondary mt-4 font-bold">- Jane Smith</p>
+        </div>
+
+      </div>
     </div>
-</section> -->
+  </div>
+
+</section>
+
+  
+
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script src="js/locomotive-scroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -46,18 +46,35 @@ body{
 
 
 .header{
-    @apply opacity-0 translate-y-[-30px] transition-all duration-1000 ease-in-out 
+    @apply transition-all duration-300 ease-in-out 
 }
+
+
 header .nav-link {
-    @apply hover:text-blue-600 text-[1rem] text-white font-normal uppercase
+    @apply hover:text-white text-[1rem] text-white font-normal uppercase
 
   }
-.header.is-inview {
-@apply opacity-100 translate-y-0
-}
+
   .header{
-    @apply w-full   flex items-center justify-between z-25 absolute top-0 left-0 bg-transparent p-[4rem] py-[3rem]
+    @apply w-full   flex items-center justify-between z-25 absolute top-0 left-0 bg-transparent px-[4rem] 
+    h-40
   }
+
+
+  header.sticky{
+    @apply bg-[rgb(255_255_255_/_50%)] fixed top-0 left-0 z-90   h-25
+}
+header.hide{
+    @apply translate-y-[-100%] transition-all duration-300 ease-in-out
+}
+
+header.sticky .nav-link{
+    @apply text-olive-drab font-bold h-8
+}
+header.sticky .logo{
+    @apply w-[7rem] object-contain
+}
+
 
   .btn{
     @apply px-6 py-3 rounded-full transition-colors duration-300 uppercase text-[1rem] font-bold
@@ -116,10 +133,10 @@ header .nav-link {
 
 
 .categories__nav a{
-    @apply translate-y-[50px] transition-all duration-1000 ease-in-out opacity-0 delay-1000
+    @apply translate-y-[50px] transition-all duration-1000 ease-in-out opacity-0 
 }
 
-.is-inview.categories__nav a{
+.cat-wrapper.is-inview .categories__nav a{
     @apply translate-y-0 opacity-100
 }
 
@@ -132,9 +149,9 @@ header .nav-link {
 
 
 .categories-sec{
-  @apply  z-50 opacity-0 pointer-events-none py-[6rem];
+  @apply  z-50 opacity-0 pointer-events-none py-[0rem];
 
-  display: block;
+  display: none;
 
 }
    
@@ -146,16 +163,19 @@ header .nav-link {
 
 
 .cat-wrapper.hide{
-      transform: translateY(91vh) !important;
+      transform: translateY(calc(100vh - 5.8rem)) !important;
        clip-path: inset(0 6rem 0 6rem) !important;
 }
 
 
 .cat-wrapper {
     clip-path: inset(0 6rem 0 6rem);
-        transform: translateY(91vh);
+        transform: translateY(100vh);
         transition: all 0.5s ease;
 
+}
+.cat-wrapper.is-inview{
+            transform: translateY(calc(100vh - 5.8rem));
 }
 .cat-wrapper.active {
     clip-path: inset(0 0 0 0);
