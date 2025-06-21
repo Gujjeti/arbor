@@ -183,10 +183,7 @@ const ProductsSlider = new Swiper('.ProductsSlider', {
   slidesPerView: 1,
   spaceBetween: 80,
   slidesOffsetBefore: 140, 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+ 
   breakpoints: {
     640: {
       slidesPerView: 2,
@@ -194,6 +191,24 @@ const ProductsSlider = new Swiper('.ProductsSlider', {
     },
     1024: {
       slidesPerView: 4,
+      slidesOffsetBefore: 140,
+    },
+  },
+});
+
+
+const inspirationSlider = new Swiper('#inspirationSlider', {
+  slidesPerView: 1,
+  spaceBetween: 40,
+  slidesOffsetBefore: 140, 
+    allowTouchMove: true,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      slidesOffsetBefore: 10,
+    },
+    1024: {
+      slidesPerView: 3,
       slidesOffsetBefore: 140,
     },
   },
