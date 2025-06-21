@@ -301,6 +301,9 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
   .mb-15 {
     margin-bottom: calc(var(--spacing) * 15);
   }
@@ -391,6 +394,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -585,8 +591,8 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
-  .py-10 {
-    padding-block: calc(var(--spacing) * 10);
+  .py-15 {
+    padding-block: calc(var(--spacing) * 15);
   }
   .py-\[2\.5rem\] {
     padding-block: 2.5rem;
@@ -606,8 +612,8 @@
   .pb-3 {
     padding-bottom: calc(var(--spacing) * 3);
   }
-  .pb-10 {
-    padding-bottom: calc(var(--spacing) * 10);
+  .pb-15 {
+    padding-bottom: calc(var(--spacing) * 15);
   }
   .pb-\[7rem\] {
     padding-bottom: 7rem;
@@ -1112,10 +1118,67 @@ header.sticky .logo {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 #scrollTickerContainer .ticker-track {
   display: flex;
   width: 200%;
   animation: scrollTicker 20s linear infinite;
+}
+.c-cursor {
+  z-index: 10000;
+  position: fixed;
+  pointer-events: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  margin-top: -.8rem;
+  margin-left: -.8rem;
+  border-radius: 50%;
+  border: 0.0625rem solid #D4952E;
+  opacity: 1;
+  overflow: hidden;
+  top: 0 !important;
+  left: 0 !important;
+  transition: width 0.4s, height 0.4s, margin-top 0.4s, margin-left 0.4s, opacity 0.4s, transform 0.15s linear;
+}
+.c-cursor__arrows {
+  width: 12rem;
+  height: 4rem;
+  top: calc(50% - 2rem);
+  left: calc(50% - 6rem);
+  position: absolute;
+  transition: transform .4s;
+}
+.c-cursor__arrows__right {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4rem;
+  height: 100%;
+}
+.c-cursor__arrows__left {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4rem;
+  height: 100%;
+}
+.c-cursor__arrows svg {
+  width: 1.375rem;
+  height: .625rem;
+  position: absolute;
+  top: calc(50% - .3125rem);
+  left: calc(50% - .6875rem);
+}
+.c-cursor__arrows svg * {
+  fill: var(--color-secondary);
 }
 .intro {
   height: 100vh;

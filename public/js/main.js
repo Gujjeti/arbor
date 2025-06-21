@@ -332,4 +332,40 @@ window.addEventListener('load', initTickerOrSwiper);
 window.addEventListener('resize', initTickerOrSwiper);
 
 
+
+
+const cursor = document.querySelector('.js-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+  });
+
+  // Optional: show/hide on enter/leave window
+  document.addEventListener('mouseenter', () => {
+    cursor.style.opacity = 1;
+  });
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = 0;
+  });
+
+  // Optional: make cursor larger on links
+  const links = document.querySelectorAll('a, button, .cursor-hover-target');
+
+  links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      cursor.style.width = '6rem';
+      cursor.style.height = '6rem';
+      cursor.style.marginTop = '-3rem';
+      cursor.style.marginLeft = '-3rem';
+    });
+
+    link.addEventListener('mouseleave', () => {
+      cursor.style.width = '1.5rem';
+      cursor.style.height = '1.5rem';
+      cursor.style.marginTop = '-0.8rem';
+      cursor.style.marginLeft = '-0.8rem';
+    });
+  });
+
+
 });
