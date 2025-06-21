@@ -123,8 +123,13 @@ $(document).ready(function () {
   $(".categories__nav a").click(function (e) {
     e.preventDefault();
     $('.categories-sec').show()
+    $('.categories-sec').addClass('h-screen')
     const $section = $(".cat-wrapper");
     $section.removeClass("hide");
+    gsap.to('.text-clipath',{
+        y:100,
+        opacity:0
+    })
     gsap.to(".categories__nav a", {
       y: -50,
       ease: "power3.out",
@@ -148,6 +153,11 @@ $(document).ready(function () {
       !$section.has(e.target).length 
     ) {
       $section.addClass("hide");
+       $('.categories-sec').removeClass('h-screen');
+          gsap.to('.text-clipath',{
+        y:0,
+        opacity:1
+    })
       gsap.to(".categories__nav a", {
         y: 0,
         ease: "power3.out",
@@ -158,7 +168,7 @@ $(document).ready(function () {
       });
       setTimeout(() => {
         $('.categories-sec').hide()
-      }, 500); // match the transition duration
+      }, 1000); // match the transition duration
     }
   });
 
@@ -263,6 +273,7 @@ slider.addEventListener("mousemove", (e) => {
 slider.addEventListener("mouseleave", () => {
   hoverZone = null;
 });
+
 
 
 

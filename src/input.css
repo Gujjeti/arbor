@@ -176,7 +176,7 @@ header.sticky .logo{
 .cat-wrapper {
     clip-path: inset(0 6rem 0 6rem);
         transform: translateY(100vh);
-        transition: all 0.5s ease;
+        transition: all 0.8s ease;
 
 }
 .cat-wrapper.is-inview{
@@ -184,8 +184,8 @@ header.sticky .logo{
 }
 .cat-wrapper.active {
     clip-path: inset(0 0 0 0);
-    transform: translateY(20vh);
- 
+    /* transform: translateY(20vh); */
+  transform: translateY(18vh);
 }
 .bg-img{
     @apply bg-center bg-no-repeat  top-0 left-0 bg-cover bg-[#F8F6F0];
@@ -219,18 +219,18 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
   -webkit-text-fill-color: transparent;
 }
 
-@keyframes scrollTicker {
+/* @keyframes scrollTicker {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
   }
-}
+} */
 
 #scrollTickerContainer .ticker-track {
   display: flex;
-  width: 200%; /* because we will duplicate content via JS or manually */
+  width: 200%; 
   animation: scrollTicker 20s linear infinite;
 }
 
