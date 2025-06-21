@@ -77,7 +77,14 @@ header.sticky .logo{
 
 
   .btn{
-    @apply px-6 py-3 rounded-full transition-colors duration-300 uppercase text-[1rem] font-bold
+    @apply flex justify-center items-center px-6  rounded-full transition-colors duration-300 uppercase text-[1rem] font-bold
+    }
+
+    .btn-small{
+        @apply min-w-40 h-12
+    }
+    .btn-large{
+        @apply min-w-65 h-20
     }
 
     .btn-primary {
@@ -90,9 +97,7 @@ header.sticky .logo{
     }
 
 
-.btn-lg{
-    @apply px-11 py-7 text-[1rem] font-bold
-}
+
 
 .text-clipath{
   clip-path: polygon(
@@ -206,9 +211,13 @@ header.sticky .logo{
   }
 }
 
+.arbor-typo h4{
 
+background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 116 88) 100%);
 
-
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 
