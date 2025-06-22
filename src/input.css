@@ -246,7 +246,7 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
   margin-top: -.8rem;
   margin-left: -.8rem;
   border-radius: 50%;
-  border: 0.0625rem solid #D4952E;
+  border: 0.0625rem solid #51483F;
   opacity: 1; /* Set to 1 so you can see it */
   overflow: hidden;
   top: 0 !important;
@@ -275,6 +275,7 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
     top: 0;
     width: 4rem;
     height: 100%;
+    transition: 0.5s;
 }
 
 .c-cursor__arrows__left {
@@ -283,6 +284,7 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
     top: 0;
     width: 4rem;
     height: 100%;
+       transition: 0.5s;
 }
 .c-cursor__arrows svg {
     width: 1.375rem;
@@ -293,7 +295,7 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
 }
 
 .c-cursor__arrows svg * {
-    fill: var(--color-secondary);
+    fill: #51483F
 }
 
 

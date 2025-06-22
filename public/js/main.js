@@ -206,6 +206,10 @@ const ProductsSlider = new Swiper('.ProductsSlider', {
   },
 });
 
+document.querySelector('.ProductsSlider .swiper-custom-prev').addEventListener('click', () => ProductsSlider.slidePrev());
+document.querySelector('.ProductsSlider .swiper-custom-next').addEventListener('click', () => ProductsSlider.slideNext());
+
+bindCursorArrows('.ProductsSlider');
 
 const inspirationSlider = new Swiper('#inspirationSlider', {
   slidesPerView: 1,
@@ -229,6 +233,78 @@ const inspirationSlider = new Swiper('#inspirationSlider', {
     },
   },
 });
+
+
+const testimonialSlider = new Swiper('#testimonialSlider', {
+  slidesPerView: 1,
+  spaceBetween: 40,
+  slidesOffsetBefore: 140, 
+  allowTouchMove: true,
+
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      slidesOffsetBefore: 10,
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesOffsetBefore: 140,
+    },
+  },
+});
+
+document.querySelector('#testimonialSlider .swiper-custom-prev').addEventListener('click', () => testimonialSlider.slidePrev());
+document.querySelector('#testimonialSlider .swiper-custom-next').addEventListener('click', () => testimonialSlider.slideNext());
+
+
+function bindCursorArrows(sliderSelector) {
+  const slider = document.querySelector(sliderSelector);
+  if (!slider) return;
+
+  const swiperNext = slider.querySelector('.swiper-custom-next');
+  const swiperPrev = slider.querySelector('.swiper-custom-prev');
+
+  const cursor = document.querySelector('.js-cursor');
+  const cursorRight = cursor.querySelector('.c-cursor__arrows__right');
+  const cursorLeft = cursor.querySelector('.c-cursor__arrows__left');
+
+  if (swiperNext) {
+    swiperNext.addEventListener('mouseenter', () => {
+      cursorRight.style.transform = 'translateX(40px)';
+      cursorLeft.style.transform = 'translateX(100%)'; // ensure left is out
+      cursor.style.width = '6rem';
+      cursor.style.height = '6rem';
+      cursor.style.marginTop = '-3rem';
+      cursor.style.marginLeft = '-3rem';
+    });
+    swiperNext.addEventListener('mouseleave', () => {
+      cursorRight.style.transform = 'translateX(-40px)';
+      cursor.style.width = '1.5rem';
+      cursor.style.height = '1.5rem';
+      cursor.style.marginTop = '-0.8rem';
+      cursor.style.marginLeft = '-0.8rem';
+    });
+  }
+
+  if (swiperPrev) {
+    swiperPrev.addEventListener('mouseenter', () => {
+      cursorLeft.style.transform = 'translateX(-40px)';
+      cursorRight.style.transform = 'translateX(-100%)'; // ensure right is out
+      cursor.style.width = '6rem';
+      cursor.style.height = '6rem';
+      cursor.style.marginTop = '-3rem';
+      cursor.style.marginLeft = '-3rem';
+    });
+    swiperPrev.addEventListener('mouseleave', () => {
+      cursorLeft.style.transform = 'translateX(40px)';
+      cursor.style.width = '1.5rem';
+      cursor.style.height = '1.5rem';
+      cursor.style.marginTop = '-0.8rem';
+      cursor.style.marginLeft = '-0.8rem';
+    });
+  }
+}
+bindCursorArrows('#testimonialSlider');
 
 const slider = document.getElementById("thumbSlider");
 let hoverZone = null;
@@ -334,19 +410,30 @@ window.addEventListener('resize', initTickerOrSwiper);
 
 
 
+
+
 const cursor = document.querySelector('.js-cursor');
+const cursorRight = cursor.querySelector('.c-cursor__arrows__right');
+const cursorLeft = cursor.querySelector('.c-cursor__arrows__left');
 
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
-  });
+// Move cursor
+document.addEventListener('mousemove', (e) => {
+  cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+});
 
-  // Optional: show/hide on enter/leave window
-  document.addEventListener('mouseenter', () => {
-    cursor.style.opacity = 1;
-  });
-  document.addEventListener('mouseleave', () => {
-    cursor.style.opacity = 0;
-  });
+// Show cursor on enter anywhere
+document.addEventListener('mouseenter', () => {
+  cursor.style.opacity = 1;
+});
+document.addEventListener('mouseleave', () => {
+  cursor.style.opacity = 0;
+});
+
+
+
+
+
+
 
   // Optional: make cursor larger on links
   const links = document.querySelectorAll('a, button, .cursor-hover-target');
