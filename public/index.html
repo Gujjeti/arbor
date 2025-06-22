@@ -62,39 +62,47 @@
   </div>
 </div> 
 
-  <header class="header" data-scroll>
-<nav class="w-full  flex items-center justify-between navbar">
-      <!-- Left: Menu Icon & Menu Items -->
-  <div class="flex items-center gap-6">
-    <!-- Menu Icon -->
-    <button class="text-2xl md:hidden">
-      ☰
-    </button>
-    <!-- Menu List (Hidden on small screens) -->
-    <nav class="hidden md:flex gap-[3rem] text-lg font-medium">
-      <a href="#" class="nav-link">Home</a>
-      <a href="#" class="nav-link">About Us</a>
-      <a href="#" class="nav-link">Collection</a>
-      <a href="#" class="nav-link">Contact Us</a>
-    </nav>
-  </div>
- 
-  <!-- Center: Logo -->
-  <div class="absolute left-1/2 transform -translate-x-1/2">
-    <img src="images/logo.svg" alt="Logo" class="w-[8rem] logo transition-all duration-300 ease-in-out  ">
-  </div>
 
-  <!-- Right: CTAs -->
-  <div class="flex items-center gap-[10px]">
-    <a href="#" class="btn btn-primary px-2 btn-small bg-gray-200 rounded hover:bg-gray-300 text-sm font-medium ">
-      Download Catalogue
-    </a>
-    <a href="#" class="btn btn-primary-outline btn-small">
-      Enquire Now
-    </a>
-  </div>
-</nav>
+<header class="header" data-scroll>
+  <nav class="w-full flex items-center justify-between relative py-4 px-4 navbar">
+    <!-- Left: Menu Icon & Menu Items -->
+    <div class="flex items-center gap-6">
+      <!-- Menu Icon -->
+      <button id="menu-toggle" class="text-2xl md:hidden focus:outline-none">
+        ☰
+      </button>
+
+        <!-- Menu List -->
+      <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white overflow-hidden transition-all duration-300 ease-in-out flex-col gap-6 text-xl font-semibold items-start justify-start p-6 z-50 md:static md:w-auto md:h-auto md:bg-transparent md:overflow-visible md:flex md:flex-row md:gap-[3rem] md:text-lg md:font-medium">
+        <!-- Close Icon -->
+        <button id="menu-close" class="text-3xl mb-4 md:hidden focus:outline-none">
+          ✕
+        </button>
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">About Us</a>
+        <a href="#" class="nav-link">Collection</a>
+        <a href="#" class="nav-link">Contact Us</a>
+      </nav>
+
+    </div>
+
+    <!-- Center: Logo -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+      <img src="images/logo.svg" alt="Logo" class="w-[8rem] logo transition-all duration-300 ease-in-out">
+    </div>
+
+    <!-- Right: CTAs -->
+    <div class="flex items-center gap-2">
+      <a href="#" class="hidden sm:inline-block btn btn-primary px-2 btn-small bg-gray-200 rounded hover:bg-gray-300 text-sm font-medium ">
+        Download Catalogue
+      </a>
+      <a href="#" class="hidden sm:inline-block btn btn-primary-outline btn-small">
+        Enquire Now
+      </a>
+    </div>
+  </nav>
 </header>
+
 
 
 
@@ -694,44 +702,44 @@ come to life</h2>
     <!-- Column 1 (stacked 2) -->
     <div class="flex flex-col gap-[1.5vw]">
       <div class="w-full h-[50vh]">
-        <img src="images/asymmetric grid/Frame 1597885720.jpg"  data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
+        <img src="images/asymmetric grid/Frame 1597885720.jpg"  data-scroll data-scroll-speed="-1" class="block w-full object-cover h-full"/>
       </div>
       <div class="w-full h-[50vh]">
-         <img src="images/asymmetric grid/Frame 1597885721.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
+         <img src="images/asymmetric grid/Frame 1597885721.jpg" data-scroll data-scroll-speed="-1" class="block w-full object-cover h-full"/>
       </div>
     </div>
 
     <!-- Column 2 -->
     <div class="flex items-center ">
       <div class="h-[60vh] w-full">
-           <img src="images/asymmetric grid/Frame 1597885722.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
+           <img src="images/asymmetric grid/Frame 1597885722.jpg" data-scroll data-scroll-speed="-1" class="block w-full object-cover h-full"/>
       </div>
     </div>
 
     <!-- Column 3 -->
     <div class="flex items-end ">
       <div class="h-[70vh] w-full">
-         <img src="images/asymmetric grid/Frame 1597885723.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
+         <img src="images/asymmetric grid/Frame 1597885723.jpg" data-scroll data-scroll-speed="-1" class="block w-full object-cover h-full"/>
       </div>
     </div>
 
     <!-- Column 4 (stacked 2) -->
     <div class="flex flex-col gap-[1.5vw] justify-end">
       <div class="w-full h-[50vh]">
-         <img src="images/asymmetric grid/Frame 1597885724.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
+         <img src="images/asymmetric grid/Frame 1597885724.jpg" data-scroll data-scroll-speed="-1" class="block w-full object-cover h-full"/>
       </div>
       <div class="w-full h-[40vh]">
-        <img src="images/asymmetric grid/Frame 1597885725.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
+        <img src="images/asymmetric grid/Frame 1597885725.jpg" data-scroll data-scroll-speed="-1" class="block w-full object-cover h-full"/>
       </div>
     </div>
 
     <!-- Column 5 (stacked 2) -->
     <div class="flex flex-col gap-[1.5vw]">
       <div class="w-full h-[30vh]">
-         <img src="images/asymmetric grid/Frame 1597885726.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
+         <img src="images/asymmetric grid/Frame 1597885726.jpg" data-scroll data-scroll-speed="-1" class="block w-full object-cover h-full"/>
       </div>
       <div class="w-full h-[70vh]">
-         <img src="images/asymmetric grid/Frame 1597885727.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
+         <img src="images/asymmetric grid/Frame 1597885727.jpg" data-scroll data-scroll-speed="-1" class="block w-full object-cover h-full"/>
       </div>
     </div>
 

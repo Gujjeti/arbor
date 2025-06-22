@@ -1,6 +1,17 @@
 //Developed by: Ganesh Gujjeti
 
 
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+  
+  });
+
+  menuClose.addEventListener('click', () => {
+   
+  });
 
 window.addEventListener("load", () => {
 
@@ -32,7 +43,7 @@ ScrollTrigger.scrollerProxy("[data-scroll-container]", {
     : "fixed"
 });
 
-// ✅ Add scroller reference here
+
 gsap.to("#sticky-content", {
   scrollTrigger: {
     trigger: "#sticky-content",
@@ -96,12 +107,11 @@ locoScroll.on("scroll", function(obj) {
   }, "=-1");
 
       tl.to(".intro", {
-        y: "-100%",
-   clipPath: "inset(0% 0% 100% 0%)",
+        yPercent: -100,
         opacity: 1,
-        ease: "power2.out",
+        ease: "expo.inOut",
         delay: 0.8,
-             duration: 2.5,
+             duration: 1.8,
       });
        tl.to(".intro__fader", {
   opacity: 1,
@@ -111,7 +121,7 @@ locoScroll.on("scroll", function(obj) {
       catWrapper.style.transitionDelay = '0s';
     }
   }
-}, "=-2.5");
+}, "=-1.3");
 
 
             tl.to('html', {
@@ -129,6 +139,8 @@ locoScroll.on("scroll", function(obj) {
   //     });
 
 });
+
+
 
 
 
@@ -218,7 +230,7 @@ $(document).ready(function () {
   
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
-  spaceBetween: 20,
+  spaceBetween: 60,
   loop: false,
   pagination: false,
   navigation: false,
