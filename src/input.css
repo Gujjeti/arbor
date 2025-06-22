@@ -111,7 +111,7 @@ header.sticky .logo{
   overflow: hidden;
   opacity: 0;
 
-   
+   transition-delay: 5.2s;
 }
 
 .is-inview .text-clipath{
@@ -120,17 +120,18 @@ header.sticky .logo{
     100% 100%, 0% 100% /* full bottom */
   );
   opacity: 1;
+ 
 }
 
 
 
 .explore__CTA{
-    @apply -translate-y-[-50px] transition-all duration-1000 ease-in-out opacity-0
+    @apply -translate-y-[-80px] transition-all duration-1000 ease-in-out opacity-0
 }
 
 
 .is-inview .explore__CTA{
-    @apply translate-y-0 opacity-100  delay-500
+    @apply translate-y-0 opacity-100  delay-[5.6s]  
 }
 
 .categories__nav{
@@ -144,7 +145,7 @@ header.sticky .logo{
 }
 
 .cat-wrapper.is-inview .categories__nav a{
-    @apply translate-y-0 opacity-100
+    @apply translate-y-0 opacity-100  
 }
 
 .is-inview .categories__nav{
@@ -179,10 +180,11 @@ header.sticky .logo{
     clip-path: inset(0 6rem 0 6rem);
         transform: translateY(100vh);
         transition: all 0.8s ease;
-
+transition-delay: 5.6s;
 }
 .cat-wrapper.is-inview{
             transform: translateY(calc(100vh - 5.8rem));
+       
 }
 .cat-wrapper.active {
     clip-path: inset(0 0 0 0);

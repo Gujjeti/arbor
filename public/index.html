@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="overflow-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,38 @@
   </div>
 </div>
 
-    <!-- <img src="images/Variant7.jpg" class="fixed w-full h-full top-0 left-0 z-35 opacity-50" /> -->
+ <div class=" overflow-hidden intro fixed w-full h-screen flex items-center justify-center top-0 left-0 z-30 bg-img bg-[url(../images/white-textture-bg.png)]">
+  <div class="intro__fader"></div>
+              <ul class="intro__hold relative">
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/6.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/1.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/5.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/IMG_0068 1.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/2.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/3.jpg" alt=""></div>
+    </li>
+    <li class="intro__img">
+      <div class="intro__img__hold"><img class="img-load" src="images/intro/4.jpg" alt=""></div>
+    </li>
+  </ul>
+
+  <div class="introl__logo absolute top-1/2 left-1/2 w-[8rem] transition-all duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2">
+   <img src="images/logo.svg" alt="Logo" class="w-full h-full">
+
+  </div>
+</div> 
+
   <header class="header" data-scroll>
 <nav class="w-full  flex items-center justify-between navbar">
       <!-- Left: Menu Icon & Menu Items -->
@@ -70,32 +101,7 @@
 
 
 
-  <!-- <div class="intro fixed w-full h-screen flex items-center justify-center top-0 left-0 z-30 bg-[#d1c7a3]">
-  <div class="intro__fader"></div>
-              <ul class="intro__hold relative">
-    <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/6.jpg" alt=""></div>
-    </li>
-    <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/1.jpg" alt=""></div>
-    </li>
-    <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/5.jpg" alt=""></div>
-    </li>
-    <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/4.jpg" alt=""></div>
-    </li>
-    <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/2.jpg" alt=""></div>
-    </li>
-    <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/3.jpg" alt=""></div>
-    </li>
-    <li class="intro__img">
-      <div class="intro__img__hold"><img class="img-load" src="images/intro/4.jpg" alt=""></div>
-    </li>
-  </ul>
-</div>  -->
+
 
 <main data-scroll-container>
 
@@ -194,6 +200,34 @@
     <div class="swiper-slide flex flex-col items-center text-center">
          <div class="p-6">
         <h4 class="text-secondary text-[2rem] font-light">005</h4>
+        <span class="text-secondary text-[1rem] uppercase">Benches</span>
+     </div>
+      <img src="images/cat/5.jpg" alt="Thumbnail 5" class="md:h-[50vh] md:object-cover w-full">
+     
+    </div>
+
+
+     <div class="swiper-slide flex flex-col items-center text-center">
+         <div class="p-6">
+        <h4 class="text-secondary text-[2rem] font-light">006</h4>
+        <span class="text-secondary text-[1rem] uppercase">Consoles</span>
+     </div>
+      <img src="images/cat/4.jpg" alt="Thumbnail 4" class="md:h-[50vh] md:object-cover w-full">
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="swiper-slide flex flex-col items-center text-center">
+         <div class="p-6">
+        <h4 class="text-secondary text-[2rem] font-light">007</h4>
+        <span class="text-secondary text-[1rem] uppercase">Benches</span>
+     </div>
+      <img src="images/cat/5.jpg" alt="Thumbnail 5" class="md:h-[50vh] md:object-cover w-full">
+     
+    </div>
+
+     <div class="swiper-slide flex flex-col items-center text-center">
+         <div class="p-6">
+        <h4 class="text-secondary text-[2rem] font-light">008</h4>
         <span class="text-secondary text-[1rem] uppercase">Benches</span>
      </div>
       <img src="images/cat/5.jpg" alt="Thumbnail 5" class="md:h-[50vh] md:object-cover w-full">
@@ -659,45 +693,45 @@ come to life</h2>
     
     <!-- Column 1 (stacked 2) -->
     <div class="flex flex-col gap-[1.5vw]">
-      <div class="bg-black w-full h-[50vh]">
-        <img src="images/asymmetric grid/Frame 1597885720.jpg" class="w-full object-cover h-full"/>
+      <div class="w-full h-[50vh]">
+        <img src="images/asymmetric grid/Frame 1597885720.jpg"  data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
       </div>
-      <div class="bg-black w-full h-[50vh]">
-         <img src="images/asymmetric grid/Frame 1597885721.jpg" class="w-full object-cover h-full"/>
+      <div class="w-full h-[50vh]">
+         <img src="images/asymmetric grid/Frame 1597885721.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
       </div>
     </div>
 
     <!-- Column 2 -->
     <div class="flex items-center ">
-      <div class="bg-red-700 h-[60vh] w-full">
-           <img src="images/asymmetric grid/Frame 1597885722.jpg" class="w-full object-cover h-full"/>
+      <div class="h-[60vh] w-full">
+           <img src="images/asymmetric grid/Frame 1597885722.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
       </div>
     </div>
 
     <!-- Column 3 -->
     <div class="flex items-end ">
-      <div class="bg-black h-[70vh] w-full">
-         <img src="images/asymmetric grid/Frame 1597885723.jpg" class="w-full object-cover h-full"/>
+      <div class="h-[70vh] w-full">
+         <img src="images/asymmetric grid/Frame 1597885723.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
       </div>
     </div>
 
     <!-- Column 4 (stacked 2) -->
     <div class="flex flex-col gap-[1.5vw] justify-end">
-      <div class="bg-black w-full h-[50vh]">
-         <img src="images/asymmetric grid/Frame 1597885724.jpg" class="w-full object-cover h-full"/>
+      <div class="w-full h-[50vh]">
+         <img src="images/asymmetric grid/Frame 1597885724.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
       </div>
-      <div class="bg-black w-full h-[40vh]">
-        <img src="images/asymmetric grid/Frame 1597885725.jpg" class="w-full object-cover h-full"/>
+      <div class="w-full h-[40vh]">
+        <img src="images/asymmetric grid/Frame 1597885725.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
       </div>
     </div>
 
     <!-- Column 5 (stacked 2) -->
     <div class="flex flex-col gap-[1.5vw]">
-      <div class="bg-black w-full h-[30vh]">
-         <img src="images/asymmetric grid/Frame 1597885726.jpg" class="w-full object-cover h-full"/>
+      <div class="w-full h-[30vh]">
+         <img src="images/asymmetric grid/Frame 1597885726.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
       </div>
-      <div class="bg-black w-full h-[70vh]">
-         <img src="images/asymmetric grid/Frame 1597885727.jpg" class="w-full object-cover h-full"/>
+      <div class="w-full h-[70vh]">
+         <img src="images/asymmetric grid/Frame 1597885727.jpg" data-scroll data-scroll-speed="-1" class="w-full object-cover h-full"/>
       </div>
     </div>
 

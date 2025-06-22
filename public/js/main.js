@@ -81,25 +81,45 @@ locoScroll.on("scroll", function(obj) {
   const tl = gsap.timeline();
 
   // Step 2: Quick center-out reveal
+
+  tl.to('.introl__logo',{
+    opacity: 0,
+    duration:1.5,
+     ease: "power2.out",
+  })
   tl.to(".intro__img", {
     clipPath: "inset(0% 0% 0% 0%)",
     opacity: 1,
     duration: 1.5,
     ease: "power2.out",
     stagger: 0.2
-  });
+  }, "=-1");
 
-  //     tl.to(".intro", {
-  //       y: "-100%",
-  //  clipPath: "inset(0% 0% 100% 0%)",
-  //       opacity: 1,
-  //       ease: "power2.out",
-  //       delay: 0.8,
-  //            duration: 2.5,
-  //     });
-  //        tl.to(".intro__fader", {
-  //         opacity: 1,
-  //         },"=-2.5");
+      tl.to(".intro", {
+        y: "-100%",
+   clipPath: "inset(0% 0% 100% 0%)",
+        opacity: 1,
+        ease: "power2.out",
+        delay: 0.8,
+             duration: 2.5,
+      });
+       tl.to(".intro__fader", {
+  opacity: 1,
+  onComplete: () => {
+    const catWrapper = document.querySelector('.cat-wrapper');
+    if (catWrapper) {
+      catWrapper.style.transitionDelay = '0s';
+    }
+  }
+}, "=-2.5");
+
+
+            tl.to('html', {
+  onStart: () => {
+    document.documentElement.classList.remove('overflow-hidden');
+  }
+});
+
 
   //   tl.to(".intro", {
   //       y: "-100%",
@@ -118,6 +138,7 @@ $(document).ready(function () {
     y: -30,
     opacity: 0,
     duration: 1,
+    delay:5.6
   });
 
   $(".categories__nav a").click(function (e) {
@@ -137,6 +158,14 @@ $(document).ready(function () {
       stagger: 0.1,
       duration: 0.1,
     });
+
+       gsap.from("#thumbSlider .swiper-slide", {
+      y: 50,
+      ease: "power3.out",
+      opacity: 0,
+      stagger: 0.2,
+      duration: 0.8,
+    });
     // Show and animate category section
     $section.removeClass("active");
     void $section[0].offsetWidth; // trigger reflow
@@ -152,8 +181,20 @@ $(document).ready(function () {
       !$section.is(e.target) &&
       !$section.has(e.target).length 
     ) {
+
+    gsap.to("#thumbSlider .swiper-slide", {
+      y: 0,
+      ease: "power3.out",
+      opacity: 1,
+      stagger: 0.2,
+      duration: 0.8,
+    });
+
       $section.addClass("hide");
        $('.categories-sec').removeClass('h-screen');
+
+     
+
           gsap.to('.text-clipath',{
         y:0,
         opacity:1
@@ -181,6 +222,7 @@ const swiper = new Swiper(".mySwiper", {
   loop: false,
   pagination: false,
   navigation: false,
+   autoplay: false,
   speed: 600,
   breakpoints: {
     640: { slidesPerView: 2 },
