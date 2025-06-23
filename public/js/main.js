@@ -291,17 +291,17 @@ const inspirationSlider = new Swiper('#inspirationSlider', {
 
 const testimonialSlider = new Swiper('#testimonialSlider', {
   slidesPerView: 1,
-  spaceBetween: 40,
+  spaceBetween: 60,
   slidesOffsetBefore: 140, 
   allowTouchMove: true,
 
   breakpoints: {
     640: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       slidesOffsetBefore: 10,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       slidesOffsetBefore: 140,
     },
   },

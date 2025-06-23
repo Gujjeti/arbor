@@ -12,7 +12,7 @@ html{
      font-size: 70%;
       font-family: 'Poppins', sans-serif;
 
-}
+} 
 
 @media screen and (min-width: 1600px) {
     html {
@@ -21,6 +21,10 @@ html{
 
     .text-clipath h1{
         @apply leading-35
+    }
+
+    .footer_wrapper{
+        @apply py-[12rem]
     }
     
 }
@@ -47,19 +51,17 @@ body{
 }
 
 
-.header{
-    @apply transition-all duration-300 ease-in-out 
-}
+
 
 
 header .nav-link {
-    @apply hover:text-white text-[3rem] md:text[1rem] text-white font-normal uppercase
+    @apply hover:text-white text-[2rem] md:text-[1rem] text-secondary md:text-white font-normal uppercase
 
   }
 
   .header{
-    @apply w-full   flex items-center justify-between z-25 absolute top-0 left-0 bg-transparent px-[4rem] 
-    h-40
+    @apply w-full   flex md:items-center justify-between z-25 absolute top-0 left-0 bg-transparent md:px-[4rem] 
+    h-40 transition-all duration-300 ease-in-out
   }
 
 

@@ -15,7 +15,7 @@
 
 <body class="index" >
 
-    <div class="c-cursor js-cursor">
+    <div class="c-cursor js-cursor hidden md:block">
   <div class="c-cursor__arrows">
     <div class="c-cursor__arrows__right">
       <svg viewBox="0 0 22 10">
@@ -73,9 +73,9 @@
       </button>
 
         <!-- Menu List -->
-      <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white overflow-hidden transition-all duration-300 ease-in-out flex-col gap-6 text-xl font-semibold items-start justify-start p-6 z-50 md:static md:w-auto md:h-auto md:bg-transparent md:overflow-visible md:flex md:flex-row md:gap-[3rem] md:text-lg md:font-medium">
+      <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-screen md:h-full bg-white overflow-hidden transition-all duration-300 ease-in-out flex-col gap-15  font-semibold items-start justify-start p-12 md:p-6 z-50 md:static md:w-auto md:h-auto md:bg-transparent md:overflow-visible md:flex flex-col md:flex-row md:gap-[3rem] md:text-lg md:font-medium hidden">
         <!-- Close Icon -->
-        <button id="menu-close" class="text-3xl mb-4 md:hidden focus:outline-none">
+        <button id="menu-close" class="text-3xl mb-4 md:hidden focus:outline-none fixed top-6 right-6">
           ✕
         </button>
         <a href="#" class="nav-link">Home</a>
@@ -92,7 +92,7 @@
     </div>
 
     <!-- Right: CTAs -->
-    <div class="flex items-center gap-4">
+    <div class="hidden items-center gap-4 md:flex">
       <a href="#" class="hidden sm:inline-block btn btn-primary px-2 btn-small bg-gray-200 rounded hover:bg-gray-300 text-sm font-medium ">
         Download Catalogue
       </a>
@@ -254,7 +254,7 @@
 
 
 
-<section id="aboutArbor" class="aboutArbor px-[10rem]  relative w-full h-screen bg-img bg-[url(../images/white-textture-bg.png)] pt-[10rem]" >
+<section id="aboutArbor" class="aboutArbor px-[3rem] md:px-[10rem]  relative w-full h-screen bg-img bg-[url(../images/white-textture-bg.png)] pt-[10rem]" >
  <div class="grid grid-cols-1 md:grid-cols-[25%_75%] gap-[4vw] p-[2vw] items-start justify-items-end">
 
 
@@ -316,7 +316,7 @@
 <!-- Section -->
 <section class="relative w-full  bg-img bg-[url('../images/white-textture-bg.png')] pt-[10rem] pb-[8rem]">
 
-    <div class="px-[10rem] relative">
+    <div class="px-[3rem] md:px-[10rem] relative">
              <small class="text-olive-drab mb-[3rem] block">Products</small>
 
   <!-- Header: Left title, Right button -->
@@ -408,7 +408,7 @@
 
 
 
-<section  class="relative px-[10rem] w-full  bg-img bg-[url('../images/white-textture-bg.png')] pt-[10rem] pb-[8rem]">
+<section  class="relative px-[3rem] md:px-[10rem] w-full  bg-img bg-[url('../images/white-textture-bg.png')] pt-[10rem] pb-[8rem]">
        <small class="text-olive-drab mb-[4rem] block">Features</small>
 
     <div class="relative flex flex-col lg:flex-row gap-6" id="sticky-target">
@@ -493,7 +493,7 @@
     <span class="absolute left-[10%] top-50 z-20" data-scroll data-scroll-speed="-1">
     <img src="images/soft-chair.png" alt="" class="w-60" />
   </span>
-  <div class="px-[10rem] relative text-center pb-[7rem]">
+  <div class="px-[3rem] md:px-[10rem] relative text-center pb-[7rem]">
     <small class="text-olive-drab mb-[3rem] block">Get Inspired</small>
     <h2 class="heading-1 text-olive-drab">See your<br/>
 design dream<br/>
@@ -590,7 +590,7 @@ come to life</h2>
     
 
 
-  <div class="px-[10rem] relative text-center ">
+  <div class="px-[3rem] md:px-[10rem] relative text-center ">
     <small class="text-olive-drab mb-[3rem] block">Testimonials</small>
     <h2 class="heading-1 text-olive-drab">Duis ultrices augue
 </h2>
@@ -687,7 +687,7 @@ come to life</h2>
 
 <section class="pt-[8rem] pb-[8rem] relative bg-img bg-[url('../images/white-textture-bg.png')]">
 
-      <div class="px-[10rem] relative text-center ">
+      <div class="px-[3rem] md:px-[10rem] relative text-center ">
     <small class="text-olive-drab mb-[3rem] block">Catalogue</small>
     <h2 class="heading-1 text-olive-drab">Scelerisque libero<br/> sit amet
 </h2>
@@ -749,7 +749,7 @@ come to life</h2>
   
 <footer class="bg-[#7B7458] text-white relative ">
   
-    <div class="px-[10rem] py-[8rem]">
+    <div class="px-[3rem] md:px-[10rem] py-[10rem] footer_wrapper">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-50">
     <!-- Left Column -->
     <div>
