@@ -213,9 +213,6 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
-  .top-4 {
-    top: calc(var(--spacing) * 4);
-  }
   .top-6 {
     top: calc(var(--spacing) * 6);
   }
@@ -231,9 +228,6 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
-  .right-4 {
-    right: calc(var(--spacing) * 4);
-  }
   .right-6 {
     right: calc(var(--spacing) * 6);
   }
@@ -245,9 +239,6 @@
   }
   .-bottom-20 {
     bottom: calc(var(--spacing) * -20);
-  }
-  .bottom-4 {
-    bottom: calc(var(--spacing) * 4);
   }
   .bottom-\[8rem\] {
     bottom: 8rem;
@@ -282,6 +273,12 @@
   .z-50 {
     z-index: 50;
   }
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 2;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -299,6 +296,9 @@
     @media (width >= 96rem) {
       max-width: 96rem;
     }
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
   }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
@@ -494,9 +494,6 @@
   .gap-15 {
     gap: calc(var(--spacing) * 15);
   }
-  .gap-20 {
-    gap: calc(var(--spacing) * 20);
-  }
   .gap-50 {
     gap: calc(var(--spacing) * 50);
   }
@@ -661,9 +658,6 @@
   .px-\[6rem\] {
     padding-inline: 6rem;
   }
-  .px-\[10rem\] {
-    padding-inline: 10rem;
-  }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
@@ -749,6 +743,9 @@
   }
   .text-\[1\.4rem\] {
     font-size: 1.4rem;
+  }
+  .text-\[1\.125rem\] {
+    font-size: 1.125rem;
   }
   .text-\[1rem\] {
     font-size: 1rem;
@@ -882,6 +879,11 @@
       position: static;
     }
   }
+  .md\:order-none {
+    @media (width >= 48rem) {
+      order: 0;
+    }
+  }
   .md\:mb-0 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 0);
@@ -935,6 +937,11 @@
   .md\:grid-cols-\[25\%_75\%\] {
     @media (width >= 48rem) {
       grid-template-columns: 25% 75%;
+    }
+  }
+  .md\:grid-cols-\[75\%_25\%\] {
+    @media (width >= 48rem) {
+      grid-template-columns: 75% 25%;
     }
   }
   .md\:flex-row {
@@ -1309,6 +1316,13 @@ header.sticky .logo {
   .parallax-section > div.relative.z-10 > div {
     position: static !important;
     margin: 1rem auto;
+  }
+  .heading-1 {
+    font-size: 4.5rem;
+    line-height: 1.2;
+  }
+  .heading-1 br {
+    display: none;
   }
 }
 .arbor-typo h4 {
