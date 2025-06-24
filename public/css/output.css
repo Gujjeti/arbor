@@ -1445,6 +1445,9 @@ header.sticky .logo {
   }
 }
 @media (max-width: 768px) {
+  header.sticky #menu-toggle svg {
+    fill: #51483F;
+  }
   .categories__nav {
     overflow-x: auto;
   }
