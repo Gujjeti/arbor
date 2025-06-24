@@ -1088,6 +1088,10 @@
     }
   }
 }
+[data-scroll-container] {
+  overflow-x: hidden;
+  position: relative;
+}
 html {
   font-size: 70%;
   font-family: 'Poppins', sans-serif;

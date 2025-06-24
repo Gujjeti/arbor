@@ -7,7 +7,13 @@ window.addEventListener("load", () => {
 
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
-  smooth: true
+  smooth: true,
+    smartphone: {
+    smooth: false
+  },
+  tablet: {
+    smooth: false
+  }
 });
 
 // Sync Locomotive with ScrollTrigger

@@ -6,7 +6,10 @@
 }
 
 
-
+[data-scroll-container] {
+  overflow-x: hidden;
+  position: relative;
+}
 
 html{
      font-size: 70%;
