@@ -64,12 +64,12 @@
 
 
 <header class="header" data-scroll>
-  <nav class="w-full flex items-center justify-between relative py-4 px-4 navbar">
+  <nav class="w-full flex items-center justify-between relative py-4 px-[2rem] md:px-4 navbar">
     <!-- Left: Menu Icon & Menu Items -->
     <div class="flex items-center gap-6">
       <!-- Menu Icon -->
       <button id="menu-toggle" class="text-2xl md:hidden focus:outline-none text-white">
-        ☰
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#fff"><path d="M160-680v-40h640v40H160Zm0 440v-40h640v40H160Zm0-220v-40h640v40H160Z"/></svg>
       </button>
 
         <!-- Menu List -->
@@ -96,7 +96,7 @@
       <a href="#" class="hidden sm:inline-block btn btn-primary px-2 btn-small bg-gray-200 rounded hover:bg-gray-300 text-sm font-medium ">
         Download Catalogue
       </a>
-      <a href="#" class="hidden sm:inline-block btn btn-primary-outline btn-small">
+      <a href="#" class="hidden lg:inline-block btn btn-primary-outline btn-small">
         Enquire Now
       </a>
     </div>
@@ -129,10 +129,12 @@
   <div class="relative z-20 flex items-center justify-center h-full flex-col">
     
     <div class="text-clipath">
- <h1 class="heading-1 text-white text-center">
-      Redefine Your <br/>
+ <h1 class="heading-1 text-white text-center px-[2rem] md:px-0">
+    
+       Redefine Your <br/>
         Space with Classic <br/>
         Timeless Decor
+   
     </h1>
     </div>
 
@@ -254,7 +256,7 @@
 
 
 
-<section id="aboutArbor" class="aboutArbor px-[3rem] md:px-[10rem]  relative w-full h-screen bg-img bg-[url(../images/white-textture-bg.png)] pt-[10rem]" >
+<section id="aboutArbor" class="aboutArbor px-[3rem] lg:px-[10rem]  relative w-full h-auto lg:h-screen bg-img bg-[url(../images/white-textture-bg.png)] pt-[10rem] pb-[10rem] lg:pb-[0rem]" >
  <div class="grid grid-cols-1 md:grid-cols-[25%_75%] gap-[4vw] p-[2vw] items-start justify-items-end">
 
 
@@ -278,7 +280,9 @@
   <div class="text-left order-1 md:order-none" data-scroll data-scroll-speed="-2">
     <small class="text-olive-drab mb-[3rem] block">About arbor Decor</small>
     <h2 class="heading-1 text-olive-drab">
-        Design is not just what<br/> it looks like, Design is<br/> also how its works.
+       <span> Design is not just what</span>
+        <span>it looks like, Design is</span> 
+      <span> also how its works.</span>
     </h2>
 
     <a href="#" class="btn-link mt-[6rem] inline-block">Read Our Story</a>
@@ -339,7 +343,7 @@
 
 
   <!-- Swiper Slider -->
-  <div class="pt-[5rem] ">
+  <div class="pt-[5rem] px-[2rem] md:px-0">
     <div class="swiper ProductsSlider">
       <div class="swiper-wrapper">
 
@@ -413,7 +417,7 @@
 
 
 
-<section  class="relative px-[3rem] md:px-[10rem] w-full  bg-img bg-[url('../images/white-textture-bg.png')] pt-[10rem] pb-[8rem]">
+<section  class="relative px-[2rem] lg:px-[10rem] w-full  bg-img bg-[url('../images/white-textture-bg.png')] pt-[5rem] md:pt-[10rem] pb-[8rem]">
        <small class="text-olive-drab mb-[4rem] block">Features</small>
 
     <div class="relative flex flex-col lg:flex-row gap-6" id="sticky-target">
@@ -424,7 +428,7 @@
       
   >
         <h2 class="heading-1 text-olive-drab">Why Arbor<br/> Decor</h2>
-        <div class="py-[6rem] px-10">
+        <div class="py-[4rem] md:py-[6rem] px-10">
             <img src="images/arbor-decor.png" alt="Arbor Decor" class="w-[15rem] ">
         </div>
   </div>
@@ -489,16 +493,16 @@
 </section>
 
 
-<section class="relative w-full   bg-[#F2E7DC] pt-[10rem] pb-[10rem] ">
+<section class="relative w-full   bg-[#F2E7DC] pt-[10rem] pb-[5rem] md:pb-[10rem] ">
 
     <span class="absolute right-[20%] top-10 z-20" data-scroll data-scroll-speed="-1">
-    <img src="images/table.png" alt="" class="w-60" />
+    <img src="images/table.png" alt="" class="w-20 lg:w-60" />
   </span>
 
-    <span class="absolute left-[10%] top-50 z-20" data-scroll data-scroll-speed="-1">
-    <img src="images/soft-chair.png" alt="" class="w-60" />
+    <span class="absolute left-[10%] top-20 lg:top-50 z-20" data-scroll data-scroll-speed="-1">
+    <img src="images/soft-chair.png" alt="" class="w-20 lg:w-60" />
   </span>
-  <div class="px-[3rem] md:px-[10rem] relative text-center pb-[7rem]">
+  <div class="px-[3rem] md:px-[10rem] relative text-center pb-[4rem] md:pb-[7rem]">
     <small class="text-olive-drab mb-[3rem] block">Get Inspired</small>
     <h2 class="heading-1 text-olive-drab">See your<br/>
 design dream<br/>
@@ -590,7 +594,7 @@ come to life</h2>
 </section>
 
 
-<section class="relative w-full  bg-[#F2E7DC] pt-[8rem] pb-[8rem]">
+<section class="relative w-full  bg-[#F2E7DC] pt-[3rem] md:pt-[8rem] pb-[8rem]">
 
     
 
@@ -603,7 +607,7 @@ come to life</h2>
 
 
 <div class="swiper mt-30 " id="testimonialSlider">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper px-[2rem] md:px-0">
 
       <!-- Testimonial Slide -->
       <div class="swiper-slide p-4 ">
@@ -754,8 +758,8 @@ come to life</h2>
   
 <footer class="bg-[#7B7458] text-white relative ">
   
-    <div class="px-[3rem] md:px-[10rem] py-[10rem] footer_wrapper">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-50">
+    <div class="px-[3rem] lg:px-[10rem] py-[6rem] md:py-[10rem] footer_wrapper">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-50">
     <!-- Left Column -->
     <div>
       <small class="text-white mb-[1rem] block">Contact</small>
@@ -785,7 +789,7 @@ come to life</h2>
         <li><a href="#" class="hover:underline uppercase font-medium text-[0.8rem]">Contact Us</a></li>
       </ul>
       
-      <h4 class="text-[3rem] font-light leading-tight">
+      <h4 class="text-[3rem] font-light leading-tight address-text">
         Arbor Decor,<br/>
         E/15, 5th floor, Commerce Center,<br/>
         Tardeo Road, Above ICICI Bank,<br/>
@@ -822,7 +826,7 @@ come to life</h2>
 
   <!-- Subfooter -->
 
-    <div class="flex flex-col md:flex-row justify-between items-center mt-45 px-[6rem] py-[2.5rem]">
+    <div class="flex flex-col md:flex-row justify-between items-center mt-10 md:mt-45 px-[6rem] py-[2.5rem]">
     <div class="space-x-4 mb-2 md:mb-0">
       <a href="#" class="hover:underline font-medium">Cookies</a>
       <a href="#" class="hover:underline font-medium">Privacy Policy</a>
@@ -831,7 +835,7 @@ come to life</h2>
   </div>
 
 
-  <div class="arbor-typo absolute -bottom-20 w-screen pointer-events-none">
+  <div class="arbor-typo absolute -bottom-20 w-screen pointer-events-none hidden md:block">
      <h4 class=" text-[19.8vw] text-center font-medium">Arbor Decor</h4>
 
   </div>

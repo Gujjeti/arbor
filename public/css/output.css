@@ -219,8 +219,8 @@
   .top-10 {
     top: calc(var(--spacing) * 10);
   }
-  .top-50 {
-    top: calc(var(--spacing) * 50);
+  .top-20 {
+    top: calc(var(--spacing) * 20);
   }
   .top-\[8rem\] {
     top: 8rem;
@@ -297,23 +297,20 @@
       max-width: 96rem;
     }
   }
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
-  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
   .mt-30 {
     margin-top: calc(var(--spacing) * 30);
-  }
-  .mt-45 {
-    margin-top: calc(var(--spacing) * 45);
   }
   .mt-\[2rem\] {
     margin-top: 2rem;
@@ -408,14 +405,14 @@
   .w-18 {
     width: calc(var(--spacing) * 18);
   }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
   .w-30 {
     width: calc(var(--spacing) * 30);
   }
   .w-50 {
     width: calc(var(--spacing) * 50);
-  }
-  .w-60 {
-    width: calc(var(--spacing) * 60);
   }
   .w-\[8rem\] {
     width: 8rem;
@@ -494,8 +491,8 @@
   .gap-15 {
     gap: calc(var(--spacing) * 15);
   }
-  .gap-50 {
-    gap: calc(var(--spacing) * 50);
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
   }
   .gap-\[1\.5vw\] {
     gap: 1.5vw;
@@ -652,6 +649,9 @@
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
   }
+  .px-\[2rem\] {
+    padding-inline: 2rem;
+  }
   .px-\[3rem\] {
     padding-inline: 3rem;
   }
@@ -676,11 +676,14 @@
   .py-\[2\.5rem\] {
     padding-block: 2.5rem;
   }
+  .py-\[4rem\] {
+    padding-block: 4rem;
+  }
   .py-\[6rem\] {
     padding-block: 6rem;
   }
-  .py-\[10rem\] {
-    padding-block: 10rem;
+  .pt-\[3rem\] {
+    padding-top: 3rem;
   }
   .pt-\[5rem\] {
     padding-top: 5rem;
@@ -697,8 +700,11 @@
   .pb-15 {
     padding-bottom: calc(var(--spacing) * 15);
   }
-  .pb-\[7rem\] {
-    padding-bottom: 7rem;
+  .pb-\[4rem\] {
+    padding-bottom: 4rem;
+  }
+  .pb-\[5rem\] {
+    padding-bottom: 5rem;
   }
   .pb-\[8rem\] {
     padding-bottom: 8rem;
@@ -743,9 +749,6 @@
   }
   .text-\[1\.4rem\] {
     font-size: 1.4rem;
-  }
-  .text-\[1\.125rem\] {
-    font-size: 1.125rem;
   }
   .text-\[1rem\] {
     font-size: 1rem;
@@ -884,6 +887,11 @@
       order: 0;
     }
   }
+  .md\:mt-45 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 45);
+    }
+  }
   .md\:mb-0 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 0);
@@ -939,14 +947,14 @@
       grid-template-columns: 25% 75%;
     }
   }
-  .md\:grid-cols-\[75\%_25\%\] {
-    @media (width >= 48rem) {
-      grid-template-columns: 75% 25%;
-    }
-  }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
+    }
+  }
+  .md\:gap-50 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 50);
     }
   }
   .md\:gap-\[3rem\] {
@@ -974,9 +982,49 @@
       padding: calc(var(--spacing) * 6);
     }
   }
+  .md\:px-0 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:px-4 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+  }
   .md\:px-\[10rem\] {
     @media (width >= 48rem) {
       padding-inline: 10rem;
+    }
+  }
+  .md\:py-\[6rem\] {
+    @media (width >= 48rem) {
+      padding-block: 6rem;
+    }
+  }
+  .md\:py-\[10rem\] {
+    @media (width >= 48rem) {
+      padding-block: 10rem;
+    }
+  }
+  .md\:pt-\[8rem\] {
+    @media (width >= 48rem) {
+      padding-top: 8rem;
+    }
+  }
+  .md\:pt-\[10rem\] {
+    @media (width >= 48rem) {
+      padding-top: 10rem;
+    }
+  }
+  .md\:pb-\[7rem\] {
+    @media (width >= 48rem) {
+      padding-bottom: 7rem;
+    }
+  }
+  .md\:pb-\[10rem\] {
+    @media (width >= 48rem) {
+      padding-bottom: 10rem;
     }
   }
   .md\:text-lg {
@@ -991,9 +1039,29 @@
       font-weight: var(--font-weight-medium);
     }
   }
+  .lg\:top-50 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 50);
+    }
+  }
+  .lg\:inline-block {
+    @media (width >= 64rem) {
+      display: inline-block;
+    }
+  }
+  .lg\:h-screen {
+    @media (width >= 64rem) {
+      height: 100vh;
+    }
+  }
   .lg\:w-1\/2 {
     @media (width >= 64rem) {
       width: calc(1/2 * 100%);
+    }
+  }
+  .lg\:w-60 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 60);
     }
   }
   .lg\:grid-cols-\[10vw_20vw_35vw_20vw_10vw\] {
@@ -1004,6 +1072,16 @@
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
+    }
+  }
+  .lg\:px-\[10rem\] {
+    @media (width >= 64rem) {
+      padding-inline: 10rem;
+    }
+  }
+  .lg\:pb-\[0rem\] {
+    @media (width >= 64rem) {
+      padding-bottom: 0rem;
     }
   }
 }
@@ -1075,7 +1153,7 @@ header .nav-link {
   @media (width >= 48rem) {
     align-items: center;
   }
-  @media (width >= 48rem) {
+  @media (width >= 64rem) {
     padding-inline: 4rem;
   }
 }
@@ -1283,11 +1361,30 @@ header.sticky .logo {
   background-repeat: no-repeat;
 }
 .heading-1 {
+  overflow: hidden;
   font-size: 6.25vw;
   --tw-leading: calc(var(--spacing) * 30);
   line-height: calc(var(--spacing) * 30);
   --tw-font-weight: var(--font-weight-normal);
   font-weight: var(--font-weight-normal);
+}
+.heading-1 span {
+  display: inline;
+  --tw-translate-y: 100%;
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+  transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 2000ms;
+  transition-duration: 2000ms;
+  @media (width >= 48rem) {
+    display: block;
+  }
+}
+.is-inview .heading-1 span {
+  --tw-translate-y: calc(var(--spacing) * 0);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
 }
 .btn-link {
   border-bottom-style: var(--tw-border-style);
@@ -1312,7 +1409,7 @@ header.sticky .logo {
     }
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .parallax-section > div.relative.z-10 > div {
     position: static !important;
     margin: 1rem auto;
@@ -1323,6 +1420,12 @@ header.sticky .logo {
   }
   .heading-1 br {
     display: none;
+  }
+  .address-text br {
+    display: none;
+  }
+  .heading-1 span {
+    display: inline;
   }
 }
 .arbor-typo h4 {

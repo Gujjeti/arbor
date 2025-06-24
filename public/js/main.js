@@ -245,8 +245,8 @@ const swiper = new Swiper(".mySwiper", {
 
 const ProductsSlider = new Swiper('.ProductsSlider', {
   slidesPerView: 1,
-  spaceBetween: 80,
-  slidesOffsetBefore: 140, 
+  spaceBetween: 30,
+  slidesOffsetBefore: 0, 
  
   breakpoints: {
     640: {
@@ -291,8 +291,8 @@ const inspirationSlider = new Swiper('#inspirationSlider', {
 
 const testimonialSlider = new Swiper('#testimonialSlider', {
   slidesPerView: 1,
-  spaceBetween: 60,
-  slidesOffsetBefore: 140, 
+  spaceBetween: 30,
+  slidesOffsetBefore: 0, 
   allowTouchMove: true,
 
   breakpoints: {
