@@ -1,17 +1,6 @@
 //Developed by: Ganesh Gujjeti
 
 
-  const menuToggle = document.getElementById('menu-toggle');
-  const menuClose = document.getElementById('menu-close');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  menuToggle.addEventListener('click', () => {
-  
-  });
-
-  menuClose.addEventListener('click', () => {
-   
-  });
 
 window.addEventListener("load", () => {
 
@@ -145,6 +134,29 @@ locoScroll.on("scroll", function(obj) {
 
 
 $(document).ready(function () {
+
+  $("#menu-toggle").click(function(){
+  gsap.to('#mobile-menu',{
+    x: 0,
+    opacity: 1,
+    duration: 0.5,
+    visibility: "visible",
+    ease: "power2.out"
+  })
+});
+
+ $("#menu-close").click(function(){
+    gsap.to('#mobile-menu',{
+    x: -100,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+   onComplete: function() {
+      gsap.set('#mobile-menu', { visibility: "hidden" });
+    }
+  })
+});
+
 
   gsap.from(".header .navbar", {
     y: -30,

@@ -189,6 +189,9 @@
   .pointer-events-none {
     pointer-events: none;
   }
+  .visible {
+    visibility: visible;
+  }
   .absolute {
     position: absolute;
   }
@@ -1410,6 +1413,9 @@ header.sticky .logo {
   }
 }
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
   .parallax-section > div.relative.z-10 > div {
     position: static !important;
     margin: 1rem auto;
@@ -1496,6 +1502,16 @@ header.sticky .logo {
 }
 .c-cursor__arrows svg * {
   fill: #51483F;
+}
+#mobile-menu {
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+#mobile-menu.show {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
 }
 .intro {
   height: 100vh;
