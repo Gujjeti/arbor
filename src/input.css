@@ -215,6 +215,20 @@ transition-delay: 5.6s;
 
  }
 
+ @media (max-width: 600px) {
+
+ #mobile-menu{
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+#mobile-menu.show{
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+}
 
  @media (max-width: 768px) {
   html, body{
@@ -325,17 +339,6 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
     fill: #51483F
 }
 
-#mobile-menu{
-  transform: translateX(-100%);
-  opacity: 0;
-  visibility: hidden;
-}
-
-#mobile-menu.show{
-  transform: translateX(0%);
-  opacity: 1;
-  visibility: visible;
-}
 
 
 
