@@ -175,6 +175,7 @@ $(document).ready(function () {
     e.preventDefault();
     $('.categories-sec').show()
     $('.categories-sec').addClass('h-screen')
+    $('html, body').addClass('overflow-hidden');
     const $section = $(".cat-wrapper");
     $section.removeClass("hide");
     gsap.to('.text-clipath',{
@@ -211,7 +212,7 @@ $(document).ready(function () {
       !$section.is(e.target) &&
       !$section.has(e.target).length 
     ) {
-
+  $('html, body').removeClass('overflow-hidden');
     gsap.to("#thumbSlider .swiper-slide", {
       y: 0,
       ease: "power3.out",

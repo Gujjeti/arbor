@@ -140,7 +140,7 @@ header.sticky .logo{
 }
 
 .categories__nav{
-   @apply flex items-center justify-between w-[100%] bg-transparent m-auto  z-30 p-10 px-40 gap-[3rem] text-secondary uppercase  translate-y-[0px] transition-all duration-1000 ease-in-out opacity-100;
+   @apply flex items-center justify-between w-[100%] bg-transparent m-auto  z-30 p-10 px-10 md:px-40 gap-[3rem] text-secondary uppercase  translate-y-[0px] transition-all duration-1000 ease-in-out opacity-100;
 
 }
 
@@ -235,6 +235,14 @@ transition-delay: 5.6s;
 
  @media (max-width: 768px) {
 
+  .cat-wrapper, .cat-wrapper.hide{
+        clip-path: inset(0 0rem 0 0rem);
+
+  }
+
+.cat-wrapper.active {
+    transform: translateY(58vh);
+}
   .h-screen {
    height: 100dvh !important;
   }
