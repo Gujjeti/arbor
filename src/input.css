@@ -234,6 +234,9 @@ transition-delay: 5.6s;
 }
 
  @media (max-width: 768px) {
+  .categories__nav{
+    overflow-x: auto;
+  }
   html, body{
     overflow-x: hidden !important;
   }
