@@ -227,6 +227,10 @@ section .heading-1{
 
  @media (max-width: 600px) {
 
+  section .heading-1{
+    @apply transform translate-y-0
+  }
+
  #mobile-menu{
   transform: translateX(-100%);
   opacity: 0;

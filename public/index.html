@@ -716,7 +716,7 @@ come to life</h2>
 </h2>
 </div>
 
-    <div class="grid gap-[1.5vw] 
+    <div class="hidden sm:grid gap-[1.5vw] 
               grid-cols-1 
               sm:grid-cols-2 
               md:grid-cols-3 
@@ -767,6 +767,40 @@ come to life</h2>
     </div>
 
   </div>
+
+
+  <div class="block sm:hidden p-[2rem]">
+  <div class="swiper gallerySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/asymmetric grid/Frame 1597885720.jpg" class="w-full object-cover h-[300px]" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/asymmetric grid/Frame 1597885721.jpg" class="w-full object-cover h-[300px]" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/asymmetric grid/Frame 1597885722.jpg" class="w-full object-cover h-[300px]" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/asymmetric grid/Frame 1597885723.jpg" class="w-full object-cover h-[300px]" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/asymmetric grid/Frame 1597885724.jpg" class="w-full object-cover h-[300px]" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/asymmetric grid/Frame 1597885725.jpg" class="w-full object-cover h-[300px]" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/asymmetric grid/Frame 1597885726.jpg" class="w-full object-cover h-[300px]" />
+      </div>
+      <div class="swiper-slide">
+        <img src="images/asymmetric grid/Frame 1597885727.jpg" class="w-full object-cover h-[300px]" />
+      </div>
+    </div>
+
+
+  </div>
+</div>
 </section>
 
   
@@ -870,5 +904,14 @@ come to life</h2>
 
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+  const swiper = new Swiper(".gallerySwiper", {
+      spaceBetween: 30,
+
+  });
+</script>
+
+
 </body>
 </html>
