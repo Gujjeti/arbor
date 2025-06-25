@@ -1,18 +1,22 @@
 //Developed by: Ganesh Gujjeti
 
 
-var locoScroll = null;
 window.addEventListener("load", () => {
 
-const isIOS = /iP(ad|hone|od)/.test(navigator.userAgent);
 
- locoScroll = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: !isIOS,
-   smoothMobile: !isIOS 
-});
+const isMobileOrTablet = /iP(ad|hone|od)|Android|Tablet|Mobile/i.test(navigator.userAgent);
+const isMobile = /iP(hone|od)|Android/i.test(navigator.userAgent);
+if(isMobile){
+  document.documentElement.classList.add('mobile');
 
-// Sync Locomotive with ScrollTrigger
+}
+if (!isMobile) {
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true
+  });
+
+  // Sync Locomotive with ScrollTrigger
 locoScroll.on("scroll", ScrollTrigger.update);
 
 ScrollTrigger.scrollerProxy("[data-scroll-container]", {
@@ -34,26 +38,9 @@ ScrollTrigger.scrollerProxy("[data-scroll-container]", {
     : "fixed"
 });
 
-
-gsap.to("#sticky-content", {
-  scrollTrigger: {
-    trigger: "#sticky-content",
-    scroller: "[data-scroll-container]",  // <--- this is what you missed
-    start: "top top",
-    end: "bottom bottom",
-    pin: true,
-    pinSpacing: false,
-  }
-});
-
 // Ensure ScrollTrigger + Locomotive stay in sync
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
-
-
-
-  // Assuming you have your LocomotiveScroll initialized as `scroll`
-
 
 let lastScrollY = 0;
 
@@ -76,6 +63,30 @@ locoScroll.on("scroll", function(obj) {
   }
   lastScrollY = currentY;
 });
+
+
+}
+
+
+
+
+gsap.to("#sticky-content", {
+  scrollTrigger: {
+    trigger: "#sticky-content",
+    scroller: "[data-scroll-container]",  // <--- this is what you missed
+    start: "top top",
+    end: "bottom bottom",
+    pin: true,
+    pinSpacing: false,
+  }
+});
+
+
+
+
+  // Assuming you have your LocomotiveScroll initialized as `scroll`
+
+
 
 
 
@@ -169,35 +180,14 @@ $(document).ready(function () {
 
   $(".categories__nav a").click(function (e) {
     e.preventDefault();
-
-     if (locoScroll) {
-    // Locomotive smooth scroll
-    locoScroll.scrollTo(0, {
-      duration: 1000
-    });
-  } else {
-    // Native smooth scroll
-    window.scrollTo({
+      window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-  }
 
     $('.categories-sec').show()
     $('.categories-sec').addClass('h-screen')
-    if (locoScroll.options.smooth) {
-    // Locomotive handles scroll
-    scroll.scrollTo(0, {
-      duration: 1000,        // 1 second
-      easing: [0.25, 0.00, 0.35, 1.00]  // optional custom easing
-    });
-  } else {
-    // Native scroll fallback (iOS or if smooth = false)
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
+
 
     $('html, body').addClass('overflow-hidden');
     const $section = $(".cat-wrapper");
