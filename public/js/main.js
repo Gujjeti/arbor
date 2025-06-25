@@ -1,15 +1,15 @@
 //Developed by: Ganesh Gujjeti
 
 
-
+var locoScroll = null;
 window.addEventListener("load", () => {
 
 const isIOS = /iP(ad|hone|od)/.test(navigator.userAgent);
 
-const locoScroll = new LocomotiveScroll({
+ locoScroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: !isIOS,
-  smoothMobile: false
+   smoothMobile: !isIOS 
 });
 
 // Sync Locomotive with ScrollTrigger
@@ -169,8 +169,36 @@ $(document).ready(function () {
 
   $(".categories__nav a").click(function (e) {
     e.preventDefault();
+
+     if (locoScroll) {
+    // Locomotive smooth scroll
+    locoScroll.scrollTo(0, {
+      duration: 1000
+    });
+  } else {
+    // Native smooth scroll
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
     $('.categories-sec').show()
     $('.categories-sec').addClass('h-screen')
+    if (locoScroll.options.smooth) {
+    // Locomotive handles scroll
+    scroll.scrollTo(0, {
+      duration: 1000,        // 1 second
+      easing: [0.25, 0.00, 0.35, 1.00]  // optional custom easing
+    });
+  } else {
+    // Native scroll fallback (iOS or if smooth = false)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
     $('html, body').addClass('overflow-hidden');
     const $section = $(".cat-wrapper");
     $section.removeClass("hide");
