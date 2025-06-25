@@ -58,7 +58,7 @@ body{
 
 
 header .nav-link {
-    @apply hover:text-white text-[2rem] md:text-[1rem] text-secondary md:text-white font-normal uppercase
+    @apply hover:text-white text-[1.5rem] md:text-[1rem] text-secondary md:text-white font-normal uppercase
 
   }
 
@@ -240,9 +240,7 @@ transition-delay: 5.6s;
 
   }
 
-.cat-wrapper.active {
-    transform: translateY(58vh);
-}
+
   .h-screen {
    height: 100dvh !important;
   }
