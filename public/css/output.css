@@ -1405,21 +1405,17 @@ header.sticky .logo {
   --tw-font-weight: var(--font-weight-normal);
   font-weight: var(--font-weight-normal);
 }
-.heading-1 span {
-  display: inline;
+section .heading-1 {
   --tw-translate-y: 100%;
   translate: var(--tw-translate-x) var(--tw-translate-y);
   transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   transition-property: all;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
   transition-duration: var(--tw-duration, var(--default-transition-duration));
-  --tw-duration: 2000ms;
-  transition-duration: 2000ms;
-  @media (width >= 48rem) {
-    display: block;
-  }
+  --tw-duration: 1000ms;
+  transition-duration: 1000ms;
 }
-.is-inview .heading-1 span {
+.is-inview .heading-1 {
   --tw-translate-y: calc(var(--spacing) * 0);
   translate: var(--tw-translate-x) var(--tw-translate-y);
 }
@@ -1457,6 +1453,9 @@ header.sticky .logo {
     opacity: 1;
     visibility: visible;
   }
+  .h-screen {
+    height: 100dvh !important;
+  }
 }
 @media (max-width: 768px) {
   body {
@@ -1465,9 +1464,6 @@ header.sticky .logo {
   }
   .cat-wrapper, .cat-wrapper.hide {
     clip-path: inset(0 0rem 0 0rem) !important;
-  }
-  .h-screen {
-    height: 100dvh !important;
   }
   header.sticky #menu-toggle svg {
     fill: #51483F;

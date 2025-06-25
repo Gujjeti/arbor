@@ -211,11 +211,12 @@ transition-delay: 5.6s;
 .heading-1{
     @apply  text-[6.25vw] font-normal  leading-30 overflow-hidden 
 }
- .heading-1 span{
-    @apply transform translate-y-[100%] transition-all duration-2000 inline md:block
- }
 
- .is-inview .heading-1 span{
+section .heading-1{
+ @apply transform translate-y-[100%] transition-all duration-1000
+}
+
+ .is-inview .heading-1 {
     @apply translate-y-0
  }
 
@@ -238,6 +239,9 @@ transition-delay: 5.6s;
   visibility: visible;
 }
 
+  .h-screen {
+   height: 100dvh !important;
+  }
 
 }
 
@@ -253,9 +257,6 @@ transition-delay: 5.6s;
   }
 
 
-  .h-screen {
-   height: 100dvh !important;
-  }
   header.sticky #menu-toggle svg{
     fill: #51483F;
   }
