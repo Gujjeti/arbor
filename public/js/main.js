@@ -4,16 +4,12 @@
 
 window.addEventListener("load", () => {
 
+const isIOS = /iP(ad|hone|od)/.test(navigator.userAgent);
 
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-    smartphone: {
-    smooth: false
-  },
-  tablet: {
-    smooth: false
-  }
+  smooth: !isIOS,
+  smoothMobile: false
 });
 
 // Sync Locomotive with ScrollTrigger

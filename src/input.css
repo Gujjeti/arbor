@@ -231,13 +231,19 @@ transition-delay: 5.6s;
   opacity: 1;
   visibility: visible;
 }
+
+
 }
 
  @media (max-width: 768px) {
 
-  .cat-wrapper, .cat-wrapper.hide{
-        clip-path: inset(0 0rem 0 0rem);
+  body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto; /* disable momentum scroll */
+}
 
+  .cat-wrapper, .cat-wrapper.hide{
+        clip-path: inset(0 0rem 0 0rem) !important;
   }
 
 
