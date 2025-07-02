@@ -210,14 +210,8 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-  .-top-2 {
-    top: calc(var(--spacing) * -2);
-  }
   .-top-4 {
     top: calc(var(--spacing) * -4);
-  }
-  .-top-5 {
-    top: calc(var(--spacing) * -5);
   }
   .-top-15 {
     top: calc(var(--spacing) * -15);
@@ -242,12 +236,6 @@
   }
   .top-\[8rem\] {
     top: 8rem;
-  }
-  .-right-4 {
-    right: calc(var(--spacing) * -4);
-  }
-  .-right-7 {
-    right: calc(var(--spacing) * -7);
   }
   .-right-8 {
     right: calc(var(--spacing) * -8);
@@ -372,8 +360,8 @@
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
-  .mb-12 {
-    margin-bottom: calc(var(--spacing) * 12);
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
   }
   .mb-15 {
     margin-bottom: calc(var(--spacing) * 15);
@@ -577,25 +565,11 @@
       margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
-  .space-y-\[2rem\] {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(2rem * var(--tw-space-y-reverse));
-      margin-block-end: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
   .space-y-\[4rem\] {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
       margin-block-start: calc(4rem * var(--tw-space-y-reverse));
       margin-block-end: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
-  .space-y-\[5rem\] {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(5rem * var(--tw-space-y-reverse));
-      margin-block-end: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-x-4 {
@@ -650,6 +624,9 @@
   .border-\[rgba\(255\,255\,255\,0\.2\)\] {
     border-color: rgba(255,255,255,0.2);
   }
+  .border-olive-drab {
+    border-color: var(--color-olive-drab);
+  }
   .border-white {
     border-color: var(--color-white);
   }
@@ -685,6 +662,9 @@
   }
   .bg-\[url\(\.\.\/images\/white-textture-bg\.png\)\] {
     background-image: url(../images/white-textture-bg.png);
+  }
+  .fill-olive-drab {
+    fill: var(--color-olive-drab);
   }
   .fill-secondary {
     fill: var(--color-secondary);
@@ -778,6 +758,9 @@
   }
   .pb-3 {
     padding-bottom: calc(var(--spacing) * 3);
+  }
+  .pb-5 {
+    padding-bottom: calc(var(--spacing) * 5);
   }
   .pb-15 {
     padding-bottom: calc(var(--spacing) * 15);
@@ -1166,6 +1149,16 @@
       padding-top: 10rem;
     }
   }
+  .md\:pt-\[15rem\] {
+    @media (width >= 48rem) {
+      padding-top: 15rem;
+    }
+  }
+  .md\:pt-\[18rem\] {
+    @media (width >= 48rem) {
+      padding-top: 18rem;
+    }
+  }
   .md\:pb-\[7rem\] {
     @media (width >= 48rem) {
       padding-bottom: 7rem;
@@ -1371,6 +1364,7 @@ header.sticky .logo {
 .btn-large {
   height: calc(var(--spacing) * 20);
   min-width: calc(var(--spacing) * 65);
+  padding-inline: calc(var(--spacing) * 10);
 }
 .btn-primary {
   border-style: var(--tw-border-style);

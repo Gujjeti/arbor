@@ -19,6 +19,27 @@ if (!isMobile) {
   // Sync Locomotive with ScrollTrigger
 locoScroll.on("scroll", ScrollTrigger.update);
 
+   // 🛠 Fix for Elfsight widget cutting off footer
+   window.addEventListener('efsWidgetLoaded', () => {
+     setTimeout(() => {
+       if (locoScroll) locoScroll.update();
+     }, 500);
+   });
+
+   const elfsightContainer = document.querySelector('.elfsight-app-3a46c95c-ab66-41a9-a5a1-3834ef20b202');
+
+if (elfsightContainer && locoScroll) {
+  const observer = new MutationObserver(() => {
+    locoScroll.update();
+  });
+
+  observer.observe(elfsightContainer, {
+    childList: true,
+    subtree: true
+  });
+}
+
+
 ScrollTrigger.scrollerProxy("[data-scroll-container]", {
   scrollTop(value) {
     return arguments.length 
