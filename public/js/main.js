@@ -1,8 +1,8 @@
 //Developed by: Ganesh Gujjeti
 
+var locoScroll;
 
 window.addEventListener("load", () => {
-
 
 const isMobileOrTablet = /iP(ad|hone|od)|Android|Tablet|Mobile/i.test(navigator.userAgent);
 const isMobile = /iP(hone|od)|Android/i.test(navigator.userAgent);
@@ -11,7 +11,7 @@ if(isMobile){
 
 }
 if (!isMobile) {
-  const locoScroll = new LocomotiveScroll({
+   locoScroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true
   });
@@ -62,7 +62,9 @@ locoScroll.on("scroll", function(obj) {
    
   }
   lastScrollY = currentY;
+  
 });
+
 
 
 }
@@ -125,6 +127,10 @@ gsap.to("#sticky-content", {
   }
 }, "=-1.3");
 
+tl.from(".hero-sec-img", {
+scale:1.5
+}, "=-0.5");
+
 
             tl.to('html', {
   onStart: () => {
@@ -147,6 +153,27 @@ gsap.to("#sticky-content", {
 
 
 $(document).ready(function () {
+
+  $('.product-img').hover(
+      function () {
+        const newSrc = $(this).data('hover');
+        $(this).attr('data-original', $(this).attr('src')); // store original
+        $(this).attr('src', newSrc);
+      },
+      function () {
+        const originalSrc = $(this).attr('data-original');
+        $(this).attr('src', originalSrc);
+      }
+    );
+
+    $('#scrollToTopBtn').click(function () {
+    if ($('html').hasClass('mobile')) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (typeof locoScroll !== 'undefined') {
+      locoScroll.scrollTo(0, { duration: 800, disableLerp: true });
+    }
+  });
+
 
   $("#menu-toggle").click(function(){
   gsap.to('#mobile-menu',{
@@ -278,7 +305,7 @@ const swiper = new Swiper(".mySwiper", {
 
 const ProductsSlider = new Swiper('.ProductsSlider', {
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 60,
   slidesOffsetBefore: 0, 
  
   breakpoints: {
@@ -324,7 +351,7 @@ const inspirationSlider = new Swiper('#inspirationSlider', {
 
 const testimonialSlider = new Swiper('#testimonialSlider', {
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 60,
   slidesOffsetBefore: 0, 
   allowTouchMove: true,
 
