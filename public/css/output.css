@@ -1461,6 +1461,60 @@ header.sticky .logo {
     }
   }
 }
+.link {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+.link--leda {
+  overflow: hidden;
+  line-height: 2;
+}
+.link--leda::before {
+  height: 2px;
+  top: calc(100% - 5px);
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+}
+.link::before {
+  content: '';
+}
+.link::before, .link::after {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+.link--leda::after {
+  content: attr(data-text);
+  height: 100%;
+  top: 0;
+  background: none;
+  transform-origin: 100% 50%;
+  transform: translate3d(150%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+}
+.link--leda:hover::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
+}
+.link--leda:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+.link--leda span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+}
+.link--leda:hover span {
+  transform: translate3d(-150%, 0, 0);
+}
+.link--leda:hover {
+  color: var(--color-olive-drab);
+}
 .text-clipath {
   clip-path: polygon( 0% 50%, 100% 50%,  100% 50%, 0% 50% );
   transition: clip-path 1.8s cubic-bezier(0.77, 0, 0.175, 1);
