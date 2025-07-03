@@ -212,7 +212,7 @@ transition-delay: 5.6s;
 
 
 .heading-1{
-    @apply  text-[6.25vw] font-normal  leading-30 overflow-hidden 
+    @apply  text-[6.25vw] font-normal  leading-30 
 }
 
 section .heading-1{
