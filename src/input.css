@@ -379,9 +379,13 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
     fill: #51483F
 }
 
+#scrollTopBtn{
+  @apply transition-all translate-y-20 opacity-0 duration-500 cursor-pointer
+}
 
-
-
+#scrollTopBtn.active{
+  @apply opacity-100 -translate-y-0
+}
 
 
 

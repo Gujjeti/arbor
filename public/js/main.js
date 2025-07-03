@@ -86,6 +86,21 @@ locoScroll.on("scroll", function(obj) {
   
 });
 
+let scrollTopBtn = document.querySelector('#scrollTopBtn');
+
+locoScroll.on('scroll', (instance) => {
+    if (instance.scroll.y > 300) { // Show after scrolling 300px
+        scrollTopBtn.classList.add('active')
+    } else {
+        scrollTopBtn.classList.remove('active')
+    }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+    locoScroll.stop(); // Stop current scroll
+    locoScroll.scrollTo(0);
+    locoScroll.start(); // Restart locomotive scroll
+});
 
 
 }
