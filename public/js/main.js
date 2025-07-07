@@ -1,4 +1,5 @@
 //Developed by: Ganesh Gujjeti
+gsap.registerPlugin(ScrollTrigger);
 
 var locoScroll;
 
@@ -70,21 +71,23 @@ locoScroll.on("scroll", function(obj) {
 
   if (currentY < lastScrollY && currentY > 100) {
     // Scrolling up
-    $('header').addClass('sticky');
-    $('header').removeClass('hide');
+    $('.home header').addClass('sticky');
+    $('.home header').removeClass('hide');
   } else if (currentY > lastScrollY) {
     // Scrolling down
-    $('header').removeClass('sticky');
-      $('header').addClass('hide');
+    $('.home header').removeClass('sticky');
+      $('.home header').addClass('hide');
   }
 
   if(currentY < 60) {
-    $('header').removeClass('sticky');
+    $('.home header').removeClass('sticky');
    
   }
   lastScrollY = currentY;
   
 });
+
+
 
 let scrollTopBtn = document.querySelector('#scrollTopBtn');
 
@@ -95,6 +98,38 @@ locoScroll.on('scroll', (instance) => {
         scrollTopBtn.classList.remove('active')
     }
 });
+
+
+
+
+
+
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".videoSec",
+      start: "top 25%",
+      end: "+=300%", // height of pinning
+      scrub: true,
+      pin: true,
+      anticipatePin: 1,
+         scroller: "[data-scroll-container]",
+    }
+  })
+  .to("#myVideo", {
+    scale: 2.1,
+    y: "-80vh",
+    duration: 1,
+    ease: "power2.inOut"
+  },"h")
+  .to(".text-clipath", {
+    y: 100,
+    duration: 1,
+    opacity:0,
+    ease: "power2.inOut"
+  },"h");
+
+
 
 scrollTopBtn.addEventListener('click', () => {
     locoScroll.stop(); // Stop current scroll
@@ -118,6 +153,10 @@ gsap.to("#sticky-content", {
     pinSpacing: false,
   }
 });
+
+
+
+
 
 
 

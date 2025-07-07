@@ -51,6 +51,7 @@ body{
     font-size: 1rem;
     font-weight: 700;
   color: #51483F;
+  background-color: #F8F6F0;
 }
 
 
@@ -58,12 +59,20 @@ body{
 
 
 header .nav-link {
-    @apply hover:text-white text-[1.5rem] md:text-[1rem] text-secondary md:text-white font-normal uppercase
+    @apply hover:text-white  text-[1.5rem] md:text-[1rem] text-secondary md:text-white font-semibold uppercase
 
   }
 
+  .innerPage header .nav-link{
+    @apply text-secondary opacity-40
+  }
+
+    .innerPage header .nav-link.active{
+    @apply opacity-100
+  }
+
   .header{
-    @apply w-full   flex md:items-center justify-between z-25 absolute top-0 left-0 bg-transparent lg:px-[4rem] 
+    @apply w-full   flex md:items-center justify-between z-25 fixed top-0 left-0 bg-transparent lg:px-[4rem] 
     h-40 transition-all duration-300 ease-in-out
   }
 
@@ -99,13 +108,13 @@ header.sticky .logo{
 
    .btn-primary {
   @apply bg-primary text-secondary border border-primary 
-         hover:text-secondary hover:bg-transparent hover:border-white
-         relative overflow-hidden transition-all duration-300 ease-in-out;
+         hover:text-white hover:bg-transparent hover:border-secondary
+         relative overflow-hidden  transition-all duration-300 ease-in-out;
 }
 
 .btn-primary::before {
   content: '';
-  @apply absolute inset-0 bg-gradient-to-r from-white to-white 
+  @apply absolute inset-0 bg-secondary
          scale-x-0 origin-left transition-transform duration-300 rounded-full z-0;
 }
 
@@ -289,10 +298,17 @@ transition-delay: 5.6s;
     @apply bg-center bg-no-repeat  top-0 left-0 bg-cover bg-[#F8F6F0];
 }
 
+.bg-img-2{
+    @apply bg-center bg-no-repeat  top-0 left-0 bg-cover bg-white;
+}
 
 
 .heading-1{
     @apply  text-[6.25vw] font-normal  leading-30 
+}
+
+.heading-2{
+    @apply  text-[4.375rem] font-normal  leading-20 
 }
 
 section .heading-1{
@@ -395,6 +411,12 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
   display: flex;
   width: 200%; 
   animation: scrollTicker 20s linear infinite;
+    animation-play-state: running;
+
+}
+
+#scrollTickerContainer:hover .ticker-track {
+  animation-play-state: paused;
 }
 
 .c-cursor {
@@ -468,7 +490,36 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
 }
 
 
+img[data-scroll] {
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
 
+small {
+    font-size: 100%;
+}
+
+
+#videoWrapper {
+  top: 70vh;                /* bottom 10% of screen */
+  left: 50%;
+  width: 50vw;
+  position: fixed;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+
+
+/* #videoWrapper{
+    top: 0;
+  left: 50%;
+  width: 50vw;
+  position: fixed;
+bottom: auto;
+transform: translate(-50%, 90vh);
+
+} */
 
 
 
@@ -487,7 +538,7 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
   opacity: 1;
   transition: clip-path 1.5s linear, opacity 1.5s linear;
       font-size: 2.5vw;
-
+z-index: 9999;
 
 }
 
@@ -507,6 +558,7 @@ background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 
     height: 100%;
     opacity: 0;
     transition: 0.5s;
+    
 }
 
 .intro__hold {
