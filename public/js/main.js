@@ -66,26 +66,31 @@ ScrollTrigger.refresh();
 
 let lastScrollY = 0;
 
+const videoEl = document.querySelector('#myVideo');
+
 locoScroll.on("scroll", function(obj) {
   const currentY = obj.scroll.y;
+  const isHome = document.body.classList.contains('home');
+  const videoTop = videoEl?.getBoundingClientRect().top;
 
-  if (currentY < lastScrollY && currentY > 100) {
+  // Condition: either home and scrolled past 100 OR video has reached top
+  const trigger = isHome ? (currentY > 100) : (videoTop <= 0);
+
+  if (currentY < lastScrollY && trigger) {
     // Scrolling up
-    $('.home header').addClass('sticky');
-    $('.home header').removeClass('hide');
-  } else if (currentY > lastScrollY) {
+    $('header').addClass('sticky').removeClass('hide');
+  } else if (currentY > lastScrollY && trigger) {
     // Scrolling down
-    $('.home header').removeClass('sticky');
-      $('.home header').addClass('hide');
+    $('header').removeClass('sticky').addClass('hide');
   }
 
-  if(currentY < 60) {
-    $('.home header').removeClass('sticky');
-   
+  if (currentY < 60) {
+    $('header').removeClass('sticky');
   }
+
   lastScrollY = currentY;
-  
 });
+
 
 
 
@@ -103,8 +108,7 @@ locoScroll.on('scroll', (instance) => {
 
 
 
-
-
+if($('.videoSec').length){
   gsap.timeline({
     scrollTrigger: {
       trigger: ".videoSec",
@@ -125,9 +129,23 @@ locoScroll.on('scroll', (instance) => {
   .to(".text-clipath", {
     y: 100,
     duration: 1,
-    opacity:0,
+
     ease: "power2.inOut"
   },"h");
+}
+
+
+// Animate .text-clipath with GSAP, including delay
+
+if($('.text-clipath').length){
+gsap.to(".text-clipath", {
+  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+  opacity: 1,
+  delay: 5.2, // matches your CSS transition-delay
+  duration: 2,
+  ease: 'power3.out'
+});
+}
 
 
 
@@ -141,8 +159,7 @@ scrollTopBtn.addEventListener('click', () => {
 }
 
 
-
-
+if($('#sticky-content').length){
 gsap.to("#sticky-content", {
   scrollTrigger: {
     trigger: "#sticky-content",
@@ -154,6 +171,8 @@ gsap.to("#sticky-content", {
   }
 });
 
+}
+
 
 
 
@@ -164,6 +183,40 @@ gsap.to("#sticky-content", {
   // Assuming you have your LocomotiveScroll initialized as `scroll`
 
 
+
+
+// Number of items inside
+const items = document.querySelectorAll(".reveal-item");
+const section = document.querySelector(".presence-sec");
+
+const tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: section,
+    start: "top top",
+    end: `+=${items.length * 100}%`, // pin for N items
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    scroller: "[data-scroll-container]", // if using Locomotive Scroll
+  }
+});
+
+// Animate each .reveal-item in sequence
+items.forEach((item, i) => {
+  const content = item.querySelector('.content');
+
+  // use labels to stagger each reveal
+  tl2.to(item, {
+    '--lineWidth': '100%',
+    ease: 'none'
+  }, i) // animation at step i
+
+  .from(content, {
+    opacity: 0,
+    y: 30,
+    ease: 'power3.out'
+  }, i + 0.2); // slight delay after border
+});
 
 
 
@@ -221,6 +274,38 @@ scale:1.5
   //       delay: 0.8 
   //     });
 
+
+
+document.querySelectorAll(".reveal-card").forEach((card) => {
+  const content = card.querySelector(".content-left");
+  const image = card.querySelector(".image-right");
+
+  gsap.fromTo(
+    [content, image],
+    {
+      opacity: 0,
+      y: 100,
+      scale: 0.97,
+    },
+    {
+      scrollTrigger: {
+        trigger: card,
+        scroller: "[data-scroll-container]",
+        start: "top 90%",
+        end: "top 30%", // longer range = slower reveal
+        scrub: 1,        // <== ⛳️ higher scrub = slower + smoother
+      },
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      ease: "power4.out",
+    }
+  );
+});
+
+
+
+
 });
 
 
@@ -228,6 +313,13 @@ scale:1.5
 
 
 $(document).ready(function () {
+
+
+
+
+
+
+ 
 
   $('.product-img').hover(
       function () {
@@ -280,7 +372,7 @@ $(document).ready(function () {
     delay:5.6
   });
 
-  $(".categories__nav a").click(function (e) {
+  $(".categories__nav").click(function (e) {
     e.preventDefault();
       window.scrollTo({
       top: 0,
@@ -395,9 +487,18 @@ const ProductsSlider = new Swiper('.ProductsSlider', {
   },
 });
 
-document.querySelector('.ProductsSlider .swiper-custom-prev').addEventListener('click', () => ProductsSlider.slidePrev());
-document.querySelector('.ProductsSlider .swiper-custom-next').addEventListener('click', () => ProductsSlider.slideNext());
+// document.querySelector('.ProductsSlider .swiper-custom-prev').addEventListener('click', () => ProductsSlider.slidePrev());
+// document.querySelector('.ProductsSlider .swiper-custom-next').addEventListener('click', () => ProductsSlider.slideNext());
 
+const productsPrev = document.querySelector('.ProductsSlider .swiper-custom-prev');
+const productsNext = document.querySelector('.ProductsSlider .swiper-custom-next');
+
+if (productsPrev) {
+  productsPrev.addEventListener('click', () => ProductsSlider.slidePrev());
+}
+if (productsNext) {
+  productsNext.addEventListener('click', () => ProductsSlider.slideNext());
+}
 bindCursorArrows('.ProductsSlider');
 
 const inspirationSlider = new Swiper('#inspirationSlider', {
@@ -442,8 +543,15 @@ const testimonialSlider = new Swiper('#testimonialSlider', {
   },
 });
 
-document.querySelector('#testimonialSlider .swiper-custom-prev').addEventListener('click', () => testimonialSlider.slidePrev());
-document.querySelector('#testimonialSlider .swiper-custom-next').addEventListener('click', () => testimonialSlider.slideNext());
+const testimonialPrev = document.querySelector('#testimonialSlider .swiper-custom-prev');
+const testimonialNext = document.querySelector('#testimonialSlider .swiper-custom-next');
+
+if (testimonialPrev) {
+  testimonialPrev.addEventListener('click', () => testimonialSlider.slidePrev());
+}
+if (testimonialNext) {
+  testimonialNext.addEventListener('click', () => testimonialSlider.slideNext());
+}
 
 
 function bindCursorArrows(sliderSelector) {
@@ -513,7 +621,7 @@ function animateScroll() {
     }, 700); // adjust delay
   }
 }
-
+if (slider) {
 slider.addEventListener("mousemove", (e) => {
   const rect = slider.getBoundingClientRect();
   const x = e.clientX - rect.left;
@@ -540,14 +648,15 @@ slider.addEventListener("mouseleave", () => {
 });
 
 
-
+}
 
 let swiperInstance = null;
 
 function initTickerOrSwiper() {
   const container = document.getElementById('scrollTickerContainer');
+   if (!container) return;
   const track = container.querySelector('.ticker-track');
-
+ if (!track) return; 
   if (window.innerWidth < 768) {
     // Mobile: Swiper
     if (!swiperInstance) {
