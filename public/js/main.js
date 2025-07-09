@@ -316,10 +316,14 @@ $(document).ready(function () {
 
 
 
+
+
+  if($('#masonry-grid').length){
+let masonry;
     const grid = document.querySelector('#masonry-grid');
 
     imagesLoaded(grid, function () {
-      new Masonry(grid, {
+    masonry =   new Masonry(grid, {
         itemSelector: '.masonry-item',
         columnWidth: '.grid-sizer',
         percentPosition: true,
@@ -327,17 +331,18 @@ $(document).ready(function () {
       });
     });
 
-  imagesLoaded(grid, () => msnry.layout());
+  imagesLoaded(grid, () => masonry.layout());
 
-  const filterButtons = document.querySelectorAll('#filterNav a');
+
+   const filterButtons = document.querySelectorAll('#filterNav a');
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', e => {
       e.preventDefault();
 
       // Remove active class from all buttons
-      filterButtons.forEach(b => b.classList.remove('bg-olive-drab', 'text-white'));
-      btn.classList.add('bg-olive-drab', 'text-white');
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
       const filter = btn.textContent.trim().toLowerCase(); // e.g., 'sofa'
 
@@ -353,9 +358,15 @@ $(document).ready(function () {
       });
 
       // Relayout Masonry after DOM change
-      msnry.layout();
+      masonry.layout();
     });
   });
+
+  }
+
+
+
+ 
 
   $('.product-img').hover(
       function () {
@@ -404,6 +415,13 @@ $(document).ready(function () {
   gsap.from(".header .navbar", {
     y: -30,
     opacity: 0,
+    duration: 1,
+    delay:5.6
+  });
+
+    gsap.to(".leftEle img, .RightEle img", {
+    x: 0,
+    opacity: 1,
     duration: 1,
     delay:5.6
   });

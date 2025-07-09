@@ -554,6 +554,15 @@ opacity: 30%;
       width: 31%;
       box-sizing: border-box;
       padding: 30px;
+      
+    }
+.masonry-item img{
+display: block;
+transform: translateY(100px);
+transition: 0.8s ease;
+}
+    .masonry-item.is-inview img{
+      transform: translateY(0);
     }
 
     .grid-sizer {
@@ -562,9 +571,17 @@ opacity: 30%;
 
 
 
+span.leftEle img{
+  transform: translateX(-100%);
+  opacity: 0;
+  display: block;
+}
 
-
-
+span.RightEle img{
+  transform: translateX(100%);
+  opacity: 0;
+    display: block;
+}
 
 
 
