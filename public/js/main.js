@@ -184,42 +184,41 @@ gsap.to("#sticky-content", {
 
 
 
-if (window.innerWidth > 1024) {
-  window.addEventListener('DOMContentLoaded', () => {
-    const items = document.querySelectorAll(".reveal-item");
-    const section = document.querySelector(".presence-sec");
 
-    if (!section || items.length === 0) return;
+if(window.innerWidth > 1024){
+// Number of items inside
+const items = document.querySelectorAll(".reveal-item");
+const section = document.querySelector(".presence-sec");
 
-    const tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: `+=${items.length * 100}%`,
-        scrub: true,
-        pin: true,
-        anticipatePin: 1,
-        scroller: "[data-scroll-container]", // important for Locomotive
-      }
-    });
+const tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: section,
+    start: "top top",
+    end: `+=${items.length * 100}%`, // pin for N items
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    scroller: "[data-scroll-container]", // if using Locomotive Scroll
+  }
+});
 
-    items.forEach((item, i) => {
-      const content = item.querySelector(".content");
+// Animate each .reveal-item in sequence
+items.forEach((item, i) => {
+  const content = item.querySelector('.content');
 
-      tl2.to(item, {
-        "--lineWidth": "100%",
-        ease: "none"
-      }, i)
+  // use labels to stagger each reveal
+  tl2.to(item, {
+    '--lineWidth': '100%',
+    ease: 'none'
+  }, i) // animation at step i
 
-      .from(content, {
-        opacity: 0,
-        y: 30,
-        ease: "power3.out"
-      }, i + 0.2);
-    });
-  });
+  .from(content, {
+    opacity: 0,
+    y: 30,
+    ease: 'power3.out'
+  }, i + 0.2); // slight delay after border
+});
 }
-
 
 
 
