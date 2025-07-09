@@ -1,0 +1,112 @@
+ @media (max-width: 600px) {
+
+      .masonry-item {
+      width: 100%;
+      padding: 30px;
+      
+    }
+
+    .masonry-item img {
+    transform: none;
+
+}
+
+
+
+ #mobile-menu{
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+#mobile-menu.show{
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+  .h-screen {
+   height: 100dvh !important;
+  }
+
+}
+
+ @media (max-width: 768px) {
+
+    #videoWrapper{
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+
+  body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto; /* disable momentum scroll */
+}
+
+  .cat-wrapper, .cat-wrapper.hide{
+        clip-path: inset(0 0rem 0 0rem) !important;
+  }
+
+
+  header.sticky #menu-toggle svg{
+    fill: #51483F;
+  }
+  .categories__nav{
+    overflow-x: auto;
+  }
+  html, body{
+    overflow-x: hidden !important;
+     overscroll-behavior: none;
+  }
+  .parallax-section > div.relative.z-10 > div {
+    position: static !important;
+    margin: 1rem auto;
+  }
+  .heading-1 {
+    font-size: 4.5rem; /* Adjusted for smaller screens */
+    line-height: 1.2; /* Adjusted for smaller screens */
+  }
+  .heading-1 br{
+    display: none; /* Hide line breaks on smaller screens */
+  }
+  .address-text br{
+  display: none;
+}
+.heading-1 span {
+display: inline;
+
+}
+
+ }
+
+
+ @media screen and (min-width: 1025px) {
+  .intro {
+    font-size: 0.70vw;
+  }
+    
+}
+
+
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .text-clipath h1{
+        @apply leading-35
+    }
+
+    .footer_wrapper{
+        @apply py-[12rem]
+    }
+    
+}
+
+
+@media only screen and (min-width: 1025px) {
+  .intro__img {
+    width: 17vw;
+  }
+}

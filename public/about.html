@@ -16,6 +16,7 @@
     />
 
     <link href="./css/output.css" rel="stylesheet" />
+      <link href="./css/responsive.css" rel="stylesheet" />
   </head>
 
   <body class="index innerPage ">
@@ -241,22 +242,22 @@
 
 
                <span
-            class="absolute left-[10%] top-10 z-20 leftEle"
+            class="absolute left-[10%] top-10 z-20 leftEle hidden md:block"
                data-scroll
             data-scroll-speed="4"
              data-scroll-direction="horizontal"
           >
-            <img src="images/chair.svg" alt="" class="w-50" />
+            <img src="images/chair.svg" alt="" class="w-50 " />
           </span>
 
                <span
-            class="absolute right-[10%] top-130 z-20 RightEle"
+            class="absolute right-[10%] top-130 z-20 RightEle hidden md:block"
             data-scroll
             data-scroll-speed="-4"
             data-scroll-delay="0.3"
              data-scroll-direction="horizontal"
           >
-            <img src="images/cuttingPlayer.svg" alt="" class="w-30" />
+            <img src="images/cuttingPlayer.svg" alt="" class="w-30 " />
           </span>
 
 
@@ -272,7 +273,7 @@
           
    <div 
 
-  class="flex justify-center  z-50  " id="videoWrapper"
+  class="flex justify-center  z-50  mt-10 md:mt-0 p-5 md:p-0" id="videoWrapper"
 >
   <video
     id="myVideo"
@@ -289,9 +290,9 @@
 
 
 
-<section class="px-[2rem] lg:px-[10rem]  py-12 md:py-24 mt-40 bg-img-2 bg-[url('../images/white-textture-bg.png')]">
+<section class="px-[2rem] lg:px-[10rem]  py-12 md:py-24 mt-10 bg-img-2 bg-[url('../images/white-textture-bg.png')]">
   <!-- First Grid -->
-  <div class="grid md:grid-cols-2 gap-80 items-start">
+  <div class="grid md:grid-cols-2 gap:20 md:gap-80 items-start ">
     <!-- Left Side Content -->
     <div data-scroll>
       <small class="text-olive-drab block text-sm mb-12">Philosophy</small>
@@ -301,7 +302,7 @@
     </div>
 
     <!-- Right Side Content -->
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-6 mt-20 md:mt-0">
       <p class="text-olive-drab text-[1.2rem] mb-2">Vision</p>
       <p class="text-secondary font-normal leading-relaxed">
         Vivamus ut finibus orci. Sed<br/> sed turpis tincidunt, scelerisque<br/> libero sit amet, pharetra lorem. <br/>
@@ -312,7 +313,7 @@
   </div>
 
   <!-- Second Grid - closer to the first -->
-  <div class="grid md:grid-cols-2 gap-80 items-start -mt-70">
+  <div class="grid md:grid-cols-2 gap-80 items-start mt-20 md:-mt-70">
     <!-- Right Side Content (again) -->
     <div class="flex flex-col gap-6">
       <p class="text-olive-drab text-[1.2rem] mb-2">Mission</p>
@@ -390,7 +391,7 @@
             data-scroll
             data-scroll-speed="-1"
           >
-            <img src="images/Image2.jpg" alt="" class="w-90" />
+            <img src="images/Image2.jpg" alt="" class="w-90 hidden md:block" />
           </span>
 
 </section>
@@ -415,10 +416,10 @@
         </div>
 
 
-       <ol class="flex flex-col sm:flex-row sm:justify-between items-stretch w-full mt-50">
+       <ol class="flex  flex-col sm:flex-row sm:justify-between items-stretch w-full mt-10 md:mt-50">
 
 
-<li class="relative mb-6 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
+<li class="relative mb-12 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
 
   <div class="flex items-center sm:me-4">
     <div class="z-10 flex items-center justify-center w-20 h-20 text-[1.2rem] font-semibold rounded-full text-olive-drab bg-[#F2E7DC] border  border-secondary">
@@ -435,7 +436,7 @@
 
 
 
-<li class="relative mb-6 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
+<li class="relative mb-12 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
 
   <div class="flex items-center sm:me-4">
    <div class="z-10 flex items-center justify-center  w-20 h-20 text-[1.2rem] font-semibold  rounded-full   shrink-0 text-olive-drab bg-[#F2E7DC] border  border-secondary">
@@ -451,7 +452,7 @@ Ideate</p>
   </li>
 
 
-<li class="relative mb-6 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
+<li class="relative mb-12 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
 
   <div class="flex items-center sm:me-4">
    <div class="z-10 flex items-center justify-center  w-20 h-20 text-[1.2rem] font-semibold  rounded-full   shrink-0 text-olive-drab bg-[#F2E7DC] border  border-secondary">
@@ -468,7 +469,7 @@ Quotation</p>
     </div>
   </li>
 
-<li class="relative mb-6 sm:mb-0 flex flex-col items-center text-center ">
+<li class="relative mb-12 sm:mb-0 flex flex-col items-center text-center ">
   <div class="flex items-center sm:me-4">
    <div class="z-10 flex items-center justify-center  w-20 h-20 text-[1.2rem] font-semibold  rounded-full   shrink-0 text-olive-drab border  border-secondary bg-[#F2E7DC]">
         <h3>004</h3>
@@ -485,7 +486,7 @@ Execution</p>
   </li>
 
 
-<li class="relative mb-6 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
+<li class="relative mb-12 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
 
   <div class="flex items-center sm:me-4">
       <div class="z-10 flex items-center justify-center  w-20 h-20 text-[1.2rem] font-semibold  rounded-full   shrink-0 text-olive-drab bg-[#F2E7DC] border border-dashed border-secondary">
@@ -517,7 +518,7 @@ Installation    </p>
 </section>
 
 <section  class="px-[2rem] lg:px-[10rem]  py-12 md:py-35 relative bg-white  md:pb-0 ">
-  <div class="flex flex-col md:flex-row gap-40">
+  <div class="flex flex-col md:flex-row gap:10 md:gap-40">
     
     <!-- Left side (Image - 70%) -->
     <div class="w-full md:w-[50%] relative">
@@ -576,7 +577,7 @@ As Principal Designer, I oversee each piece from concept to creation — ensurin
 
 
 
-     <div class="flex flex-col md:flex-row gap-40 justify-between items-center mt-20 reveal-card">
+     <div class="flex flex-col md:flex-row gap:20 md:gap-40 justify-between items-center mt-0 md:mt-20 reveal-card">
 
     
     <div class="w-full md:w-[40%] py-15 content-left">
@@ -600,7 +601,7 @@ As Principal Designer, I oversee each piece from concept to creation — ensurin
   </div>
 
 
-        <div class="flex  gap-40 justify-between items-center mt-20 md:flex-row-reverse flex-col reveal-card">
+        <div class="flex gap:20 md:gap-40 justify-between items-center mt-0 md:mt-20 md:flex-row-reverse flex-col reveal-card">
     
     <div class="w-full md:w-[40%] py-15 content-left">
       
@@ -623,7 +624,7 @@ As Principal Designer, I oversee each piece from concept to creation — ensurin
   </div>
 
 
-      <div class="flex flex-col md:flex-row gap-40 justify-between items-center mt-20 reveal-card">
+      <div class="flex flex-col md:flex-row gap:20 md:gap-40 justify-between items-center mt-0 md:mt-20 reveal-card">
 
     
     <div class="w-full md:w-[40%] py-15 content-left">
@@ -648,7 +649,7 @@ As Principal Designer, I oversee each piece from concept to creation — ensurin
   </div>
 
 
-       <div class="flex  gap-40 justify-between items-center mt-20 md:flex-row-reverse flex-col reveal-card">
+       <div class="flex  gap:20 md:gap-40 justify-between items-center mt-0 md:mt-20 md:flex-row-reverse flex-col reveal-card">
     
     <div class="w-full md:w-[40%] py-15 content-left">
       

@@ -17,20 +17,6 @@ html{
 
 } 
 
-@media screen and (min-width: 1600px) {
-    html {
-        font-size: 87.5%;
-    }
-
-    .text-clipath h1{
-        @apply leading-35
-    }
-
-    .footer_wrapper{
-        @apply py-[12rem]
-    }
-    
-}
 
 @font-face {
     font-family: 'voyageregular';
@@ -311,7 +297,7 @@ transition-delay: 5.6s;
 }
 
 section .heading-1{
- @apply transform translate-y-[100%] transition-all duration-1000
+ @apply transform translate-y-0 md:translate-y-[100%] transition-all duration-1000
 }
 
  .is-inview .heading-1 {
@@ -323,72 +309,7 @@ section .heading-1{
 
  }
 
- @media (max-width: 600px) {
 
-  section .heading-1{
-    @apply transform translate-y-0
-  }
-
- #mobile-menu{
-  transform: translateX(-100%);
-  opacity: 0;
-  visibility: hidden;
-}
-
-#mobile-menu.show{
-  transform: translateX(0%);
-  opacity: 1;
-  visibility: visible;
-}
-
-  .h-screen {
-   height: 100dvh !important;
-  }
-
-}
-
- @media (max-width: 768px) {
-
-  body {
-  overscroll-behavior: none;
-  -webkit-overflow-scrolling: auto; /* disable momentum scroll */
-}
-
-  .cat-wrapper, .cat-wrapper.hide{
-        clip-path: inset(0 0rem 0 0rem) !important;
-  }
-
-
-  header.sticky #menu-toggle svg{
-    fill: #51483F;
-  }
-  .categories__nav{
-    overflow-x: auto;
-  }
-  html, body{
-    overflow-x: hidden !important;
-     overscroll-behavior: none;
-  }
-  .parallax-section > div.relative.z-10 > div {
-    position: static !important;
-    margin: 1rem auto;
-  }
-  .heading-1 {
-    font-size: 4.5rem; /* Adjusted for smaller screens */
-    line-height: 1.2; /* Adjusted for smaller screens */
-  }
-  .heading-1 br{
-    display: none; /* Hide line breaks on smaller screens */
-  }
-  .address-text br{
-  display: none;
-}
-.heading-1 span {
-display: inline;
-
-}
-
- }
 .arbor-typo h4{
 
 background: linear-gradient(180deg, #FFFFFF -180%, rgb(123 116 88) 70%, rgb(123 116 88) 100%);
@@ -606,12 +527,7 @@ z-index: 9999;
 
 }
 
-@media screen and (min-width: 1025px) {
-  .intro {
-    font-size: 0.70vw;
-  }
-    
-}
+
  .intro__fader {
     position: absolute;
     z-index: 1;
@@ -643,11 +559,7 @@ z-index: 9999;
 
   
 }
-@media only screen and (min-width: 1025px) {
-  .intro__img {
-    width: 17vw;
-  }
-}
+
 .intro__img__hold {
   height: 100%;
   overflow: hidden;
