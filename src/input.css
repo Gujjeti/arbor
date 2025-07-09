@@ -535,6 +535,35 @@ opacity: 30%;
 }
 
 
+#filterNav .active {
+    @apply bg-secondary text-white border-secondary;
+  }
+
+
+
+
+
+
+ #masonry-grid {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    .masonry-item {
+      float: left;
+      width: 31%;
+      box-sizing: border-box;
+      padding: 30px;
+    }
+
+    .grid-sizer {
+      width: 30%;
+    }
+
+
+
+
+
 
 
 

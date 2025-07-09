@@ -70,11 +70,11 @@ const videoEl = document.querySelector('#myVideo');
 
 locoScroll.on("scroll", function(obj) {
   const currentY = obj.scroll.y;
-  const isHome = document.body.classList.contains('home');
+  const headerScroll = document.body.classList.contains('headerScroll');
   const videoTop = videoEl?.getBoundingClientRect().top;
 
   // Condition: either home and scrolled past 100 OR video has reached top
-  const trigger = isHome ? (currentY > 100) : (videoTop <= 0);
+  const trigger = headerScroll ? (currentY > 100) : (videoTop <= 0);
 
   if (currentY < lastScrollY && trigger) {
     // Scrolling up
@@ -316,10 +316,46 @@ $(document).ready(function () {
 
 
 
+    const grid = document.querySelector('#masonry-grid');
 
+    imagesLoaded(grid, function () {
+      new Masonry(grid, {
+        itemSelector: '.masonry-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: 20
+      });
+    });
 
+  imagesLoaded(grid, () => msnry.layout());
 
- 
+  const filterButtons = document.querySelectorAll('#filterNav a');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+
+      // Remove active class from all buttons
+      filterButtons.forEach(b => b.classList.remove('bg-olive-drab', 'text-white'));
+      btn.classList.add('bg-olive-drab', 'text-white');
+
+      const filter = btn.textContent.trim().toLowerCase(); // e.g., 'sofa'
+
+      // Show/hide items
+      document.querySelectorAll('.masonry-item').forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+
+        if (filter === 'all' || itemCat === filter) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      // Relayout Masonry after DOM change
+      msnry.layout();
+    });
+  });
 
   $('.product-img').hover(
       function () {
