@@ -33,11 +33,7 @@
 
  @media (max-width: 768px) {
 
-    #videoWrapper{
-        position: static;
-        transform: none;
-        width: 100%;
-    }
+
 
   body {
   overscroll-behavior: none;
@@ -67,7 +63,7 @@
     font-size: 4.5rem; /* Adjusted for smaller screens */
     line-height: 1.2; /* Adjusted for smaller screens */
   }
-  .heading-1 br{
+  .heading-1 br, .heading-2 br{
     display: none; /* Hide line breaks on smaller screens */
   }
   .address-text br{
@@ -82,6 +78,16 @@ display: inline;
 
 
  @media screen and (min-width: 1025px) {
+
+
+#videoWrapper {
+  top: 70vh;                /* bottom 10% of screen */
+  left: 50%;
+  width: 50vw;
+  position: fixed;
+  transform: translateX(-50%);
+  z-index: 50;
+}
   .intro {
     font-size: 0.70vw;
   }

@@ -106,7 +106,7 @@ locoScroll.on('scroll', (instance) => {
 
 
 
-
+if(window.innerWidth > 1024){
 
 if($('.videoSec').length){
   gsap.timeline({
@@ -134,6 +134,7 @@ if($('.videoSec').length){
   },"h");
 }
 
+}
 
 // Animate .text-clipath with GSAP, including delay
 
@@ -158,6 +159,19 @@ scrollTopBtn.addEventListener('click', () => {
 
 }
 
+
+if (isMobile) {
+  var header = $('header');
+  var headerOffset = header.offset().top; // Get the initial position of the header
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > headerOffset) {
+      header.addClass('sticky'); // Add the sticky class when scrolling past the header
+    } else {
+      header.removeClass('sticky'); // Remove the sticky class when scrolling back up
+    }
+  });
+}
 
 if($('#sticky-content').length){
 gsap.to("#sticky-content", {

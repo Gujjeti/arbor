@@ -419,14 +419,8 @@ small {
     font-size: 100%;
 }
 
-
-#videoWrapper {
-  top: 70vh;                /* bottom 10% of screen */
-  left: 50%;
-  width: 50vw;
-  position: fixed;
-  transform: translateX(-50%);
-  z-index: 50;
+.innerPage #menu-toggle svg {
+   @apply fill-secondary
 }
 
 
@@ -455,6 +449,18 @@ opacity: 30%;
   transition: 0.8s ease;
 }
 
+#filterNav a{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition-delay: var(--delay);
+  display: inline-block;
+}
+
+#filterNav.is-inview a{
+    transform: translateY(0px);
+  opacity: 1;
+}
 
 #filterNav .active {
     @apply bg-secondary text-white border-secondary;
@@ -468,21 +474,28 @@ opacity: 30%;
  #masonry-grid {
       margin-left: -20px;
       margin-right: -20px;
+ 
     }
+
 
     .masonry-item {
       float: left;
       width: 31%;
       box-sizing: border-box;
       padding: 30px;
+
       
     }
+
+
+
 .masonry-item img{
 display: block;
 transform: translateY(100px);
 transition: 0.8s ease;
+transition-delay: 5.9s;
 }
-    .masonry-item.is-inview img{
+    .is-inview .masonry-item img{
       transform: translateY(0);
     }
 
