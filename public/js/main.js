@@ -113,7 +113,7 @@ if($('.videoSec').length){
     scrollTrigger: {
       trigger: ".videoSec",
       start: "top 25%",
-      end: "+=250%", // height of pinning
+      end: "+=200%", // height of pinning
       scrub: true,
       pin: true,
       anticipatePin: 1,
