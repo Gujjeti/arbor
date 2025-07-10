@@ -116,3 +116,9 @@ display: inline;
     width: 17vw;
   }
 }
+
+@media only screen and (min-width: 1400px) {
+.vision-mission-sec{
+           margin-top: 10rem !important;
+}
+}
