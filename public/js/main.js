@@ -7,11 +7,21 @@ window.addEventListener("load", () => {
 
 const isMobileOrTablet = /iP(ad|hone|od)|Android|Tablet|Mobile/i.test(navigator.userAgent);
 const isMobile = /iP(hone|od)|Android/i.test(navigator.userAgent);
-if(isMobile){
+if (window.innerWidth <= 768) {
   document.documentElement.classList.add('mobile');
+  var header = $('header');
+  var headerOffset = header.offset().top; // Get the initial position of the header
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > headerOffset) {
+      header.addClass('sticky'); // Add the sticky class when scrolling past the header
+    } else {
+      header.removeClass('sticky'); // Remove the sticky class when scrolling back up
+    }
+  });
 
 }
-if (!isMobile) {
+if (window.innerWidth > 768) {
    locoScroll = new LocomotiveScroll({
     el: document.querySelector("[data-scroll-container]"),
     smooth: true
@@ -94,6 +104,11 @@ locoScroll.on("scroll", function(obj) {
 
 
 
+
+}
+
+
+
 let scrollTopBtn = document.querySelector('#scrollTopBtn');
 
 locoScroll.on('scroll', (instance) => {
@@ -104,6 +119,29 @@ locoScroll.on('scroll', (instance) => {
     }
 });
 
+
+
+
+
+// Animate .text-clipath with GSAP, including delay
+
+if($('.text-clipath').length){
+gsap.to(".text-clipath", {
+  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+  opacity: 1,
+  delay: 5.2, // matches your CSS transition-delay
+  duration: 2,
+  ease: 'power3.out'
+});
+}
+
+
+
+scrollTopBtn.addEventListener('click', () => {
+    locoScroll.stop(); // Stop current scroll
+    locoScroll.scrollTo(0);
+    locoScroll.start(); // Restart locomotive scroll
+});
 
 
 if(window.innerWidth > 1024){
@@ -136,42 +174,7 @@ if($('.videoSec').length){
 
 }
 
-// Animate .text-clipath with GSAP, including delay
 
-if($('.text-clipath').length){
-gsap.to(".text-clipath", {
-  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-  opacity: 1,
-  delay: 5.2, // matches your CSS transition-delay
-  duration: 2,
-  ease: 'power3.out'
-});
-}
-
-
-
-scrollTopBtn.addEventListener('click', () => {
-    locoScroll.stop(); // Stop current scroll
-    locoScroll.scrollTo(0);
-    locoScroll.start(); // Restart locomotive scroll
-});
-
-
-}
-
-
-if (isMobile) {
-  var header = $('header');
-  var headerOffset = header.offset().top; // Get the initial position of the header
-
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > headerOffset) {
-      header.addClass('sticky'); // Add the sticky class when scrolling past the header
-    } else {
-      header.removeClass('sticky'); // Remove the sticky class when scrolling back up
-    }
-  });
-}
 
 if($('#sticky-content').length){
 gsap.to("#sticky-content", {
