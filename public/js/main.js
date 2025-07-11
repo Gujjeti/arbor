@@ -235,6 +235,38 @@ items.forEach((item, i) => {
     ease: 'power3.out'
   }, i + 0.2); // slight delay after border
 });
+
+
+const stepsLi = document.querySelectorAll("#steps-sec ol li");
+const stepSection = document.querySelector("#steps-sec");
+const tl3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: stepSection,
+    start: "top top",
+    end: `+=${stepsLi.length * 100}%`, // pin for N items
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    scroller: "[data-scroll-container]", // if using Locomotive Scroll
+  }
+});
+
+// Animate each .reveal-item in sequence
+stepsLi.forEach((item, i) => {
+
+  // use labels to stagger each reveal
+  tl3
+  .from(item, {
+    opacity: 0,
+    x: 50,
+    ease: 'power3.out'
+  }, i + 0.2); // slight delay after border
+});
+
+
+
+
+
 }
 
 
