@@ -440,18 +440,7 @@ opacity: 30%;
   transition: 0.8s ease;
 }
 
-#filterNav a{
-  transform: translateY(100px);
-  opacity: 0;
-  transition: transform 0.8s ease, opacity 0.8s ease;
-  transition-delay: var(--delay);
-  display: inline-block;
-}
 
-#filterNav.is-inview a{
-    transform: translateY(0px);
-  opacity: 1;
-}
 
 #filterNav .active {
     @apply bg-secondary text-white border-secondary;
@@ -480,15 +469,7 @@ opacity: 30%;
 
 
 
-.masonry-item img{
-display: block;
-transform: translateY(100px);
-transition: 0.8s ease;
-transition-delay: 5.9s;
-}
-    .is-inview .masonry-item img{
-      transform: translateY(0);
-    }
+
 
     .grid-sizer {
       width: 30%;

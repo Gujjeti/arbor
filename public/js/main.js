@@ -103,12 +103,6 @@ locoScroll.on("scroll", function(obj) {
 
 
 
-
-
-}
-
-
-
 let scrollTopBtn = document.querySelector('#scrollTopBtn');
 
 locoScroll.on('scroll', (instance) => {
@@ -118,6 +112,12 @@ locoScroll.on('scroll', (instance) => {
         scrollTopBtn.classList.remove('active')
     }
 });
+
+
+
+}
+
+
 
 
 
