@@ -19,7 +19,7 @@
       <link href="./css/responsive.css" rel="stylesheet" />
   </head>
 
-  <body class="index innerPage ">
+  <body class="index innerPage headerScroll">
     <button
       id="scrollTopBtn"
       class="fixed bottom-20 right-10 w-17 h-17 rounded-full bg-white shadow-lg flex items-center justify-center z-50"
@@ -160,7 +160,7 @@
                 <span>Download Catalogue</span>
               </a>
               <a
-                href="#"
+                href="contact.html#contactForm"
                 class="hidden lg:inline-block btn btn-primary-outline btn-small"
               >
                 Enquire Now
@@ -187,7 +187,7 @@
             <span> Download Catalogue</span>
           </a>
           <a
-            href="#"
+             href="contact.html"
             class="hidden lg:inline-block btn btn-primary-outline btn-small"
           >
             Enquire Now
@@ -265,7 +265,9 @@
                 Mumbai-400034
               </h4>
 
-             <ul class="flex flex-col gap-4 py-10 text-[1.2rem] font-normal text-olive-drab ">
+
+              <small class="text-olive-drab mb-[1rem] block mt-15">Contact Info</small>
+             <ul class="flex flex-col gap-4  text-[1.2rem] font-normal text-olive-drab ">
   <!-- Phone -->
   <li class="flex items-center gap-3">
     <img src="images/icons/phone.svg" alt="Phone Icon" class="w-5 h-5">
@@ -292,7 +294,7 @@
 </ul>
 
 
-                <div class="flex justify-between items-start ">
+                <div class="flex justify-between items-start mt-10">
 
             <div class="flex space-x-6 mt-8">
               <a
@@ -357,12 +359,19 @@
     <div class="flex flex-col gap-6 mt-20 md:mt-0">
       
         
-              <form class="space-y-[4rem] mt-20">
+              <form class="space-y-[4rem] mt-20" id="contactForm">
                 <input
                   type="text"
                   placeholder="Name"
                   class="w-full bg-transparent border-b border-olive-drab focus:outline-none pb-5 placeholder-olive-drab font-normal"
                 />
+
+                   <input
+                  type="mobile"
+                  placeholder="Mobile Number"
+                  class="w-full bg-transparent border-b border-olive-drab focus:outline-none pb-5 placeholder-olive-drab font-normal"
+                />
+
                 <input
                   type="email"
                   placeholder="Email"
@@ -379,6 +388,11 @@
                   <option>Product</option>
                   <option>Support</option>
                 </select>
+
+
+                <textarea id="message"   type="text"
+                  placeholder="Message"   class="w-full bg-transparent border-b border-olive-drab focus:outline-none pb-5 placeholder-olive-drab font-normal"></textarea>
+
 
                 <button
                   class="btn btn-primary btn-large mt-4 cursor-pointer"
