@@ -290,6 +290,9 @@
   .bottom-20 {
     bottom: calc(var(--spacing) * 20);
   }
+  .bottom-\[0rem\] {
+    bottom: 0rem;
+  }
   .bottom-\[8rem\] {
     bottom: 8rem;
   }
@@ -511,6 +514,12 @@
   }
   .h-screen {
     height: 100vh;
+  }
+  .min-h-\[120vh\] {
+    min-height: 120vh;
+  }
+  .min-h-\[160vh\] {
+    min-height: 160vh;
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
@@ -927,6 +936,9 @@
   }
   .py-\[6rem\] {
     padding-block: 6rem;
+  }
+  .py-\[10rem\] {
+    padding-block: 10rem;
   }
   .py-\[12rem\] {
     padding-block: 12rem;
