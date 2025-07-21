@@ -78,15 +78,7 @@ display: inline;
 
 
  @media screen and (min-width: 1025px) {
-.masonry-item img{
-display: block;
-transform: translateY(100px);
-transition: 0.8s ease;
-transition-delay: 5.9s;
-}
-    .is-inview .masonry-item img{
-      transform: translateY(0);
-    }
+
 
     #filterNav a{
   transform: translateY(100px);

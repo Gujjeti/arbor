@@ -357,6 +357,16 @@ document.querySelectorAll(".reveal-card").forEach((card) => {
 
 
 
+  const urlParams = new URLSearchParams(window.location.search);
+  const tab = urlParams.get('tab'); // 'residential' or 'commercial'
+
+  if (tab === 'residential' || tab === 'commercial') {
+    const targetTab = document.querySelector(`.tabs a[data-target="${tab}"]`);
+    if (targetTab) {
+      targetTab.click(); // Simulate tab click
+    }
+  }
+
 
 });
 
@@ -373,52 +383,89 @@ $(document).ready(function () {
 
 
 
+if ($('.masonry-grid').length) {
+  let masonryInstances = {};
 
-  if($('#masonry-grid').length){
-let masonry;
-    const grid = document.querySelector('#masonry-grid');
-
+  const initMasonry = (grid) => {
     imagesLoaded(grid, function () {
-    masonry =   new Masonry(grid, {
+      masonryInstances[grid.id] = new Masonry(grid, {
         itemSelector: '.masonry-item',
         columnWidth: '.grid-sizer',
         percentPosition: true,
-        gutter: 20
+        gutter: 20,
       });
     });
+  };
 
-  imagesLoaded(grid, () => masonry.layout());
-
-
-   const filterButtons = document.querySelectorAll('#filterNav a');
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-
-      // Remove active class from all buttons
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.textContent.trim().toLowerCase(); // e.g., 'sofa'
-
-      // Show/hide items
-      document.querySelectorAll('.masonry-item').forEach(item => {
-        const itemCat = item.getAttribute('data-category');
-
-        if (filter === 'all' || itemCat === filter) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-
-      // Relayout Masonry after DOM change
-      masonry.layout();
-    });
+  // Initialize all masonry grids
+  document.querySelectorAll('.masonry-grid').forEach((grid) => {
+    initMasonry(grid);
   });
 
-  }
+  // Tab switching logic
+  const tabs = document.querySelectorAll('.tabs a');
+  const grids = document.querySelectorAll('.masonry-grid');
+
+  tabs.forEach((tab) => {
+  tab.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = tab.getAttribute('data-target');
+
+    // Active class toggle
+    tabs.forEach((t) => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // Hide all grids, show target grid
+    grids.forEach((grid) => {
+      if (grid.id === targetId) {
+        grid.classList.remove('hidden');
+
+        // Re-layout current Masonry
+        if (masonryInstances[targetId]) {
+          masonryInstances[targetId].layout();
+        }
+      } else {
+        grid.classList.add('hidden');
+      }
+    });
+
+    // 🔁 Reset filter to 'All'
+    const allBtn = document.querySelector('#filterNav a[data-filter="all"]');
+    if (allBtn) {
+      allBtn.click(); // Trigger click to reset filter
+    }
+  });
+});
+
+
+  // Optional: Filter buttons inside currently visible masonry grid
+  const filterButtons = document.querySelectorAll('#filterNav a');
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const activeGrid = document.querySelector('.masonry-grid:not(.hidden)');
+      const currentMasonry = masonryInstances[activeGrid.id];
+
+      // Toggle active class
+      filterButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.textContent.trim().toLowerCase();
+
+      // Show/hide items
+      activeGrid.querySelectorAll('.masonry-item').forEach((item) => {
+        const itemCat = item.getAttribute('data-category');
+        item.style.display = (filter === 'all' || itemCat === filter) ? 'block' : 'none';
+      });
+
+      // Trigger Masonry re-layout
+      currentMasonry.layout();
+    });
+  });
+}
+
 
 
 

@@ -497,7 +497,10 @@ span.RightEle img{
 
 
 .logo-box {
-  @apply w-[22rem] h-[12rem] px-4 py-2 bg-[#e9ded3] rounded-[1rem] mx-2 flex justify-center items-center shrink-0;
+  @apply w-[22rem] h-[12rem] px-4 py-2 bg-[#f5f5f5] rounded-[1rem] mx-2 flex justify-center items-center shrink-0;
+}
+.logo-box.bg-wheat {
+  @apply bg-[#e9ded3];
 }
 .logo-box img {
   @apply max-h-[60%] max-w-[60%] object-contain;
@@ -532,7 +535,14 @@ span.RightEle img{
   }
 }
 
+.tabs a{
+     font-family: 'voyageregular';
+  @apply text-olive-drab font-semibold uppercase text-[2.5rem] opacity-50;
+}
 
+.tabs a.active{
+  @apply opacity-100 
+}
 
 
     

@@ -282,10 +282,15 @@
 
 <section  class="relative w-full px-[2rem] lg:px-[10rem] py-20 bg-white">
 
+  <div class="flex  gap-15 mb-15 tabs">
+  <a href="#" class="active" data-target="commercial">Commercial</a>
+  <a href="#" data-target="residential">Residential</a>
+  </div>
+
 <div class="flex justify-between gap-5 mb-4">
   <nav id="filterNav" class="flex flex-wrap gap-4 justify-center md:justify-start " data-scroll>
 
-  <a href="#" style="--delay:5.1s" class="filter-btn px-8 py-3 uppercase text-[1rem] font-medium text-secondary border border-secondary rounded-full hover:bg-secondary hover:text-white transition duration-300 active">All</a>
+  <a href="#" style="--delay:5.1s" class="filter-btn px-8 py-3 uppercase text-[1rem] font-medium text-secondary border border-secondary rounded-full hover:bg-secondary hover:text-white transition duration-300 active" data-filter="all">All</a>
 
   <a href="#" style="--delay:5.2s" class="filter-btn px-8 py-3 uppercase text-[1rem] font-medium text-secondary border border-secondary rounded-full hover:bg-secondary hover:text-white transition duration-300">Sofa</a>
 
@@ -312,72 +317,118 @@
 </div>
 
 
-<div id="masonry-grid" class="clearfix" data-scroll>
+<div  class="clearfix masonry-grid" id="commercial" data-scroll>
   <!-- Grid Sizer must match item width -->
    <div class="grid-sizer"></div>
 
   <!-- Masonry Items -->
      <div class="masonry-item"  data-scroll data-category="sofa">
     <img src="images/masonry-grid/1.jpg" class="w-full" />
-    <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+  
   </div>
   <div class="masonry-item"  data-scroll data-category="tables">
     <img src="images/masonry-grid/2.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
   </div>
   <div class="masonry-item"  data-scroll data-category="chairs">
     <img src="images/masonry-grid/3.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
   </div>
   <div class="masonry-item"  data-scroll data-category="tables">
     <img src="images/masonry-grid/4.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
   </div>
   <div class="masonry-item"  data-scroll data-category="tables">
     <img src="images/masonry-grid/5.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
   </div>
   <div class="masonry-item"  data-scroll data-category="tables">
     <img src="images/masonry-grid/3.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
   </div>
   <div class="masonry-item"  data-scroll data-category="tables">
     <img src="images/masonry-grid/4.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
   </div>
   <div class="masonry-item"  data-scroll data-category="tables">
     <img src="images/masonry-grid/5.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
   </div>
 
 
     <div class="masonry-item"  data-scroll data-category="tables">
     <img src="images/masonry-grid/5.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
   </div>
   <div class="masonry-item"  data-scroll data-category="tables">
     <img src="images/masonry-grid/3.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
   </div>
   <div class="masonry-item"  data-scroll data-category="tables">
     <img src="images/masonry-grid/4.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
   </div>
   <div class="masonry-item"  data-scroll data-category="tables">
     <img src="images/masonry-grid/5.jpg" class="w-full" />
-     <span class="text-olive-drab uppercase opacity-50 block mt-4 mb-2">Sofa</span>
-    <p class="font-semibold text-[1.2rem] text-olive-drab">Hinoki Wood Onigiri Mould</p>
+   
+  </div>
+
+</div>
+
+<div  class="clearfix masonry-grid" id="residential" data-scroll>
+  <!-- Grid Sizer must match item width -->
+   <div class="grid-sizer"></div>
+
+  <!-- Masonry Items -->
+     <div class="masonry-item"  data-scroll data-category="sofa">
+    <img src="images/masonry-grid/1.jpg" class="w-full" />
+  
+  </div>
+  <div class="masonry-item"  data-scroll data-category="tables">
+    <img src="images/masonry-grid/2.jpg" class="w-full" />
+   
+  </div>
+  <div class="masonry-item"  data-scroll data-category="chairs">
+    <img src="images/masonry-grid/3.jpg" class="w-full" />
+   
+  </div>
+  <div class="masonry-item"  data-scroll data-category="tables">
+    <img src="images/masonry-grid/4.jpg" class="w-full" />
+   
+  </div>
+  <div class="masonry-item"  data-scroll data-category="tables">
+    <img src="images/masonry-grid/5.jpg" class="w-full" />
+   
+  </div>
+  <div class="masonry-item"  data-scroll data-category="tables">
+    <img src="images/masonry-grid/3.jpg" class="w-full" />
+   
+  </div>
+  <div class="masonry-item"  data-scroll data-category="tables">
+    <img src="images/masonry-grid/4.jpg" class="w-full" />
+   
+  </div>
+  <div class="masonry-item"  data-scroll data-category="tables">
+    <img src="images/masonry-grid/5.jpg" class="w-full" />
+   
+  </div>
+
+
+    <div class="masonry-item"  data-scroll data-category="tables">
+    <img src="images/masonry-grid/5.jpg" class="w-full" />
+   
+  </div>
+  <div class="masonry-item"  data-scroll data-category="tables">
+    <img src="images/masonry-grid/3.jpg" class="w-full" />
+   
+  </div>
+  <div class="masonry-item"  data-scroll data-category="tables">
+    <img src="images/masonry-grid/4.jpg" class="w-full" />
+   
+  </div>
+  <div class="masonry-item"  data-scroll data-category="tables">
+    <img src="images/masonry-grid/5.jpg" class="w-full" />
+   
   </div>
 
 </div>
