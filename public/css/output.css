@@ -227,6 +227,9 @@
   .top-1 {
     top: calc(var(--spacing) * 1);
   }
+  .top-1\/1 {
+    top: calc(1/1 * 100%);
+  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
@@ -253,6 +256,24 @@
   }
   .top-\[8rem\] {
     top: 8rem;
+  }
+  .top-\[15rem\] {
+    top: 15rem;
+  }
+  .top-\[25rem\] {
+    top: 25rem;
+  }
+  .top-\[30\%\] {
+    top: 30%;
+  }
+  .top-\[40\%\] {
+    top: 40%;
+  }
+  .top-\[45\%\] {
+    top: 45%;
+  }
+  .top-\[50\%\] {
+    top: 50%;
   }
   .-right-8 {
     right: calc(var(--spacing) * -8);
@@ -572,6 +593,9 @@
   .max-w-\[23\.75rem\] {
     max-width: 23.75rem;
   }
+  .max-w-\[25rem\] {
+    max-width: 25rem;
+  }
   .flex-shrink {
     flex-shrink: 1;
   }
@@ -598,6 +622,14 @@
   }
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-1 {
+    --tw-translate-y: calc(var(--spacing) * 1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-1\/2 {
+    --tw-translate-y: calc(1/2 * 100%);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .scale-0 {
@@ -801,6 +833,9 @@
   }
   .bg-\[\#7B7458\] {
     background-color: #7B7458;
+  }
+  .bg-\[\#88888885\] {
+    background-color: #88888885;
   }
   .bg-\[\#F2E7DC\] {
     background-color: #F2E7DC;
@@ -1016,8 +1051,14 @@
   .text-\[1\.4rem\] {
     font-size: 1.4rem;
   }
+  .text-\[1\.5rem\] {
+    font-size: 1.5rem;
+  }
   .text-\[1rem\] {
     font-size: 1rem;
+  }
+  .text-\[2\.5rem\] {
+    font-size: 2.5rem;
   }
   .text-\[2rem\] {
     font-size: 2rem;
@@ -1364,6 +1405,11 @@
       margin-top: calc(var(--spacing) * 0);
     }
   }
+  .md\:mt-10 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 10);
+    }
+  }
   .md\:mt-20 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 20);
@@ -1658,6 +1704,11 @@
   .lg\:top-50 {
     @media (width >= 64rem) {
       top: calc(var(--spacing) * 50);
+    }
+  }
+  .lg\:mt-10 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 10);
     }
   }
   .lg\:mb-0 {
