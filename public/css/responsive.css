@@ -55,9 +55,13 @@
     overflow-x: hidden !important;
      overscroll-behavior: none;
   }
-  .parallax-section > div.relative.z-10 > div {
-    position: static !important;
-    margin: 1rem auto;
+  .parallax-section .project-card{
+          position: relative !important;
+        margin: 1rem auto;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
   }
   .heading-1 {
     font-size: 4.5rem; /* Adjusted for smaller screens */
