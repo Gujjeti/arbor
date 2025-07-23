@@ -8,6 +8,8 @@ window.addEventListener("load", () => {
 const isMobileOrTablet = /iP(ad|hone|od)|Android|Tablet|Mobile/i.test(navigator.userAgent);
 const isMobile = /iP(hone|od)|Android/i.test(navigator.userAgent);
 if (window.innerWidth <= 768) {
+
+  $('.categories__nav .link').removeClass('link--led');
   document.documentElement.classList.add('mobile');
   var header = $('header');
   var headerOffset = header.offset().top; // Get the initial position of the header
