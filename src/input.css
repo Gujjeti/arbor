@@ -537,7 +537,7 @@ span.RightEle img{
 
 .tabs a{
      font-family: 'voyageregular';
-  @apply text-olive-drab font-semibold uppercase text-[2.5rem] opacity-50;
+  @apply text-olive-drab font-semibold uppercase text-[2rem] md:text-[2.5rem] opacity-50;
 }
 
 .tabs a.active{
@@ -587,6 +587,13 @@ span.RightEle img{
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+
+
+
+
+
+
+
 
     
 .intro{
