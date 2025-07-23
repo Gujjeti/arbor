@@ -33,6 +33,12 @@
 
  @media (max-width: 768px) {
 
+  .masonry-item {
+
+      padding: 15px;
+
+      
+    }
 
 
   body {
