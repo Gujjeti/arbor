@@ -394,7 +394,7 @@ if ($('.masonry-grid').length) {
         itemSelector: '.masonry-item',
         columnWidth: '.grid-sizer',
         percentPosition: true,
-        gutter: 20,
+        gutter: 10,
       });
     });
   };
