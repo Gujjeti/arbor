@@ -370,6 +370,37 @@ document.querySelectorAll(".reveal-card").forEach((card) => {
   }
 
 
+const images = gsap.utils.toArray("#image-stack img");
+
+const tl4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#image-stack",
+    scroller: "[data-scroll-container]",
+    start: "top 80%",
+    end: "bottom 40%",
+    scrub: 1.5,
+  },
+});
+
+images.forEach((img, i) => {
+  tl4.to(
+    img,
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power2.out",
+    },
+    i * 0.3 // slightly staggered scrub overlap
+  );
+});
+
+
+
+
+
+
+
 });
 
 
@@ -612,6 +643,39 @@ if ($('.masonry-grid').length) {
   });
 
 
+const categoriesSwiper = new Swiper(".categoriesSwiper", {
+  effect: "coverflow", // Make sure there's no typo here
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 1.5,
+  loop: true,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 180,
+    depth: 150,
+    modifier: 3,
+    slideShadows: true,
+  },
+});
+
+
+const brandsSwiper = new Swiper(".brandsSwiper", {
+  effect: "coverflow", // Make sure there's no typo here
+  grabCursor: true,
+centeredSlides: true,
+centeredSlidesBounds: true,
+  slidesPerView:3,
+  spaceBetween: 100, 
+   loop: true,
+  coverflowEffect: {
+  rotate: 0,
+  stretch: 10,
+  depth: 80,
+  modifier:2.5,
+  slideShadows: true,
+  },
+});
+
 
   
 const swiper = new Swiper(".mySwiper", {
@@ -711,6 +775,9 @@ if (testimonialPrev) {
 if (testimonialNext) {
   testimonialNext.addEventListener('click', () => testimonialSlider.slideNext());
 }
+
+
+
 
 
 function bindCursorArrows(sliderSelector) {

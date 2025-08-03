@@ -1,4 +1,8 @@
 @import "tailwindcss";
+
+
+
+
 @theme {
   --color-primary: #EBBF80;
   --color-secondary: #51483F;
@@ -590,10 +594,18 @@ span.RightEle img{
 
 
 
+.brandsSwiper {
+  width: 100%;
+ 
+}
 
 
-
-
+      .categoriesSwiper  .swiper-slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
 
     
 .intro{
