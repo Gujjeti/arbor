@@ -33,6 +33,10 @@
 
  @media (max-width: 768px) {
 
+  #filterNav a::after{
+    width: 120px;
+  }
+
   .masonry-item {
 
       padding: 15px;

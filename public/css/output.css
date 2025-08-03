@@ -203,6 +203,9 @@
   .relative {
     position: relative;
   }
+  .static {
+    position: static;
+  }
   .sticky {
     position: sticky;
   }
@@ -584,6 +587,9 @@
   .w-\[90\%\] {
     width: 90%;
   }
+  .w-\[100\%\] {
+    width: 100%;
+  }
   .w-\[250px\] {
     width: 250px;
   }
@@ -604,6 +610,9 @@
   }
   .max-w-\[25rem\] {
     max-width: 25rem;
+  }
+  .flex-shrink-0 {
+    flex-shrink: 0;
   }
   .shrink-0 {
     flex-shrink: 0;
@@ -778,6 +787,9 @@
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
   }
   .rounded {
     border-radius: 0.25rem;
@@ -986,6 +998,9 @@
   .py-\[10rem\] {
     padding-block: 10rem;
   }
+  .py-\[12rem\] {
+    padding-block: 12rem;
+  }
   .pt-0 {
     padding-top: calc(var(--spacing) * 0);
   }
@@ -1073,6 +1088,10 @@
   }
   .text-\[19\.8vw\] {
     font-size: 19.8vw;
+  }
+  .leading-35 {
+    --tw-leading: calc(var(--spacing) * 35);
+    line-height: calc(var(--spacing) * 35);
   }
   .leading-none {
     --tw-leading: 1;
@@ -1361,6 +1380,11 @@
       padding-inline-end: calc(var(--spacing) * 8);
     }
   }
+  .md\:absolute {
+    @media (width >= 48rem) {
+      position: absolute;
+    }
+  }
   .md\:static {
     @media (width >= 48rem) {
       position: static;
@@ -1516,6 +1540,11 @@
       width: 80%;
     }
   }
+  .md\:w-\[90\%\] {
+    @media (width >= 48rem) {
+      width: 90%;
+    }
+  }
   .md\:w-auto {
     @media (width >= 48rem) {
       width: auto;
@@ -1556,6 +1585,11 @@
       align-items: flex-start;
     }
   }
+  .md\:justify-between {
+    @media (width >= 48rem) {
+      justify-content: space-between;
+    }
+  }
   .md\:justify-start {
     @media (width >= 48rem) {
       justify-content: flex-start;
@@ -1583,6 +1617,11 @@
         margin-block-start: calc(calc(var(--spacing) * 0) * var(--tw-space-y-reverse));
         margin-block-end: calc(calc(var(--spacing) * 0) * calc(1 - var(--tw-space-y-reverse)));
       }
+    }
+  }
+  .md\:overflow-hidden {
+    @media (width >= 48rem) {
+      overflow: hidden;
     }
   }
   .md\:overflow-visible {
