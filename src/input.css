@@ -283,6 +283,11 @@ transition-delay: 5.6s;
 }
 
 
+.bg-img-3{
+    @apply bg-center bg-no-repeat   bg-cover bg-[#F8F6F0];
+}
+
+
 .heading-1{
     @apply  text-[6.25vw] font-normal  leading-30 
 }
