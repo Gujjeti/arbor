@@ -46,7 +46,7 @@
 
   </head>
 
-  <body class="index headerScroll innerPage">
+  <body class="index headerScroll ">
     <button
       id="scrollTopBtn"
       class="fixed bottom-20 right-10 w-17 h-17 rounded-full bg-white shadow-lg flex items-center justify-center z-50"
@@ -176,7 +176,8 @@
             </button>
        <a href="index.html" class="nav-link">Home</a>
             <a href="about.html" class="nav-link ">About Us</a>
-            <a href="collections.html" class="nav-link active">Collection</a>
+               <a href="commercial.html" class="nav-link ">Commercial</a>
+              <a href="residential.html" class="nav-link ">Residential</a>
             <a href="contact.html" class="nav-link">Contact Us</a>
 
             <div class="flex gap-6 md:hidden flex-col">
@@ -229,50 +230,68 @@
 
 
 
-      <div class="flex items-center justify-center mt-50 md:mt-[25vh] mb-[12vh] font-[600] flex-col relative">
-  <nav class="text-sm text-olive-drab" aria-label="Breadcrumb" >
+  <div class="flex items-center justify-center h-[45rem]  font-[600] flex-col relative">
+        <div class="absolute w-full h-full top-0 left-0 ">
+                    <div class="bg-[#51483F] opacity-70 absolute top-0 w-full h-full"></div>
+
+            <img src="images/Commercial-banner.jpg" class=" w-full h-full" />
+        </div>
+  <nav class="text-sm text-white relative" aria-label="Breadcrumb" >
     <ol class="inline-flex items-center space-x-1 text-[1rem]">
       <li>
-        <a href="#" class="hover:text-gray-700">Home</a>
+        <a href="#" class="hover:text-white text-white">Home</a>
       </li>
       <li class="flex items-center space-x-1">
         <span>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4.5 9L7.5 6L4.5 3" stroke="#7B7458"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.5 9L7.5 6L4.5 3" stroke="#fff"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
-        <a href="collections.html" class="text-olive-drab font-[600] opacity-50">Collection</a>
+        <a href="collections.html" class="text-white font-[600] ">Commercial</a>
+      </li>
+
+       <li class="flex items-center space-x-1">
+        <span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 9L7.5 6L4.5 3" stroke="#fff"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <a href="collections.html" class="text-white font-[600] opacity-50">Seating</a>
       </li>
     </ol>
   </nav>
 
   <div class="flex justify-center text-center mt-20" >
      <div class="text-clipath">
-            <h1 class="heading-1 text-olive-drab text-center px-[2rem] md:px-0">
-           Explore Our<br/> Signature Collection
+            <h1 class="heading-1 text-white text-center px-[2rem] md:px-0">
+          Seating
             </h1>
           </div>
   </div>
 
 
-      <span
-            class="absolute left-[5%] top-50  md:-top-20 z-20 leftEle hidden lg:block"
-            data-scroll
-            data-scroll-speed="-2"
-             data-scroll-direction="horizontal"
-          >
-            <img src="images/singleChair.png" alt="" class="w-20 md:w-50 " />
-          </span>
+    <nav class="flex items-center justify-between w-[90%] bg-[#F8F6F0] absolute bottom-0  "  id="filterNav" data-scroll>
+<a href="#" class="active px-15 p-10" data-text="Sofa" style="--delay:5.1s">
+              <span>Seating</span>
+            </a>
+            <a href="#" class="px-15 p-10" data-text="Sofa" style="--delay:5.2s">
+              <span>Tables</span>
+            </a>
+            <a href="#" class="px-15 p-10" data-text="Sofa" style="--delay:5.4s">
+              <span>Desks</span>
+            </a>
+            <a href="#" class="px-15 p-10" data-text="Sofa" style="--delay:5.5s">
+              <span>Storage</span>
+            </a>
+            <a href="#" class="px-15 p-10" data-text="Sofa" style="--delay:5.6s">
+              <span>Loungers</span>
+            </a>
 
-    <span
-            class="absolute right-[5%] -bottom-10 z-20 RightEle  hidden lg:block"
-            data-scroll
-            data-scroll-speed="2.5"
-            data-scroll-delay="0.3"
-             data-scroll-direction="horizontal"
-          >
-            <img src="images/soft-chair.png" alt="" class="w-20 md:w-40" />
-          </span>
+            <a href="#" class="px-15 p-10" data-text="Sofa" style="--delay:5.7s">
+              <span>Accents</span>
+            </a>
+    </nav>
+
 
 </div>
 
@@ -282,42 +301,8 @@
 
 <section  class="relative w-full px-[2rem] lg:px-[10rem] py-20 bg-white">
 
-  <div class="flex gap-15 mb-15 tabs">
-  <a href="#" class="active" data-target="commercial">Commercial</a>
-  <a href="#" data-target="residential">Residential</a>
-  </div>
 
-<div class="flex justify-between gap-5 mb-4 flex-col md:flex-row items-center">
-  <nav id="filterNav" class="flex flex-wrap gap-4 justify-center md:justify-start " data-scroll>
-
-  <a href="#" style="--delay:5.1s" class="filter-btn px-8 py-3 uppercase text-[1rem] font-medium text-secondary border border-secondary rounded-full hover:bg-secondary hover:text-white transition duration-300 active" data-filter="all">All</a>
-
-  <a href="#" style="--delay:5.2s" class="filter-btn px-8 py-3 uppercase text-[1rem] font-medium text-secondary border border-secondary rounded-full hover:bg-secondary hover:text-white transition duration-300">Sofa</a>
-
-  <a href="#" style="--delay:5.3s" class="filter-btn px-8 py-3 uppercase text-[1rem] font-medium text-secondary border border-secondary rounded-full hover:bg-secondary hover:text-white transition duration-300">Tables</a>
-
-    <a href="#" style="--delay:5.4s" class="filter-btn px-8 py-3 uppercase text-[1rem] font-medium text-secondary border border-secondary rounded-full hover:bg-secondary hover:text-white transition duration-300">Chairs</a>
-
-
-      <a href="#" style="--delay:5.5s" class="filter-btn px-8 py-3 uppercase text-[1rem] font-medium text-secondary border border-secondary rounded-full hover:bg-secondary hover:text-white transition duration-300">Consoles</a>
-
-
-        <a href="#" style="--delay:5.6s" class="filter-btn px-8 py-3 uppercase text-[1rem] font-medium text-secondary border border-secondary rounded-full hover:bg-secondary hover:text-white transition duration-300">Benches</a>
-
-
-          <a href="#" style="--delay:5.7s" class="filter-btn px-8 py-3 uppercase text-[1rem] font-medium text-secondary border border-secondary rounded-full hover:bg-secondary hover:text-white transition duration-300">Benches</a>
-
-</nav>
-
-
-<a href="#" class="hidden sm:inline-block btn btn-primary px-2 btn-small">
-            <span> Download Catalogue</span>
-          </a>
-
-</div>
-
-
-<div  class="clearfix masonry-grid" id="commercial" data-scroll>
+<div  class="clearfix masonry-grid"  data-scroll>
   <!-- Grid Sizer must match item width -->
    <div class="grid-sizer"></div>
 
@@ -326,7 +311,7 @@
     <img src="images/masonry-grid/1.jpg" class="w-full" />
   
   </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
+  <div class="masonry-item"  data-scroll data-category="seating">
     <img src="images/masonry-grid/2.jpg" class="w-full" />
    
   </div>
@@ -342,7 +327,7 @@
     <img src="images/masonry-grid/5.jpg" class="w-full" />
    
   </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
+  <div class="masonry-item"  data-scroll data-category="Seating">
     <img src="images/masonry-grid/3.jpg" class="w-full" />
    
   </div>
@@ -350,7 +335,7 @@
     <img src="images/masonry-grid/4.jpg" class="w-full" />
    
   </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
+  <div class="masonry-item"  data-scroll data-category="Seating">
     <img src="images/masonry-grid/5.jpg" class="w-full" />
    
   </div>
@@ -375,63 +360,7 @@
 
 </div>
 
-<div  class="clearfix masonry-grid" id="residential" data-scroll>
-  <!-- Grid Sizer must match item width -->
-   <div class="grid-sizer"></div>
 
-  <!-- Masonry Items -->
-     <div class="masonry-item"  data-scroll data-category="sofa">
-    <img src="images/masonry-grid/1.jpg" class="w-full" />
-  
-  </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
-    <img src="images/masonry-grid/2.jpg" class="w-full" />
-   
-  </div>
-  <div class="masonry-item"  data-scroll data-category="chairs">
-    <img src="images/masonry-grid/3.jpg" class="w-full" />
-   
-  </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
-    <img src="images/masonry-grid/4.jpg" class="w-full" />
-   
-  </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
-    <img src="images/masonry-grid/5.jpg" class="w-full" />
-   
-  </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
-    <img src="images/masonry-grid/3.jpg" class="w-full" />
-   
-  </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
-    <img src="images/masonry-grid/4.jpg" class="w-full" />
-   
-  </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
-    <img src="images/masonry-grid/5.jpg" class="w-full" />
-   
-  </div>
-
-
-    <div class="masonry-item"  data-scroll data-category="tables">
-    <img src="images/masonry-grid/5.jpg" class="w-full" />
-   
-  </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
-    <img src="images/masonry-grid/3.jpg" class="w-full" />
-   
-  </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
-    <img src="images/masonry-grid/4.jpg" class="w-full" />
-   
-  </div>
-  <div class="masonry-item"  data-scroll data-category="tables">
-    <img src="images/masonry-grid/5.jpg" class="w-full" />
-   
-  </div>
-
-</div>
 
 
 

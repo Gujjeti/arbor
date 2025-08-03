@@ -359,15 +359,7 @@ document.querySelectorAll(".reveal-card").forEach((card) => {
 
 
 
-  const urlParams = new URLSearchParams(window.location.search);
-  const tab = urlParams.get('tab'); // 'residential' or 'commercial'
 
-  if (tab === 'residential' || tab === 'commercial') {
-    const targetTab = document.querySelector(`.tabs a[data-target="${tab}"]`);
-    if (targetTab) {
-      targetTab.click(); // Simulate tab click
-    }
-  }
 
 
 const images = gsap.utils.toArray("#image-stack img");
