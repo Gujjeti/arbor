@@ -133,7 +133,7 @@ document.querySelectorAll(".gallery-grid figure").forEach((figure, index) => {
       scrollTrigger: {
         trigger: figure,
         scroller: "[data-scroll-container]",
-        start: "top 90%",
+        start: "top 80%",
         toggleActions: "play none none reverse"
       },
       delay: index * 0.1 // stagger manually if needed
