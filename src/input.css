@@ -762,3 +762,11 @@ z-index: 9999;
   position: absolute;
 }
 
+
+
+
+.gallery-grid figure{
+  clip-path: polygon(0 0,100% 0,100% 0,0 0);
+  opacity: 0;
+}
+

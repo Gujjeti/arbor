@@ -117,6 +117,35 @@ locoScroll.on('scroll', (instance) => {
 
 
 
+// Animate each figure
+document.querySelectorAll(".gallery-grid figure").forEach((figure, index) => {
+  gsap.fromTo(
+    figure,
+    {
+      clipPath: "polygon(0 0,100% 0,100% 0,0 0)",
+      opacity: 0
+    },
+    {
+      clipPath: "polygon(0 0,100% 0,100% 100%,0 100%)",
+      opacity: 1,
+      duration: 0.6,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: figure,
+        scroller: "[data-scroll-container]",
+        start: "top 90%",
+        toggleActions: "play none none reverse"
+      },
+      delay: index * 0.1 // stagger manually if needed
+    }
+  );
+});
+
+
+
+
+
+
 }
 
 
