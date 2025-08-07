@@ -304,13 +304,13 @@ transition-delay: 5.6s;
     @apply  text-[4.375rem] font-normal  leading-20 
 }
 
-section .heading-1{
+/* section .heading-1{
  @apply transform translate-y-0 lg:translate-y-[100%] transition-all duration-1000
 }
 
  .is-inview .heading-1 {
     @apply translate-y-0
- }
+ } */
 
  .btn-link{
     @apply text-secondary text-[1rem] font-[600] uppercase  transition-colors duration-300 hover:text-primary border-b-1 border-[#CECBC5] pb-1 tracking-[0]
