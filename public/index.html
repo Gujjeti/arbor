@@ -231,7 +231,7 @@
         />
 
         <!-- Tint Overlay -->
-        <div class="absolute inset-0 bg-olive-drab opacity-70 z-10"></div>
+        <!-- <div class="absolute inset-0 bg-olive-drab opacity-70 z-10"></div> -->
 
         <!-- Centered Title -->
         <div
@@ -274,35 +274,23 @@
       >
         <div class="cat-nav-inner">
           <nav class="categories__nav">
-            <a href="#" class="link link--leda" data-text="Sofa">
-              <span>Sofa</span>
+            <a href="#" class="" data-text="commercial">
+              <span>Commercial</span>
             </a>
-            <a href="#" class="link link--leda" data-text="Tables">
-              <span>Tables</span>
+            <a href="#" class="" data-text="residential">
+              <span>Residential</span>
             </a>
-            <a href="#" class="link link--leda" data-text="Chairs">
-              <span>Chairs</span>
-            </a>
-            <a href="#" class="link link--leda" data-text="Consoles">
-              <span>Consoles</span>
-            </a>
-            <a href="#" class="link link--leda" data-text="Benches">
-              <span>Benches</span>
-            </a>
-
-            <a href="#" class="link link--leda" data-text="Poufs">
-              <span>Poufs</span>
-            </a>
+           
           </nav>
         </div>
         <section class="categories-sec h-full">
           <div class="swiper mySwiper p-4" id="thumbSlider">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper" id="swiperWrapper">
               <!-- Slide 1 -->
-              <div class="swiper-slide flex flex-col items-center text-center">
+              <div class="swiper-slide flex flex-col items-center text-center" data-target="commercial">
                 <div class="p-6">
                   <h4 class="text-secondary text-[2rem] font-light">001</h4>
-                  <span class="text-secondary text-[1rem] uppercase">Sofa</span>
+                  <span class="text-secondary text-[1rem] uppercase">Seating</span>
                 </div>
                 <div class="overflow-hidden">
                   <img
@@ -314,7 +302,7 @@
               </div>
 
               <!-- Slide 2 -->
-              <div class="swiper-slide flex flex-col items-center text-center">
+              <div class="swiper-slide flex flex-col items-center text-center" data-target="commercial">
                 <div class="p-6">
                   <h4 class="text-secondary text-[2rem] font-light">002</h4>
                   <span class="text-secondary text-[1rem] uppercase"
@@ -331,11 +319,11 @@
               </div>
 
               <!-- Slide 3 -->
-              <div class="swiper-slide flex flex-col items-center text-center">
+              <div class="swiper-slide flex flex-col items-center text-center" data-target="commercial">
                 <div class="p-6">
                   <h4 class="text-secondary text-[2rem] font-light">003</h4>
                   <span class="text-secondary text-[1rem] uppercase"
-                    >Chairs</span
+                    >Desks</span
                   >
                 </div>
                 <div class="overflow-hidden">
@@ -348,11 +336,11 @@
               </div>
 
               <!-- Slide 4 -->
-              <div class="swiper-slide flex flex-col items-center text-center">
+              <div class="swiper-slide flex flex-col items-center text-center" data-target="commercial">
                 <div class="p-6">
                   <h4 class="text-secondary text-[2rem] font-light">004</h4>
                   <span class="text-secondary text-[1rem] uppercase"
-                    >Consoles</span
+                    >Storage</span
                   >
                 </div>
                 <div class="overflow-hidden">
@@ -365,11 +353,11 @@
               </div>
 
               <!-- Slide 5 -->
-              <div class="swiper-slide flex flex-col items-center text-center">
+              <div class="swiper-slide flex flex-col items-center text-center" data-target="commercial">
                 <div class="p-6">
                   <h4 class="text-secondary text-[2rem] font-light">005</h4>
                   <span class="text-secondary text-[1rem] uppercase"
-                    >Benches</span
+                    >Loungers</span
                   >
                 </div>
                 <div class="overflow-hidden">
@@ -381,7 +369,40 @@
                 </div>
               </div>
 
-              <div class="swiper-slide flex flex-col items-center text-center">
+                      <div class="swiper-slide flex flex-col items-center text-center" data-target="commercial">
+                <div class="p-6">
+                  <h4 class="text-secondary text-[2rem] font-light">005</h4>
+                  <span class="text-secondary text-[1rem] uppercase"
+                    >Loungers</span
+                  >
+                </div>
+                <div class="overflow-hidden">
+                  <img
+                    src="images/cat/5.jpg"
+                    alt="Thumbnail 5"
+                    class="h-[50vh] w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                  />
+                </div>
+              </div>
+
+
+                      <div class="swiper-slide flex flex-col items-center text-center" data-target="commercial">
+                <div class="p-6">
+                  <h4 class="text-secondary text-[2rem] font-light">005</h4>
+                  <span class="text-secondary text-[1rem] uppercase"
+                    >Loungers</span
+                  >
+                </div>
+                <div class="overflow-hidden">
+                  <img
+                    src="images/cat/5.jpg"
+                    alt="Thumbnail 5"
+                    class="h-[50vh] w-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide flex flex-col items-center text-center" data-target="residential">
                 <div class="p-6">
                   <h4 class="text-secondary text-[2rem] font-light">006</h4>
                   <span class="text-secondary text-[1rem] uppercase"
@@ -398,7 +419,7 @@
               </div>
 
               <!-- Slide 5 -->
-              <div class="swiper-slide flex flex-col items-center text-center">
+              <div class="swiper-slide flex flex-col items-center text-center" data-target="residential">
                 <div class="p-6">
                   <h4 class="text-secondary text-[2rem] font-light">007</h4>
                   <span class="text-secondary text-[1rem] uppercase"
@@ -414,7 +435,7 @@
                 </div>
               </div>
 
-              <div class="swiper-slide flex flex-col items-center text-center">
+              <div class="swiper-slide flex flex-col items-center text-center" data-target="residential">
                 <div class="p-6">
                   <h4 class="text-secondary text-[2rem] font-light">008</h4>
                   <span class="text-secondary text-[1rem] uppercase"
@@ -496,7 +517,7 @@
       <section
         class="relative min-h-[160vh] w-full overflow-hidden parallax-section py-[10rem] lg:mt-10"
       >
-        <!-- Parallax Image -->
+       
         <div data-scroll data-scroll-speed="-2" class="absolute inset-0 z-0">
           <img
             src="images/flower-bg.jpg"
@@ -511,11 +532,10 @@
           <h2 class="heading-1 text-olive-drab">Signature collection</h2>
         </div>
 
-        <!-- Cards -->
+     
         <div
           class=" z-10 h-full flex flex-col items-center justify-center mt-20 md:mt-0"
         >
-          <!-- Left Top Card -->
           <div
             class="absolute top-[40%]  left-[10rem] max-w-[25rem] project-card"
           >
@@ -526,7 +546,6 @@
            </a>
           </div>
 
-          <!-- Right Bottom Card -->
          <div
             class="absolute top-[50%]  right-[10rem] max-w-[25rem] project-card"
           >
@@ -545,16 +564,16 @@
             </a>
           </div>
 
-      </section>
+      </section> 
 
       <!-- Section -->
-      <section
+      <!-- <section
         class="relative w-full bg-img bg-[url('../images/white-textture-bg.png')] pt-[10rem] pb-[8rem]"
       >
         <div class="px-[3rem] md:px-[10rem] relative">
           <small class="text-olive-drab mb-[3rem] block">Products</small>
 
-          <!-- Header: Left title, Right button -->
+        
           <div class="flex justify-between items-start" data-scroll>
             <h2 class="heading-1 text-olive-drab">Signature collection</h2>
 
@@ -565,12 +584,7 @@
               </span>
             </a>
 
-            <!-- <a class="btn-link relative inline-block" href="#">
-              View All
-              <span class="absolute -top-4 -right-8 text-[#CECBC5] px-2 py-0.5">
-                68
-              </span>
-            </a> -->
+        
           </div>
 
           <span
@@ -582,11 +596,11 @@
           </span>
         </div>
 
-        <!-- Swiper Slider -->
+ 
         <div class="pt-[5rem] px-[2rem] md:px-0">
           <div class="swiper ProductsSlider">
             <div class="swiper-wrapper">
-              <!-- Single Card Slide -->
+              
               <div class="swiper-slide scroll-reveal" data-scroll>
                 <img
                   src="images/products/1.jpg"
@@ -688,7 +702,7 @@
             ></span>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section
         class="relative px-[2rem] lg:px-[10rem] w-full bg-img bg-[url('../images/white-textture-bg.png')] pt-[5rem] md:pt-[10rem] pb-[8rem]"
@@ -840,7 +854,7 @@
           <div class="flex ticker-track items-start">
             <div class="w-auto flex flex-col items-center text-center px-4">
               <img
-                src="images/inspired/Frame 15978856999.jpg"
+                src="images/inspired/1.jpg"
                 alt="Inspiration"
                 class="h-auto w-auto object-contain"
                
@@ -849,7 +863,7 @@
 
             <div class="w-auto flex flex-col items-center text-center px-4">
               <img
-                src="images/inspired/Frame 1597885697.jpg"
+                src="images/inspired/2.jpg"
                 alt="Inspiration"
                 class="h-auto w-auto object-contain"
               />
@@ -857,7 +871,7 @@
 
             <div class="w-auto flex flex-col items-center text-center px-4">
               <img
-                src="images/inspired/Frame 15978856961.jpg"
+                src="images/inspired/3.jpg"
                 alt="Inspiration"
                 class="h-auto w-auto object-contain"
               />
@@ -865,7 +879,7 @@
 
             <div class="w-auto flex flex-col items-center text-center px-4">
               <img
-                src="images/inspired/Frame 15978856999.jpg"
+                src="images/inspired/4.jpg"
                 alt="Inspiration"
                 class="h-auto w-auto object-contain"
               />
@@ -873,7 +887,7 @@
 
             <div class="w-auto flex flex-col items-center text-center px-4">
               <img
-                src="images/inspired/Frame 1597885697.jpg"
+                src="images/inspired/5.jpg"
                 alt="Inspiration"
                 class="h-auto w-auto object-contain"
               />
@@ -881,7 +895,7 @@
 
             <div class="w-auto flex flex-col items-center text-center px-4">
               <img
-                src="images/inspired/Frame 15978856961.jpg"
+                src="images/inspired/6.jpg"
                 alt="Inspiration"
                 class="h-auto w-auto object-contain"
               />
@@ -1364,9 +1378,17 @@ that matter</h2>
                 </li>
                 <li>
                   <a
-                    href="collections.html"
+                    href="commercial.html"
                     class="hover:underline uppercase font-medium text-[1rem]"
-                    >Collection</a
+                    >Commercial</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="residential.html"
+                    class="hover:underline uppercase font-medium text-[1rem]"
+                    >Residential</a
                   >
                 </li>
                 <li>
