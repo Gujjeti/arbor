@@ -620,6 +620,9 @@
   .w-\[15rem\] {
     width: 15rem;
   }
+  .w-\[70\%\] {
+    width: 70%;
+  }
   .w-\[100\%\] {
     width: 100%;
   }
@@ -711,6 +714,9 @@
   }
   .resize {
     resize: both;
+  }
+  .grid-flow-col {
+    grid-auto-flow: column;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1505,9 +1511,29 @@
       order: 0;
     }
   }
+  .md\:-mt-0 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * -0);
+    }
+  }
+  .md\:-mt-50 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * -50);
+    }
+  }
+  .md\:-mt-60 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * -60);
+    }
+  }
   .md\:-mt-70 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * -70);
+    }
+  }
+  .md\:-mt-100 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * -100);
     }
   }
   .md\:mt-0 {
@@ -1570,9 +1596,19 @@
       height: 30vh;
     }
   }
+  .md\:h-\[40rem\] {
+    @media (width >= 48rem) {
+      height: 40rem;
+    }
+  }
   .md\:h-\[40vh\] {
     @media (width >= 48rem) {
       height: 40vh;
+    }
+  }
+  .md\:h-\[50rem\] {
+    @media (width >= 48rem) {
+      height: 50rem;
     }
   }
   .md\:h-\[50vh\] {
@@ -1871,6 +1907,26 @@
       width: calc(var(--spacing) * 60);
     }
   }
+  .lg\:w-\[30\%\] {
+    @media (width >= 64rem) {
+      width: 30%;
+    }
+  }
+  .lg\:w-\[40\%\] {
+    @media (width >= 64rem) {
+      width: 40%;
+    }
+  }
+  .lg\:w-\[50\%\] {
+    @media (width >= 64rem) {
+      width: 50%;
+    }
+  }
+  .lg\:w-\[70\%\] {
+    @media (width >= 64rem) {
+      width: 70%;
+    }
+  }
   .lg\:grid-cols-4 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1889,6 +1945,16 @@
   .lg\:gap-80 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 80);
+    }
+  }
+  .lg\:gap-120 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 120);
+    }
+  }
+  .lg\:gap-1200 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 1200);
     }
   }
   .lg\:px-\[10rem\] {
