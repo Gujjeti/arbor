@@ -437,7 +437,7 @@ $(document).ready(function () {
 
 
 
-if ($('.masonry-grid').length) {
+  if ($('.masonry-grid').length) {
   let masonryInstances = {};
 
   const initMasonry = (grid) => {
@@ -456,43 +456,46 @@ if ($('.masonry-grid').length) {
     initMasonry(grid);
   });
 
+  // ---------------------
   // Tab switching logic
+  // ---------------------
   const tabs = document.querySelectorAll('.tabs a');
   const grids = document.querySelectorAll('.masonry-grid');
 
   tabs.forEach((tab) => {
-  tab.addEventListener('click', (e) => {
-    e.preventDefault();
-    const targetId = tab.getAttribute('data-target');
+    tab.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = tab.getAttribute('data-target');
 
-    // Active class toggle
-    tabs.forEach((t) => t.classList.remove('active'));
-    tab.classList.add('active');
+      // Active class toggle
+      tabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
 
-    // Hide all grids, show target grid
-    grids.forEach((grid) => {
-      if (grid.id === targetId) {
-        grid.classList.remove('hidden');
+      // Hide all grids, show target grid
+      grids.forEach((grid) => {
+        if (grid.id === targetId) {
+          grid.classList.remove('hidden');
 
-        // Re-layout current Masonry
-        if (masonryInstances[targetId]) {
-          masonryInstances[targetId].layout();
+          // Re-layout current Masonry
+          if (masonryInstances[targetId]) {
+            masonryInstances[targetId].layout();
+          }
+        } else {
+          grid.classList.add('hidden');
         }
-      } else {
-        grid.classList.add('hidden');
+      });
+
+      // 🔁 Reset filter to 'All'
+      const allBtn = document.querySelector('#filterNav a[data-filter="all"]');
+      if (allBtn) {
+        allBtn.click(); // Trigger click to reset filter
       }
     });
-
-    // 🔁 Reset filter to 'All'
-    const allBtn = document.querySelector('#filterNav a[data-filter="all"]');
-    if (allBtn) {
-      allBtn.click(); // Trigger click to reset filter
-    }
   });
-});
 
-
-  // Optional: Filter buttons inside currently visible masonry grid
+  // ---------------------
+  // Filter logic
+  // ---------------------
   const filterButtons = document.querySelectorAll('#filterNav a');
 
   filterButtons.forEach((btn) => {
@@ -511,14 +514,56 @@ if ($('.masonry-grid').length) {
       // Show/hide items
       activeGrid.querySelectorAll('.masonry-item').forEach((item) => {
         const itemCat = item.getAttribute('data-category');
-        item.style.display = (filter === 'all' || itemCat === filter) ? 'block' : 'none';
+        item.style.display =
+          filter === 'all' || itemCat === filter ? 'block' : 'none';
       });
 
       // Trigger Masonry re-layout
       currentMasonry.layout();
     });
   });
+
+  // ---------------------
+  // Load More logic
+  // ---------------------
+  document.querySelectorAll('.masonry-grid').forEach((grid) => {
+    const items = grid.querySelectorAll('.masonry-item');
+    let visibleCount = 0;
+    const initial = 12; // show first 12
+    const step = 4;     // load 4 more each click
+
+    const loadMoreBtn = document.querySelector('#loadMore');
+    // 👆 assumes you have <button class="load-more">Load More</button> near grid
+
+    function showMore(count) {
+      for (let i = visibleCount; i < count && i < items.length; i++) {
+        items[i].style.display = 'block';
+      }
+      visibleCount = count;
+
+      // re-layout Masonry
+      if (masonryInstances[grid.id]) {
+        masonryInstances[grid.id].layout();
+      }
+
+      // hide button if all items are visible
+      if (visibleCount >= items.length) {
+        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+      }
+    }
+
+    // show first batch
+    showMore(initial);
+
+    // button click
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        showMore(visibleCount + step);
+      });
+    }
+  });
 }
+
 
 
 
@@ -583,89 +628,90 @@ if ($('.masonry-grid').length) {
     delay:5.6
   });
 
-  $(".categories__nav").click(function (e) {
-    e.preventDefault();
-      window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  // $(".categories__nav").click(function (e) {
+  //   e.preventDefault();
+  //     window.scrollTo({
+  //     top: 0,
+  //     behavior: 'smooth'
+  //   });
 
-    $('.categories-sec').show()
-    $('.categories-sec').addClass('h-screen')
+  //   $('.categories-sec').show()
+  //   $('.categories-sec').addClass('h-screen')
 
 
-    $('html, body').addClass('overflow-hidden');
-    const $section = $(".cat-wrapper");
-    gsap.to('.text-clipath',{
-        y:100,
-        opacity:0
-    })
-    // gsap.to(".categories__nav a", {
-    //   y: -50,
-    //   ease: "power3.out",
-    //   opacity: 0,
-    //   stagger: 0.1,
-    //   duration: 0.1,
-    // });
+  //   $('html, body').addClass('overflow-hidden');
+  //   const $section = $(".cat-wrapper");
+  //   gsap.to('.text-clipath',{
+  //       y:100,
+  //       opacity:0
+  //   })
+  //   // gsap.to(".categories__nav a", {
+  //   //   y: -50,
+  //   //   ease: "power3.out",
+  //   //   opacity: 0,
+  //   //   stagger: 0.1,
+  //   //   duration: 0.1,
+  //   // });
 
-    //    gsap.from("#thumbSlider .swiper-slide", {
-    //   y: 50,
-    //   ease: "power3.out",
-    //   opacity: 0,
-    //   stagger: 0.2,
-    //   duration: 0.8,
-    // });
-    // Show and animate category section
-    $section.removeClass("active");
-    void $section[0].offsetWidth; // trigger reflow
-    $section.addClass("active");
-  });
+  //   //    gsap.from("#thumbSlider .swiper-slide", {
+  //   //   y: 50,
+  //   //   ease: "power3.out",
+  //   //   opacity: 0,
+  //   //   stagger: 0.2,
+  //   //   duration: 0.8,
+  //   // });
+  //   // Show and animate category section
+  //   $section.removeClass("active");
+  //   void $section[0].offsetWidth; // trigger reflow
+  //   $section.addClass("active");
+  // });
+
   // Hide when clicking outside
-  $(document).on("click", function (e) {
-    const $section = $(".cat-wrapper");
+  // $(document).on("click", function (e) {
+  //   const $section = $(".cat-wrapper");
 
-    if(!$section.hasClass("active")){
-       $section.addClass("active");
-    }
-    // If section is active and click is outside both
-    if (
-      $section.hasClass("active") &&
-      !$section.is(e.target) &&
-      !$section.has(e.target).length 
-    ) {
-  $('html, body').removeClass('overflow-hidden');
-    gsap.to("#thumbSlider .swiper-slide", {
-      y: 0,
-      ease: "power3.out",
-      opacity: 1,
-      stagger: 0.2,
-      duration: 0.8,
-    });
+  //   if(!$section.hasClass("active")){
+  //      $section.addClass("active");
+  //   }
+  //   // If section is active and click is outside both
+  //   if (
+  //     $section.hasClass("active") &&
+  //     !$section.is(e.target) &&
+  //     !$section.has(e.target).length 
+  //   ) {
+  // $('html, body').removeClass('overflow-hidden');
+  //   gsap.to("#thumbSlider .swiper-slide", {
+  //     y: 0,
+  //     ease: "power3.out",
+  //     opacity: 1,
+  //     stagger: 0.2,
+  //     duration: 0.8,
+  //   });
 
       
-       $('.categories-sec').removeClass('h-screen');
-         $section.removeClass("active");
+  //      $('.categories-sec').removeClass('h-screen');
+  //        $section.removeClass("active");
 
      
 
-          gsap.to('.text-clipath',{
-        y:0,
-        opacity:1
-    })
-      // gsap.to(".categories__nav a", {
-      //   y: 0,
-      //   ease: "power3.out",
-      //   delay: 0.2,
-      //   opacity: 1,
-      //   stagger: 0.1,
-      //   duration: 0.1,
-      // });
-      setTimeout(() => {
-        $('.categories-sec').hide()
+  //         gsap.to('.text-clipath',{
+  //       y:0,
+  //       opacity:1
+  //   })
+  //     // gsap.to(".categories__nav a", {
+  //     //   y: 0,
+  //     //   ease: "power3.out",
+  //     //   delay: 0.2,
+  //     //   opacity: 1,
+  //     //   stagger: 0.1,
+  //     //   duration: 0.1,
+  //     // });
+  //     setTimeout(() => {
+  //       $('.categories-sec').hide()
         
-      }, 1000); // match the transition duration
-    }
-  });
+  //     }, 1000); // match the transition duration
+  //   }
+  // });
 
 
 const categoriesSwiper = new Swiper(".categoriesSwiper", {
@@ -719,40 +765,40 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 
- const navLinks = document.querySelectorAll('.categories__nav a');
-  const slides = document.querySelectorAll('.swiper-slide');
+//  const navLinks = document.querySelectorAll('.categories__nav a');
+//   const slides = document.querySelectorAll('.swiper-slide');
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
+//   navLinks.forEach(link => {
+//     link.addEventListener('click', function(e) {
+//       e.preventDefault();
 
-      const selectedCategory = this.dataset.text;
+//       const selectedCategory = this.dataset.text;
 
-      // Remove active class from all links and add to the clicked one
-      navLinks.forEach(l => l.classList.remove('active'));
-      this.classList.add('active');
+//       // Remove active class from all links and add to the clicked one
+//       navLinks.forEach(l => l.classList.remove('active'));
+//       this.classList.add('active');
 
-      // Filter slides
-      slides.forEach((slide, index) => {
-        const target = slide.dataset.target;
+//       // Filter slides
+//       slides.forEach((slide, index) => {
+//         const target = slide.dataset.target;
 
-        if (target === selectedCategory) {
-          slide.style.display = '';
-        } else {
-          slide.style.display = 'none';
-        }
-      });
+//         if (target === selectedCategory) {
+//           slide.style.display = '';
+//         } else {
+//           slide.style.display = 'none';
+//         }
+//       });
 
-      // Update Swiper after DOM manipulation
-      swiper.update();
+//       // Update Swiper after DOM manipulation
+//       swiper.update();
 
-      // Slide to the first visible slide
-      const firstVisibleIndex = Array.from(slides).findIndex(slide => slide.style.display !== 'none');
-      if (firstVisibleIndex !== -1) {
-        swiper.slideTo(firstVisibleIndex);
-      }
-    });
-  });
+//       // Slide to the first visible slide
+//       const firstVisibleIndex = Array.from(slides).findIndex(slide => slide.style.display !== 'none');
+//       if (firstVisibleIndex !== -1) {
+//         swiper.slideTo(firstVisibleIndex);
+//       }
+//     });
+//   });
 
 const ProductsSlider = new Swiper('.ProductsSlider', {
   slidesPerView: 1,

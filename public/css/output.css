@@ -1948,6 +1948,9 @@ header.sticky {
   -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
 }
+.invert-0{
+  filter: invert(0);
+}
 header.hide {
   --tw-translate-y: -100%;
   translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -2434,6 +2437,7 @@ small {
   width: 31%;
   box-sizing: border-box;
   padding: 20px;
+  display: none;
 }
 .grid-sizer {
   width: 30%;
