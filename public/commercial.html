@@ -175,21 +175,28 @@
             >
               ✕
             </button>
-       <a href="index.html" class="nav-link">Home</a>
+               <a href="index.html" class="nav-link">Home</a>
             <a href="about.html" class="nav-link ">About Us</a>
-            <a href="commercial.html" class="nav-link active">Commercial</a>
-              <a href="residential.html" class="nav-link">Residential</a>
-            <a href="contact.html" class="nav-link">Contact Us</a>
+           <a href="commercial.html" class="nav-link ">Commercial</a>
+              <a href="residential.html" class="nav-link ">Residential</a>
+            <a href="contact.html" class="nav-link active">Contact Us</a>
 
             <div class="flex gap-6 md:hidden flex-col">
+                <a
+      href="#"
+      class="hidden sm:inline-block btn btn-primary px-2 btn-small dropdown-toggle"
+    >
+      <span class="flex items-center justify-center">Download Catalogue
+
+        <span class="ml-2" style="margin-left: 3px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+        </span>
+      </span>
+  </a>
               <a
-                href="#"
-                class="hidden sm:inline-block btn btn-primary px-2 btn-small"
-              >
-                <span>Download Catalogue</span>
-              </a>
-              <a
-                 href="contact.html#contactForm"
+                href="contact.html#contactForm"
                 class="hidden lg:inline-block btn btn-primary-outline btn-small"
               >
                 Enquire Now
@@ -209,18 +216,50 @@
 
         <!-- Right: CTAs -->
         <div class="hidden items-center gap-4 md:flex">
-          <a
-            href="#"
-            class="hidden sm:inline-block btn btn-primary px-2 btn-small"
-          >
-            <span> Download Catalogue</span>
-          </a>
-          <a
-              href="contact.html"
-            class="hidden lg:inline-block btn btn-primary-outline btn-small"
-          >
-            Enquire Now
-          </a>
+         <!-- Dropdown Wrapper -->
+  <div class="relative dropdown">
+    <a
+      href="#"
+      class="hidden sm:inline-block btn btn-primary px-2 btn-small dropdown-toggle"
+    >
+      <span class="flex items-center justify-center">Download Catalogue
+
+        <span class="ml-2" style="margin-left: 3px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+        </span>
+      </span>
+  </a>
+
+    <!-- Dropdown Menu -->
+    <div
+      class="absolute left-0 mt-2 w-full bg-primary shadow-lg  z-50 rounded-lg text-center p-5 hidden dropdown-menu"
+    >
+      <a
+        href="commercial.html"
+        class="block px-4 py-2 text-white"
+        download
+      >
+        Commercial
+      </a>
+      <a
+        href="residential.html"
+        class="block px-4 py-2 text-white"
+        download
+      >
+        Residential
+      </a>
+    </div>
+  </div>
+
+  <!-- Enquire Now -->
+  <a
+    href="contact.html#contactForm"
+    class="hidden lg:inline-block btn btn-primary-outline btn-small"
+  >
+    Enquire Now
+  </a>
         </div>
       </nav>
     </header>
