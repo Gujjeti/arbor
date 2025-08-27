@@ -176,7 +176,9 @@
             <a href="contact.html" class="nav-link active">Contact Us</a>
 
             <div class="flex gap-6 md:hidden flex-col">
-                <a
+              
+               <div class="relative dropdown">
+    <a
       href="#"
       class="hidden sm:inline-block btn btn-primary px-2 btn-small dropdown-toggle"
     >
@@ -189,6 +191,27 @@
         </span>
       </span>
   </a>
+
+    <!-- Dropdown Menu -->
+    <div
+      class="absolute left-0 mt-0 border-t-2 border-white w-full bg-primary shadow-lg  z-50 rounded-lg text-center p-5 hidden dropdown-menu"
+    >
+      <a
+        href="commercial.html"
+        class="block px-4 py-2 text-white"
+        download
+      >
+        Commercial
+      </a>
+      <a
+        href="residential.html"
+        class="block px-4 py-2 text-white"
+        download
+      >
+        Residential
+      </a>
+    </div>
+  </div>
               <a
                 href="contact.html#contactForm"
                 class="hidden lg:inline-block btn btn-primary-outline btn-small"
@@ -228,7 +251,7 @@
 
     <!-- Dropdown Menu -->
     <div
-      class="absolute left-0 mt-2 w-full bg-primary shadow-lg  z-50 rounded-lg text-center p-5 hidden dropdown-menu"
+      class="absolute left-0 mt-0 border-t-2 border-white w-full bg-primary shadow-lg  z-50 rounded-lg text-center p-5 hidden dropdown-menu"
     >
       <a
         href="commercial.html"
@@ -440,7 +463,11 @@
                   class="w-full bg-transparent border-b border-olive-drab focus:outline-none pb-5 placeholder-olive-drab font-normal"
                 />
 
+                <label for="enquiryType" class="sr-only">Enquiry Type</label>
                 <select
+                  id="enquiryType"
+                  title="Select the type of enquiry"
+                  aria-label="Enquiry Type"
                   class="w-full  border-b border-olive-drab focus:outline-none pb-5 text-olive-drab font-normal"
                 >
                   <option disabled selected class="">
@@ -572,6 +599,7 @@
                 />
 
                 <select
+                title="Select Enquiry"
                   class="w-full bg-olive-drab border-b border-[rgba(255,255,255,0.2)] focus:outline-none pb-5 text-white font-normal"
                 >
                   <option disabled selected class="text-white">
