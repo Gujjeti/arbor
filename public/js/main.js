@@ -434,7 +434,7 @@ images.forEach((img, i) => {
 
 $(document).ready(function () {
 
-if('.popup-gallery'){
+if ($('.popup-gallery').length) {
 $('.popup-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
