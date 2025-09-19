@@ -434,7 +434,15 @@ images.forEach((img, i) => {
 
 $(document).ready(function () {
 
-
+if('.popup-gallery'){
+$('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+          enabled: true
+        }
+      });
+}
 
 
   if ($('.masonry-grid').length) {
@@ -494,74 +502,117 @@ $(document).ready(function () {
   });
 
   // ---------------------
-  // Filter logic
-  // ---------------------
-  const filterButtons = document.querySelectorAll('#filterNav a');
+// Filter logic
+// ---------------------
+const filterButtons = document.querySelectorAll('#filterNav a');
+const loadMoreBtn = document.querySelector('#loadMore');
 
-  filterButtons.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
+filterButtons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
 
-      const activeGrid = document.querySelector('.masonry-grid:not(.hidden)');
-      const currentMasonry = masonryInstances[activeGrid.id];
+    const activeGrid = document.querySelector('.masonry-grid:not(.hidden)');
+    const currentMasonry = masonryInstances[activeGrid.id];
+    const items = activeGrid.querySelectorAll('.masonry-item');
 
-      // Toggle active class
-      filterButtons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
+    // Toggle active class
+    filterButtons.forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
 
-      const filter = btn.textContent.trim().toLowerCase();
+    const filter = btn.textContent.trim().toLowerCase();
+    const initial = 12;
+    const step = 4;
 
-      // Show/hide items
-      activeGrid.querySelectorAll('.masonry-item').forEach((item) => {
-        const itemCat = item.getAttribute('data-category');
-        item.style.display =
-          filter === 'all' || itemCat === filter ? 'block' : 'none';
+    // Reset visibleCount for this filter
+    activeGrid.dataset.visibleCount = initial;
+    activeGrid.dataset.currentFilter = filter;
+
+    function applyFilter() {
+      const filter = activeGrid.dataset.currentFilter;
+      let visibleCount = parseInt(activeGrid.dataset.visibleCount, 10);
+
+      let shown = 0;
+      items.forEach((item) => {
+        const itemCat = item.getAttribute('data-filter');
+        const match = filter === 'all' || itemCat === filter;
+
+        if (match && shown < visibleCount) {
+          item.style.display = 'block';
+          shown++;
+        } else {
+          item.style.display = 'none';
+        }
       });
 
-      // Trigger Masonry re-layout
+      // Show/hide Load More
+      const totalMatches = Array.from(items).filter((i) => {
+        const cat = i.getAttribute('data-filter');
+        return filter === 'all' || cat === filter;
+      }).length;
+
+      if (shown < totalMatches) {
+        loadMoreBtn.style.display = 'block';
+      } else {
+        loadMoreBtn.style.display = 'none';
+      }
+
       currentMasonry.layout();
-    });
+    }
+
+    applyFilter();
+
+    // Hook Load More
+    loadMoreBtn.onclick = () => {
+      activeGrid.dataset.visibleCount =
+        parseInt(activeGrid.dataset.visibleCount, 10) + step;
+      applyFilter();
+    };
   });
+});
+
+// Trigger "All" on page load
+ let el = document.querySelector('#filterNav a');
+  if (el) el.click();
+
+
 
   // ---------------------
   // Load More logic
   // ---------------------
   document.querySelectorAll('.masonry-grid').forEach((grid) => {
-    const items = grid.querySelectorAll('.masonry-item');
-    let visibleCount = 0;
-    const initial = 12; // show first 12
-    const step = 4;     // load 4 more each click
+  const items = grid.querySelectorAll('.masonry-item');
+  let visibleCount = 0;
+  const initial = 12;
+  const step = 4;
 
-    const loadMoreBtn = document.querySelector('#loadMore');
-    // 👆 assumes you have <button class="load-more">Load More</button> near grid
+  const loadMoreBtn = document.querySelector('#loadMore');
 
-    function showMore(count) {
-      for (let i = visibleCount; i < count && i < items.length; i++) {
-        items[i].style.display = 'block';
-      }
-      visibleCount = count;
+  function showMore(count) {
+    for (let i = visibleCount; i < count && i < items.length; i++) {
+      items[i].style.display = 'block';
+    }
+    visibleCount = count;
+    grid.dataset.visibleCount = visibleCount; // 👈 save for filter
 
-      // re-layout Masonry
-      if (masonryInstances[grid.id]) {
-        masonryInstances[grid.id].layout();
-      }
-
-      // hide button if all items are visible
-      if (visibleCount >= items.length) {
-        if (loadMoreBtn) loadMoreBtn.style.display = 'none';
-      }
+    if (masonryInstances[grid.id]) {
+      masonryInstances[grid.id].layout();
     }
 
-    // show first batch
-    showMore(initial);
-
-    // button click
-    if (loadMoreBtn) {
-      loadMoreBtn.addEventListener('click', () => {
-        showMore(visibleCount + step);
-      });
+    if (visibleCount >= items.length) {
+      if (loadMoreBtn) loadMoreBtn.style.display = 'none';
     }
-  });
+  }
+
+  // show first batch
+  showMore(initial);
+
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      showMore(visibleCount + step);
+    });
+  }
+});
+
 }
 
 

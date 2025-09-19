@@ -2466,7 +2466,7 @@ small {
 }
 .masonry-item {
   float: left;
-  width: 31%;
+  width: 30%;
   box-sizing: border-box;
   padding: 20px;
   display: none;
