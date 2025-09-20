@@ -566,6 +566,7 @@ filterButtons.forEach((btn) => {
       activeGrid.dataset.visibleCount =
         parseInt(activeGrid.dataset.visibleCount, 10) + step;
       applyFilter();
+     locoScroll.update();
     };
   });
 });
