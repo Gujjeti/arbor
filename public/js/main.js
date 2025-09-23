@@ -243,9 +243,6 @@ const tl2 = gsap.timeline({
     trigger: section,
     start: "top top",
     end: `+=${items.length * 100}%`, // pin for N items
-    scrub: true,
-    pin: true,
-    anticipatePin: 1,
     scroller: "[data-scroll-container]", // if using Locomotive Scroll
   }
 });
