@@ -1067,7 +1067,11 @@ function initTickerOrSwiper() {
         spaceBetween: 20,
         loop: false,
         speed: 3000,
-       
+         autoplay: {
+    delay: 2000, // Time in milliseconds between slide transitions (e.g., 3 seconds)
+    disableOnInteraction: false, // Set to false to prevent autoplay from being disabled after user interaction (swipes)
+    pauseOnMouseEnter: true, // Pauses autoplay when the mouse enters the Swiper container
+  },
       });
     }
   } else {
