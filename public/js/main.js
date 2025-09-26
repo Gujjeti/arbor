@@ -790,21 +790,27 @@ const categoriesSwiper = new Swiper(".categoriesSwiper", {
 
 
 const brandsSwiper = new Swiper(".brandsSwiper", {
-  effect: "coverflow", // Make sure there's no typo here
+  effect: "coverflow",
   grabCursor: true,
-centeredSlides: true,
-centeredSlidesBounds: true,
-  slidesPerView:3,
-  spaceBetween: 100, 
-   loop: true,
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  slidesPerView: 2,
+  spaceBetween: 100,
+  loop: true,
   coverflowEffect: {
-  rotate: 0,
-  stretch: 10,
-  depth: 80,
-  modifier:2.5,
-  slideShadows: true,
+    rotate: 0,
+    stretch: 10,
+    depth: 80,
+    modifier: 2.5,
+    slideShadows: true,
+  },
+  breakpoints: {
+    640: { slidesPerView: 2, spaceBetween: 50 },
+    768: { slidesPerView: 2, spaceBetween: 80 },
+    1024: { slidesPerView: 3, spaceBetween: 100 },
   },
 });
+
 
 
   
