@@ -545,11 +545,26 @@
   .h-180 {
     height: calc(var(--spacing) * 180);
   }
+  .h-\[20vh\] {
+    height: 20vh;
+  }
+  .h-\[30vh\] {
+    height: 30vh;
+  }
+  .h-\[40vh\] {
+    height: 40vh;
+  }
   .h-\[45rem\] {
     height: 45rem;
   }
   .h-\[50vh\] {
     height: 50vh;
+  }
+  .h-\[60vh\] {
+    height: 60vh;
+  }
+  .h-\[70vh\] {
+    height: 70vh;
   }
   .h-\[120vh\] {
     height: 120vh;
@@ -697,6 +712,9 @@
   }
   .grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .grid-cols-\[10vw_20vw_35vw_20vw_10vw\] {
+    grid-template-columns: 10vw 20vw 35vw 20vw 10vw;
   }
   .flex-col {
     flex-direction: column;
