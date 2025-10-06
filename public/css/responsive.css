@@ -8,8 +8,12 @@
       --menu-bg: #0b1020;
       --menu-text: #fff;
     }
-
-
+.header{
+  z-index: 99999 !important;
+}
+#menu-close{
+  color: #fff;
+}
 #mobile-menu{
         /* start hidden with a 0px circle at some default top-right place.
          We'll set the exact circle center inline with JS when toggling. */
