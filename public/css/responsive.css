@@ -15,9 +15,13 @@
          We'll set the exact circle center inline with JS when toggling. */
       clip-path: circle(0px at calc(100% - var(--btn-right) - var(--btn-size)/2) calc(100% - var(--btn-bottom) - var(--btn-size)/2));
       transition: clip-path var(--transition);
-      background-color: #fff;
+      background-color: #7B7458;
 }
 
+header .nav-link{
+  color: #fff !important;
+ 
+}
 
       .masonry-item {
       width: 100%;

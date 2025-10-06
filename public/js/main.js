@@ -1222,8 +1222,7 @@ document.addEventListener('mouseleave', () => {
     opacity: 0,
     duration: 0.5,
     ease: "power2.out",
-    delay:0.2,
-    stagger:0.2
+    stagger:0.1
   })
       }
 
