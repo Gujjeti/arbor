@@ -1,5 +1,24 @@
  @media (max-width: 600px) {
 
+   :root{
+      --btn-size: 64px;
+      --btn-bottom: 24px;
+      --btn-right: 20px;
+      --transition: 1s cubic-bezier(.22,.9,.3,1);
+      --menu-bg: #0b1020;
+      --menu-text: #fff;
+    }
+
+
+#mobile-menu{
+        /* start hidden with a 0px circle at some default top-right place.
+         We'll set the exact circle center inline with JS when toggling. */
+      clip-path: circle(0px at calc(100% - var(--btn-right) - var(--btn-size)/2) calc(100% - var(--btn-bottom) - var(--btn-size)/2));
+      transition: clip-path var(--transition);
+      background-color: #fff;
+}
+
+
       .masonry-item {
       width: 100%;
       padding: 30px;
@@ -13,7 +32,7 @@
 
 
 
- #mobile-menu{
+ /* #mobile-menu{
   transform: translateX(-100%);
   opacity: 0;
   visibility: hidden;
@@ -23,7 +42,7 @@
   transform: translateX(0%);
   opacity: 1;
   visibility: visible;
-}
+} */
 
   .h-screen {
    height: 100dvh !important;

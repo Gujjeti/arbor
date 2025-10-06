@@ -650,27 +650,27 @@ $(".dropdown").hover(
   });
 
 
-  $("#menu-toggle").click(function(){
-  gsap.to('#mobile-menu',{
-    x: 0,
-    opacity: 1,
-    duration: 0.5,
-    visibility: "visible",
-    ease: "power2.out"
-  })
-});
+//   $("#menu-toggle").click(function(){
+//   gsap.to('#mobile-menu',{
+//     x: 0,
+//     opacity: 1,
+//     duration: 0.5,
+//     visibility: "visible",
+//     ease: "power2.out"
+//   })
+// });
 
- $("#menu-close").click(function(){
-    gsap.to('#mobile-menu',{
-    x: -100,
-    opacity: 0,
-    duration: 0.5,
-    ease: "power2.out",
-   onComplete: function() {
-      gsap.set('#mobile-menu', { visibility: "hidden" });
-    }
-  })
-});
+//  $("#menu-close").click(function(){
+//     gsap.to('#mobile-menu',{
+//     x: -100,
+//     opacity: 0,
+//     duration: 0.5,
+//     ease: "power2.out",
+//    onComplete: function() {
+//       gsap.set('#mobile-menu', { visibility: "hidden" });
+//     }
+//   })
+// });
 
 
   gsap.from(".header .navbar", {
@@ -1156,3 +1156,140 @@ document.addEventListener('mouseleave', () => {
 
 
 });
+
+
+
+
+
+
+
+
+
+
+ (function(){
+      const btn = document.getElementById('menu-toggle');
+      const menu = document.getElementById('mobile-menu');
+
+      // compute maximum distance from a point (x,y) to the viewport corners
+      function computeRadius(cx, cy) {
+        const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        const h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+        const corners = [
+          {x:0, y:0},
+          {x:w, y:0},
+          {x:0, y:h},
+          {x:w, y:h}
+        ];
+        let max = 0;
+        for (const c of corners) {
+          const dx = c.x - cx;
+          const dy = c.y - cy;
+          const d = Math.hypot(dx, dy);
+          if (d > max) max = d;
+        }
+        return Math.ceil(max) + 8; // little extra padding
+      }
+
+      // get center point of the button in viewport coordinates
+      function getBtnCenter() {
+        const r = btn.getBoundingClientRect();
+        return {
+          x: r.left + r.width/2,
+          y: r.top + r.height/2
+        };
+      }
+
+      // open menu (set clip-path to computed large circle)
+      function openMenu() {
+        const c = getBtnCenter();
+        const radius = computeRadius(c.x, c.y);
+        // set clip-path inline so it animates from the current small circle to big circle
+        // first set explicit small circle with current center so transition animates
+        menu.style.transition = 'clip-path 0ms';
+        menu.style.clipPath = `circle(0px at ${c.x}px ${c.y}px)`;
+        // force reflow to apply the 0ms state
+        // eslint-disable-next-line no-unused-expressions
+        menu.offsetWidth;
+        // now animate to the large radius
+        menu.style.transition = '';
+        menu.style.clipPath = `circle(${radius}px at ${c.x}px ${c.y}px)`;
+        menu.classList.add('open');
+        menu.setAttribute('aria-hidden', 'false');
+        btn.setAttribute('aria-expanded', 'true');
+
+          gsap.from('.nav-link, .grp-btn',{
+    x: -50,
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    delay:0.2,
+    stagger:0.2
+  })
+      }
+
+      function closeMenu() {
+        const c = getBtnCenter();
+        // animate back to 0px circle
+        menu.style.clipPath = `circle(0px at ${c.x}px ${c.y}px)`;
+        menu.classList.remove('open');
+        menu.setAttribute('aria-hidden', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+        // optional: after transition ends remove inline style to restore CSS default
+        const onEnd = () => {
+          menu.style.clipPath = '';
+          menu.removeEventListener('transitionend', onEnd);
+        };
+        menu.addEventListener('transitionend', onEnd);
+      }
+
+      // toggle
+      function toggleMenu() {
+        if (menu.classList.contains('open')) closeMenu();
+        else openMenu();
+      }
+
+      // Close button click
+document.getElementById("menu-close").addEventListener("click", (e) => {
+  e.stopPropagation();
+  closeMenu();
+});
+
+
+      // click the button
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      // close when clicking a menu link
+      menu.addEventListener('click', (e) => {
+        const a = e.target.closest('a[role="menuitem"]');
+        if (a) {
+          // simulate navigation then close
+          e.preventDefault();
+          // any link action can be handled here
+          closeMenu();
+        }
+      });
+
+      // close on outside click
+      document.addEventListener('click', (e) => {
+        if (!menu.classList.contains('open')) return;
+        if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+      });
+
+      // close on Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+      });
+
+      // Recompute clip-path center if viewport size/orientation changes while open
+      window.addEventListener('resize', () => {
+        if (!menu.classList.contains('open')) return;
+        // recompute and set new expanded radius/center
+        const c = getBtnCenter();
+        const radius = computeRadius(c.x, c.y);
+        menu.style.clipPath = `circle(${radius}px at ${c.x}px ${c.y}px)`;
+      });
+
+    })();
