@@ -314,7 +314,7 @@
 
 
 
-<section class="vision-mission-sec px-[2rem] lg:px-[10rem]  py-12 md:py-20 lg:py-50 bg-img-2 bg-[url('../images/white-textture-bg.png')]">
+<section class="vision-mission-sec px-[2rem] lg:px-[10rem]  py-12 md:py-20 lg:py-50 bg-img-2 bg-[url('../images/white-textture-bg.png')]" id="contactForm">
   <!-- First Grid -->
   <div class="grid md:grid-cols-2 gap:20 md:gap-40  items-start ">
     <!-- Left Side Content -->
@@ -421,22 +421,25 @@
     <div class="flex flex-col gap-6 mt-20 md:mt-0">
       
         
-              <form class="space-y-[4rem] mt-20" id="contactForm">
+              <form class="space-y-[4rem] mt-20" id="enquiryForm">
                 <input
                   type="text"
                   placeholder="Name"
+                  name="name"
                   class="w-full bg-transparent border-b border-olive-drab focus:outline-none pb-5 placeholder-olive-drab font-normal"
                 />
 
                    <input
                   type="mobile"
                   placeholder="Mobile Number"
+                   name="mobile"
                   class="w-full bg-transparent border-b border-olive-drab focus:outline-none pb-5 placeholder-olive-drab font-normal"
                 />
 
                 <input
                   type="email"
                   placeholder="Email"
+                  name="email"
                   class="w-full bg-transparent border-b border-olive-drab focus:outline-none pb-5 placeholder-olive-drab font-normal"
                 />
 
@@ -446,6 +449,7 @@
                   title="Select the type of enquiry"
                   aria-label="Enquiry Type"
                   class="w-full  border-b border-olive-drab focus:outline-none pb-5 text-olive-drab font-normal"
+                  name="enquiry"
                 >
                   <option disabled selected class="">
                     Select Enquiry
@@ -456,7 +460,7 @@
                 </select>
 
 
-                <textarea id="message"   type="text"
+                <textarea id="message" name="message"   type="text"
                   placeholder="Message"   class="w-full bg-transparent border-b border-olive-drab focus:outline-none pb-5 placeholder-olive-drab font-normal"></textarea>
 
 
@@ -762,8 +766,47 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/main.js"></script>
 
+
+    <script>
+      document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = this;
+  const formData = new FormData(form);
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  // Disable button + show loading text
+  submitBtn.disabled = true;
+  submitBtn.innerText = 'Submitting...';
+
+  fetch('submit.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(result => {
+    Swal.fire({
+      title: 'Result',
+      html: result,
+      icon: result.includes('Thank you') ? 'success' : 
+            (result.includes('saved') ? 'warning' : 'error')
+    });
+    form.reset();
+  })
+  .catch(error => {
+    Swal.fire('Error', 'Something went wrong.', 'error');
+    console.error('Error:', error);
+  })
+  .finally(() => {
+    // Re-enable button + reset text
+    submitBtn.disabled = false;
+    submitBtn.innerText = 'Submit';
+  });
+});
+    </script>
    
   </body>
 </html>
