@@ -1,0 +1,198 @@
+ @media (max-width: 767px) {
+
+   :root{
+      --btn-size: 64px;
+      --btn-bottom: 24px;
+      --btn-right: 20px;
+      --transition: 1s cubic-bezier(.22,.9,.3,1);
+      --menu-bg: #0b1020;
+      --menu-text: #fff;
+    }
+.header{
+  z-index: 99999 !important;
+}
+#menu-close{
+  color: #fff;
+}
+#mobile-menu{
+        /* start hidden with a 0px circle at some default top-right place.
+         We'll set the exact circle center inline with JS when toggling. */
+      clip-path: circle(0px at calc(100% - var(--btn-right) - var(--btn-size)/2) calc(100% - var(--btn-bottom) - var(--btn-size)/2));
+      transition: clip-path var(--transition);
+      background-color: #7B7458;
+}
+
+header .nav-link{
+  color: #fff !important;
+ 
+}
+
+      .masonry-item {
+      width: 100%;
+      padding: 30px;
+      
+    }
+
+    .masonry-item img {
+    transform: none;
+
+}
+
+
+
+ /* #mobile-menu{
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+#mobile-menu.show{
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+} */
+
+  .h-screen {
+   height: 100dvh !important;
+  }
+
+}
+
+ @media (max-width: 768px) {
+
+  #filterNav a::after{
+    width: 120px;
+  }
+
+  .masonry-item {
+
+      padding: 15px;
+
+      
+    }
+
+
+  body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto; /* disable momentum scroll */
+}
+
+  .cat-wrapper, .cat-wrapper.hide{
+        clip-path: inset(0 0rem 0 0rem) !important;
+  }
+
+
+  header.sticky #menu-toggle svg{
+    fill: #51483F;
+  }
+  .categories__nav{
+    overflow-x: auto;
+  }
+  html, body{
+    overflow-x: hidden !important;
+     overscroll-behavior: none;
+  }
+  .parallax-section .project-card{
+          position: relative !important;
+        margin: 1rem auto;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+  }
+  .heading-1 {
+    font-size: 4.5rem; /* Adjusted for smaller screens */
+    line-height: 1.2; /* Adjusted for smaller screens */
+  }
+  .heading-1 br, .heading-2 br{
+    display: none; /* Hide line breaks on smaller screens */
+  }
+  .address-text br{
+  display: none;
+}
+.heading-1 span {
+display: inline;
+
+}
+
+ }
+
+
+ @media screen and (min-width: 1025px) {
+
+
+    #filterNav a{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition-delay: var(--delay);
+  display: inline-block;
+}
+
+#filterNav.is-inview a{
+    transform: translateY(0px);
+  opacity: 1;
+}
+
+#videoWrapper {
+  top: 70vh;                /* bottom 10% of screen */
+  left: 50%;
+  width: 50vw;
+  position: fixed;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+  .intro {
+    font-size: 0.70vw;
+  }
+    
+}
+
+
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .text-clipath h1{
+        @apply leading-35
+    }
+
+    .footer_wrapper{
+        @apply py-[12rem]
+    }
+    
+}
+
+
+@media only screen and (min-width: 1025px) {
+  .intro__img {
+    width: 17vw;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+.vision-mission-sec{
+           margin-top: 10rem !important;
+}
+}
+
+
+.masonry-item a{
+    overflow:hidden;
+}
+
+.masonry-item a img{
+    transition:0.5s;
+}
+
+.masonry-item:hover a img{
+    scale:1.1
+}
+
+
+.btn-primary > span {
+
+    text-align: center;
+    line-height: 1;
+}

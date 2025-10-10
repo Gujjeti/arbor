@@ -567,20 +567,23 @@
               <small class="text-white mb-[1rem] block">Contact</small>
               <h2 class="text-white heading-1">Get in Touch</h2>
 
-              <form class="space-y-[4rem] mt-20">
+              <form class="space-y-[4rem] mt-20"  id="getinTouchForm">
                 <input
                   type="text"
                   placeholder="Name"
+                  name="name"
                   class="w-full bg-transparent border-b border-[rgba(255,255,255,0.2)] focus:outline-none pb-5 placeholder-white font-normal"
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email"
                   class="w-full bg-transparent border-b border-[rgba(255,255,255,0.2)] focus:outline-none pb-5 placeholder-white font-normal"
                 />
 
                 <select
                 title="Select Enquiry"
+                 name="enquiry"
                   class="w-full bg-olive-drab border-b border-[rgba(255,255,255,0.2)] focus:outline-none pb-5 text-white font-normal"
                 >
                   <option disabled selected class="text-white">
@@ -771,7 +774,7 @@
 
 
     <script>
-      document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+ document.getElementById('enquiryForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
   const form = this;

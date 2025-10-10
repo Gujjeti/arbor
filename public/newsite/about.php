@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html class="overflow-hidden">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Arbor | Bespoke Handmade Interiors & Joinery</title>
+
+<meta name="description" content="Arbor specialises in bespoke handmade interiors and architectural joinery, offering premium fitted furniture and craftsmanship for luxury spaces in Yorkshire and London." />
+
+<link rel="canonical" href="https://www.arbor.com/" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Arbor | Bespoke Handmade Interiors & Joinery" />
+<meta property="og:description" content="Arbor crafts luxury handmade interiors and architectural joinery for high-end homes and commercial spaces across the UK." />
+<meta property="og:url" content="https://www.arbor.com/" />
+<meta property="og:site_name" content="Arbor" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Arbor | Handmade Interiors & Joinery for Luxury Homes | Yorkshire & London" />
+<meta name="twitter:description" content="Experience refined craftsmanship with Arbor – creators of bespoke fitted interiors and joinery for timeless, elegant spaces." />
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <!-- Google Fonts: Custom + Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=YourCustomFontName&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link href="./css/output.css" rel="stylesheet" />
+      <link href="./css/responsive.css" rel="stylesheet" />
+  </head>
+
+  <body class="index innerPage ">
+    <button
+      id="scrollTopBtn"
+      class="fixed bottom-20 right-10 w-17 h-17 rounded-full bg-white shadow-lg flex items-center justify-center z-50"
+    >
+      <svg
+        width="14"
+        height="8"
+        viewBox="0 0 14 8"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 7L7 1L13 7"
+          stroke="#7B7458"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <div class="c-cursor js-cursor hidden md:block ">
+      <div class="c-cursor__arrows">
+        <div class="c-cursor__arrows__right">
+          <svg viewBox="0 0 22 10">
+            <polygon
+              class="fill-secondary"
+              points="17,0.65 16.29,1.35 19.44,4.5 0.65,4.5 0.65,5.5 19.44,5.5 16.29,8.65 17,9.35 21.35,5"
+            ></polygon>
+          </svg>
+        </div>
+        <div class="c-cursor__arrows__left">
+          <svg viewBox="0 0 22 10">
+            <polygon
+              class="fill-secondary"
+              points="5,9.35 5.71,8.65 2.56,5.5 21.35,5.5 21.35,4.5 2.56,4.5 5.71,1.35 5,0.65 0.65,5"
+            ></polygon>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="  overflow-hidden intro fixed w-full h-screen  items-center justify-center top-0 left-0 z-30 bg-img bg-[url(../images/white-textture-bg.png)]"
+    >
+      <div class="intro__fader"></div>
+      <ul class="intro__hold relative">
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/6.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/1.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/5.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/IMG_0068 1.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/2.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/3.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/4.jpg" alt="" />
+          </div>
+        </li>
+      </ul>
+
+      <div
+        class="introl__logo absolute top-1/2 left-1/2 w-[8rem] transition-all duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2"
+      >
+        <img src="images/logo.svg" alt="Logo" class="w-full h-full" />
+      </div>
+    </div>
+
+    <header class="header" data-scroll>
+      <nav
+        class="w-full flex items-center justify-between relative py-4 px-[2rem] md:px-4 navbar"
+      >
+        <!-- Left: Menu Icon & Menu Items -->
+        <div class="flex items-center gap-6">
+          <!-- Menu Icon -->
+          <button
+            id="menu-toggle"
+            class="text-2xl md:hidden focus:outline-none text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#fff"
+            >
+              <path
+                d="M160-680v-40h640v40H160Zm0 440v-40h640v40H160Zm0-220v-40h640v40H160Z"
+              />
+            </svg>
+          </button>
+
+          <!-- Menu List -->
+
+          <nav
+            id="mobile-menu"
+            class="fixed top-0 left-0 w-full h-screen  overflow-hidden gap-15 font-normal items-center justify-start md:items-start md:justify-start pt-40 md:pt-auto p-12 md:p-6 z-50 md:static md:w-auto md:h-auto md:bg-transparent md:overflow-visible flex flex-col md:flex-row md:gap-[1.3rem] xl:gap-[3rem] md:text-lg md:font-medium"
+          >
+            <!-- Close Icon -->
+            <button
+              id="menu-close"
+              class="text-3xl mb-4 md:hidden focus:outline-none fixed top-6 right-6"
+            >
+              ✕
+            </button>
+               <a href="index.php" class="nav-link text-white">Home</a>
+            <a href="about.php" class="nav-link text-white active">About Us</a>
+           <a href="commercial.php" class="nav-link text-white">Commercial</a>
+              <a href="residential.php" class="nav-link text-white">Residential</a>
+            <a href="contact.php" class="nav-link ">Contact Us</a>
+
+            <div class="flex gap-6 md:hidden flex-col grp-btn">
+                <a
+      href="#"
+      class="hidden sm:inline-block btn btn-primary px-2 btn-small dropdown-toggle"
+    >
+      <span class="flex items-center justify-center">Download Catalogue
+
+        <span class="ml-2" style="margin-left: 3px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+        </span>
+      </span>
+  </a>
+              <a
+                href="contact.html#contactForm"
+                class="hidden lg:inline-block btn btn-primary-outline btn-small"
+              >
+                Enquire Now
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Center: Logo -->
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+          <img
+            src="images/logo.svg"
+            alt="Logo"
+            class="w-[8rem] logo transition-all duration-300 ease-in-out"
+          />
+        </div>
+
+        <!-- Right: CTAs -->
+        <div class="hidden items-center gap-4 md:flex">
+         <!-- Dropdown Wrapper -->
+  <div class="relative dropdown">
+    <a
+      href="#"
+      class="hidden sm:inline-block btn btn-primary px-2 btn-small dropdown-toggle"
+    >
+      <span class="flex items-center justify-center">Download Catalogue
+
+        <span class="ml-2" style="margin-left: 3px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+        </span>
+      </span>
+  </a>
+
+    <!-- Dropdown Menu -->
+    <div
+      class="absolute left-0 mt-0 w-full border-t-2 border-white border-white bg-primary shadow-lg  z-50 rounded-lg text-center p-5 hidden dropdown-menu"
+    >
+      <a
+        href="pdf/Corporate Deck x Arbor Decor.pdf" download="pdf/Corporate Deck x Arbor Decor.pdf"
+        class="block px-4 py-2 text-white"
+        download
+      >
+        Commercial
+      </a>
+      <a
+       href="pdf/Residential Deck x Arbor Decor.pdf" download="pdf/Residential Deck x Arbor Decor.pdf"
+        class="block px-4 py-2 text-white"
+        download
+      >
+        Residential
+      </a>
+    </div>
+  </div>
+
+  <!-- Enquire Now -->
+  <a
+    href="contact.html#contactForm"
+    class="hidden lg:inline-block btn btn-primary-outline btn-small"
+  >
+    Enquire Now
+  </a>
+        </div>
+      </nav>
+    </header>
+
+    <main data-scroll-container>
+
+
+
+
+
+<section class="relative  videoSec "  data-scroll>
+
+            <div class="flex justify-center mt-50 md:mt-[10rem] mb-[5vh] font-[600] ">
+  <nav class="text-sm text-olive-drab" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-1 text-[1rem]">
+      <li>
+        <a href="index.php" class="hover:text-gray-700">Home</a>
+      </li>
+      <li class="flex items-center space-x-1">
+        <span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 9L7.5 6L4.5 3" stroke="#7B7458"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <a href="#" class="text-olive-drab font-[600] opacity-50">About Us</a>
+      </li>
+    </ol>
+  </nav>
+</div>
+
+
+      <div
+          class="relative z-20 flex items-center justify-center flex-col h-full"
+         
+  
+        >
+      <div class="text-clipath" >
+            <h1 class="heading-1 text-olive-drab text-center px-[2rem] md:px-0">
+              Designing timeless<br/> spaces with purpose<br/> & passion
+            </h1>
+
+            
+          </div>
+
+          <p class="text-center font-normal mt-[5vh]">
+                We're premium lifestyle and décor brand redefining<br/> modern living with elegant, functional designs tailored for<br/> contemporary homes.
+            </p>
+
+
+               <span
+            class="absolute left-[10%] top-10 z-20 leftEle hidden lg:block"
+               data-scroll
+            data-scroll-speed="4"
+             data-scroll-direction="horizontal"
+          >
+            <img src="images/chair.svg" alt="" class="w-50 " />
+          </span>
+
+               <span
+            class="absolute right-[10%] top-100 z-20 RightEle hidden lg:block"
+            data-scroll
+            data-scroll-speed="-4"
+            data-scroll-delay="0.3"
+             data-scroll-direction="horizontal"
+          >
+            <img src="images/cuttingPlayer.svg" alt="" class="w-30 " />
+          </span>
+
+
+
+
+
+
+
+
+          </div>
+
+
+          
+   <div 
+
+  class="flex justify-center  z-50  mt-10 md:mt-0 p-5 xl:p-0" id="videoWrapper"
+>
+ <img src="images/Video.jpg" class="w-full"  id="myVideo" />
+</div>
+</section>
+
+
+
+
+<section class="vision-mission-sec px-[2rem] lg:px-[10rem]  py-12 md:py-20 lg:py-50 bg-img-2 bg-[url('../images/white-textture-bg.png')]">
+  <!-- First Grid -->
+<div class="flex flex-col md:flex-row justify-between items-start gap-20 md:gap-40 lg:gap-80 reveal-card">
+    <!-- Left Side Content -->
+    <div data-scroll class="md:w-1/2 content-left">
+      <small class="text-olive-drab block text-sm mb-12">Overview</small>
+      <h2 class="text-olive-drab heading-2 leading-tight">
+        Timeless design,<br/> conscious choices
+      </h2>
+    </div>
+
+    <!-- Right Side Content -->
+    <div class="flex flex-col gap-6 mt-20 md:mt-0 md:w-1/2 lg:w-[30%] image-right">
+      <p class="text-olive-drab text-[1.2rem] mb-2">Philosophy</p>
+      <p class="text-secondary font-normal leading-relaxed">
+      Our philosophy is to blend design worlds to create a foundation so strong that it lasts a lifetime! Customisation to the millimetre at every stage using ethical material and practises. <br/>
+
+Share your dream with us to see the design come to life in our factories where all the magic happens. Where most brands offer 'configurable' furniture, we delve deeper.
+      </p>
+      <img src="images/philosophy.jpg" alt="philosophy Image" class="mt-10 object-cover " />
+    </div>
+  </div>
+
+  <!-- Second Grid - closer to the first -->
+  <div class="flex flex-col md:flex-row justify-between items-start gap-20 md:gap-40 lg:gap-80 mt-20 md:-mt-50 reveal-card">
+    <!-- Right Side Content (again) -->
+    <div class="flex flex-col gap-6 md:w-1/2 lg:w-[30%] content-left">
+      <p class="text-olive-drab text-[1.2rem] mb-2">Mission and Vision</p>
+      <p class="text-secondary font-normal leading-relaxed">
+       As we aim to grow across India and onto the global platform, we aim to showcase Indian craftsmanship and quality infused in modern designs. Our vision is to be recognised as an Indian brand championing sustainable design in today's world of personalised living.
+      </p>
+      <img src="images/mission_vission.jpg" alt="Vision Image" class="mt-10 w-full object-cover" />
+    </div>
+  </div>
+</section>
+
+<section class="px-[2rem] lg:px-[10rem]   py-40 bg-olive-drab presence-sec relative">
+ 
+    <div data-scroll >
+         <small class="text-white block mb-[3rem]">Presence</small>
+    <h2 class="heading-2 text-white">Expanding boundaries<br/> with excellence</h2>
+    </div>
+
+
+<ul class="presence-list space-y-12 mt-25 ">
+  <li class="reveal-item relative pt-12 " style="--lineWidth: 0%;">
+    <div class="content">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+      <h3 class="text-[1.2rem] font-normal tracking-wide w-full md:w-1/5 text-white">001</h3>
+      <div class="text-[1.2rem] font-medium w-full md:w-1/2 text-left text-white">
+        Elevated<br />Expansion
+      </div>
+      <div class="w-full text-left text-white font-light">
+        Arbor Decor caters to both domestic and international clients with<br/> high-quality, design-forward furniture solutions. Our growing presence across<br/> sectors reflects our commitment to scale, precision, and style.
+      </div>
+    </div>
+    </div>
+  </li>
+
+  <li class="reveal-item relative pt-12 " style="--lineWidth: 0%;">
+    <div class="content">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+      <h3 class="text-[1.2rem] font-normal tracking-wide w-full md:w-1/5 text-white">002</h3>
+      <div class="text-[1.2rem] font-medium w-full md:w-1/2 text-left text-white">
+        Corporate
+<br />Capabilities
+      </div>
+      <div class="w-full text-left text-white font-light">
+        
+      We offer custom furniture for commercial spaces, residences, real estate developments &<br/> hospitality ensuring seamless execution, consistency, and collaboration with architects and design teams.
+      </div>
+    </div>
+    </div>
+  </li>
+
+  <li class="reveal-item relative pt-12 " style="--lineWidth: 0%;">
+      <div class="content">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+      <h3 class="text-[1.2rem] font-normal tracking-wide w-full md:w-1/5 text-white">003</h3>
+      <div class="text-[1.2rem] font-medium w-full md:w-1/2 text-left text-white">
+        Export
+<br />Readiness
+      </div>
+      <div class="w-full text-left text-white font-light">
+   With efficient logistics, secure packaging, and export expertise, we are equipped to deliver <br/>globally to strengthen our international presence.
+      </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+<div class="inline-block  text-left mt-20">
+    <a href="#" class="btn btn-primary btn-large inline-block  text-left mt-10">
+              <span>Get In Touch</span>
+            </a>
+</div>
+
+
+    <span
+            class="absolute right-[20%] -top-40 z-20"
+            data-scroll
+            data-scroll-speed="-1"
+          >
+            <img src="images/Image2.jpg" alt="" class="w-90 hidden md:block" />
+          </span>
+
+</section>
+
+
+
+<section class="px-[2rem] lg:px-[10rem]  md:py-20 lg:py-50 relative bg-[#F2E7DC]" id="steps-sec">
+
+      <span
+          class="absolute left-[10%] top-30 z-20 block"
+          data-scroll
+          data-scroll-speed="-2.5"
+        >
+          <img src="images/chair2.svg" alt="" class="w-20 lg:w-60" />
+        </span>
+
+        <div data-scroll class="text-center">
+             <small class="text-olive-drab mb-[3rem] block">How We Work</small>
+          <h2 class="heading-2 text-olive-drab">
+            5 simple steps
+          </h2>
+        </div>
+
+
+       <ol class="flex  flex-col sm:flex-row sm:justify-between items-stretch w-full mt-10 md:mt-50">
+
+
+<li class="relative mb-12 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
+
+  <div class="flex items-center sm:me-4">
+    <div class="z-10 flex items-center justify-center w-20 h-20 text-[1.2rem] font-semibold rounded-full text-olive-drab bg-[#F2E7DC] border  border-secondary">
+      <h3 class="m-0">001</h3>
+    </div>
+    <!-- Horizontal line (only on larger screens) -->
+    <div class="hidden sm:block w-100 border-t border-dashed border-secondary dark:border-secondary absolute"></div>
+  </div>
+   <div class="mt-3 sm:pe-8">
+    <p class="text-olive-drab text-[1.2rem] font-semibold py-5 leading-6">Visit <br/> Arbor Decor</p>
+    
+  </div>
+</li>
+
+
+
+<li class="relative mb-12 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
+
+  <div class="flex items-center sm:me-4">
+   <div class="z-10 flex items-center justify-center  w-20 h-20 text-[1.2rem] font-semibold  rounded-full   shrink-0 text-olive-drab bg-[#F2E7DC] border  border-secondary">
+        <h3>002</h3>
+      </div>
+        <div class="hidden sm:block w-100 border-t border-dashed border-secondary dark:border-secondary absolute"></div>
+    </div>
+    <div class="mt-3 sm:pe-8">
+      <p class="text-olive-drab text-[1.2rem] font-semibold py-5 leading-6">Design &<br/>
+Ideate</p>
+     
+    </div>
+  </li>
+
+
+<li class="relative mb-12 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
+
+  <div class="flex items-center sm:me-4">
+   <div class="z-10 flex items-center justify-center  w-20 h-20 text-[1.2rem] font-semibold  rounded-full   shrink-0 text-olive-drab bg-[#F2E7DC] border  border-secondary">
+        <h3>003</h3>
+      </div>
+     <div class="hidden sm:block w-100 border-t border-dashed border-secondary dark:border-secondary absolute"></div>
+    </div>
+    <div class="mt-3 sm:pe-8">
+     <p class="text-olive-drab text-[1.2rem] font-semibold py-5 leading-6">Wait For
+
+ <br/>
+Quotation</p>
+    
+    </div>
+  </li>
+
+<li class="relative mb-12 sm:mb-0 flex flex-col items-center text-center ">
+  <div class="flex items-center sm:me-4">
+   <div class="z-10 flex items-center justify-center  w-20 h-20 text-[1.2rem] font-semibold  rounded-full   shrink-0 text-olive-drab border  border-secondary bg-[#F2E7DC]">
+        <h3>004</h3>
+      </div>
+     <div class="hidden sm:block w-100 border-t border-dashed border-secondary dark:border-secondary absolute"></div>
+    </div>
+    <div class="mt-3 sm:pe-8">
+        <p class="text-olive-drab text-[1.2rem] font-semibold py-5 leading-6">Design
+ <br/>
+Execution</p>
+     
+     
+    </div>
+  </li>
+
+
+<li class="relative mb-12 sm:mb-0 flex flex-col items-center text-center sm:basis-1/5">
+
+  <div class="flex items-center sm:me-4">
+      <div class="z-10 flex items-center justify-center  w-20 h-20 text-[1.2rem] font-semibold  rounded-full   shrink-0 text-olive-drab bg-[#F2E7DC] border border-dashed border-secondary">
+        <h3>005</h3>
+      </div>
+      <!-- No line after the last item -->
+    </div>
+    <div class="mt-3 sm:pe-8">
+      <p class="text-olive-drab text-[1.2rem] font-semibold py-5 leading-6">Delivery &
+ <br/>
+Installation    </p>
+     
+      
+    </div>
+  </li>
+
+
+
+</ol>
+
+
+
+
+
+</section>
+
+<section  class="px-[2rem] lg:px-[10rem]  py-12 md:py-35 relative bg-white  md:pb-0 ">
+  <div class="flex flex-col md:flex-row gap:10 md:gap-40">
+    
+    <!-- Left side (Image - 70%) -->
+    <div class="w-full md:w-[50%] ">
+     
+      <div class="relative">
+         <img src="images/girl.jpg" alt="Example Image" class="w-full h-auto object-cover ">
+          <span class="bg-[#F8F6F0] w-50 h-50 absolute -right-20  top-150 -translate-y-1/2 flex justify-center items-center"          data-scroll
+          data-scroll-speed="-1">
+        <img src="images/logo.svg" class="w-40" alt="logo" />
+      </span>
+      </div>
+
+     
+    </div>
+
+    <!-- Right side (Content - 30%) -->
+    <div class="w-full md:w-[30%] py-15">
+      
+           <div data-scroll class="text-left">
+             <small class="text-olive-drab mb-[3rem] block">How We Work</small>
+          <h2 class="heading-2 text-olive-drab">
+            Blending<br/> passion, design<br/> & purpose
+          </h2>
+        </div>
+        
+      <p class="mt-15 mb-4 font-normal">
+        Design has always been second nature to me — from a childhood immersed in art to managing global luxury brands early in my career. My path evolved unexpectedly, blending entrepreneurial experience with a deep appreciation for form, balance, and beauty.  <br/><br/>
+
+Arbor Decor was born from a desire to create furniture that merges elegance with everyday functionality. With no formal training in furniture design, I trusted my instinct and aesthetic sensibility to shape a brand that feels personal yet timeless. <br/><br/>
+
+As Principal Designer, I oversee each piece from concept to creation — ensuring that every design not only reflects sophistication but also tells a story. Arbor Decor is my expression of quiet luxury, made for those who value thoughtful design.
+
+      </p>
+
+      <p class="mt-8">
+        <span class="block font-semibold text-secondary text-[1.2rem]">Alisha Bafna</span>
+<span class="font-normal">Founder & Creative Head</span>
+</p>
+   
+
+<span class="block mt-20" >
+        <img src="images/soft-chair.png" class="w-60" alt="chair" />
+      </span>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section  class="px-[2rem] lg:px-[10rem]  py-12 md:py-35    relative bg-img-1 bg-[url('../images/white-textture-bg.png')]">
+    <div class="md:w-[80%] m-auto">
+            <div data-scroll class="text-left">
+             <small class="text-olive-drab mb-[3rem] block">Expertise</small>
+          <h2 class="heading-2 text-olive-drab">
+            Our core design<br/> strengths
+          </h2>
+        </div>
+   
+
+
+
+     <div class="flex flex-col md:flex-row gap:20 md:gap-40 justify-between items-center mt-0 md:mt-20 reveal-card">
+
+    
+    <div class="w-full md:w-[40%] py-15 content-left">
+      
+      <p class="text-[1.2rem] font-semibold text-olive-drab">Bespoke Furniture Design</p>
+        
+      <p class="mt-10 mb-4 font-normal">
+      Every space deserves furniture that reflects its personality. At Arbor Decor, we specialize in designing bespoke pieces tailored to your unique aesthetic, spatial needs, and lifestyle. From conceptual sketches to final finishes, each creation is a fusion of craftsmanship, proportion, and individuality — made to complement your environment, not just occupy it.
+
+      </p>
+
+
+    </div>
+
+      <div class="w-full md:w-[35%] relative image-right">
+      <img src="images/Bespoke Furniture Design.jpg" alt="Example Image" class="w-full md:h-[40rem] object-cover ">
+
+    
+    </div>
+
+  </div>
+
+
+        <div class="flex gap:20 md:gap-40 justify-between items-center mt-0 md:mt-20 md:flex-row-reverse flex-col reveal-card">
+    
+    <div class="w-full md:w-[40%] py-15 content-left">
+      
+      <p class="text-[1.2rem] font-semibold text-olive-drab">Space Planning & Styling</p>
+        
+      <p class="mt-10 mb-4 font-normal">
+       Good design begins with flow and function. Our approach to space planning combines an intuitive understanding of layout, light, and movement with refined styling sensibilities. We focus on creating interiors that feel cohesive, balanced, and intentional — where each element is thoughtfully placed to elevate both form and function.
+
+      </p>
+
+
+    </div>
+
+      <div class="w-full md:w-[35%] relative image-right">
+     <img src="images/Space Planning & Styling.jpg" alt="Example Image" class="w-full md:h-[40rem] object-cover ">
+
+    
+    </div>
+
+  </div>
+
+
+      <div class="flex flex-col md:flex-row gap:20 md:gap-40 justify-between items-center mt-0 md:mt-20 reveal-card">
+
+    
+    <div class="w-full md:w-[40%] py-15 content-left">
+      
+      <p class="text-[1.2rem] font-semibold text-olive-drab">Material Curation</p>
+        
+      <p class="mt-10 mb-4 font-normal">
+       The soul of every design lies in its materials. We meticulously curate a rich palette of premium woods, metals, textiles, and finishes that not only enhance visual appeal but also bring longevity and tactile richness to every piece. Our choices reflect a balance of elegance, sustainability, and performance — ensuring your space feels as good as it looks.
+
+      </p>
+
+
+    </div>
+
+      <div class="w-full md:w-[35%] relative image-right">
+     <img src="images/Material Curation.jpg" alt="Example Image" class="w-full md:h-[40rem] object-cover ">
+
+
+    
+    </div>
+
+  </div>
+
+
+       <div class="flex  gap:20 md:gap-40 justify-between items-center mt-0 md:mt-20 md:flex-row-reverse flex-col reveal-card">
+    
+    <div class="w-full md:w-[40%] py-15 content-left">
+      
+      <p class="text-[1.2rem] font-semibold text-olive-drab">Functional Aesthetic Integration</p>
+        
+      <p class="mt-10 mb-4 font-normal">
+       At the heart of our design philosophy lies the harmony between beauty and utility. We believe furniture should not only look exquisite but also serve a meaningful purpose. Whether it's hidden storage, ergonomic detailing, or smart proportions, our pieces are thoughtfully designed to support your daily life while adding understated sophistication to your space.
+
+      </p>
+
+
+    </div>
+
+      <div class="w-full md:w-[35%] relative image-right">
+     <img src="images/Functional Aesthetic Integration.jpg" alt="Example Image" class="w-full md:h-[40rem] object-cover ">
+
+    
+    </div>
+
+  </div>
+
+
+  
+
+   </div>
+
+
+           <div class="flex gap-4 flex-row justify-center  mt-35 mb-20">
+            <a
+            class="btn btn-primary btn-large cursor-pointer"
+           href="pdf/Commercial-Catalogue.pdf" download="pdf/Commercial-Catalogue.pdf"
+          >
+            <span>Commercial Catalogue</span>
+        </a>
+
+        <a
+            class="btn btn-primary btn-large cursor-pointer"
+           href="pdf/Commercial-Catalogue.pdf" download="pdf/Commercial-Catalogue.pdf"
+          >
+            <span>rResidential Catalogue</span>
+        </a>
+          </div>
+
+
+
+</section>
+
+
+  <section
+        class="relative w-full bg-white pt-[3rem] md:pt-[8rem] pb-[8rem]"
+      >
+
+
+    <div class="px-[3rem] md:px-[10rem] relative text-center" data-scroll>
+          <small class="text-olive-drab mb-[3rem] block">Our Clients</small>
+          <h2 class="heading-1 text-olive-drab">Collaborations<br/>
+that matter</h2>
+        </div>
+
+  <div class="logo-row row-1 relative flex whitespace-nowrap will-change-transform mt-20">
+    <div class="logo-track scroll-left flex">
+      <!-- Original set -->
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/1.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/2.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/3.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/4.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/5.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/6.png" /> </div>
+     
+    </div>
+    <div class="logo-track scroll-left flex">
+      <!-- Duplicate set -->
+ <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/1.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/2.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/3.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/4.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/5.png" /> </div>
+       <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/6.png" /> </div>
+    </div>
+  </div>
+
+    <div class="logo-row row-2 relative flex whitespace-nowrap will-change-transform mt-[1rem]">
+    <div class="logo-track scroll-right flex">
+      <!-- Original set -->
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/7.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/8.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/9.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/10.png" /> </div>
+       <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/11.png" /> </div>
+       <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/12.png" /> </div>
+          <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/13.png" /> </div>
+             <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/14.png" /> </div>
+    </div>
+    <div class="logo-track scroll-right flex">
+      <!-- Duplicate set -->
+ <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/1.png" /> </div>
+<div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/7.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/8.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/9.png" /> </div>
+      <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/10.png" /> </div>
+       <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/11.png" /> </div>
+       <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/12.png" /> </div>
+          <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/13.png" /> </div>
+             <div class="logo-box bg-[#f5f5f5]"> <img src="images/clients/14.png" /> </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+      <section
+        class="relative w-full bg-[#F2E7DC] pt-[3rem] md:pt-[8rem] pb-[8rem]"
+      >
+        <div class="px-[3rem] md:px-[10rem] relative text-center" data-scroll>
+          <small class="text-olive-drab mb-[3rem] block">Testimonials</small>
+          <h2 class="heading-1 text-olive-drab">Duis ultrices augue</h2>
+        </div>
+
+        <div class="swiper mt-30" id="testimonialSlider">
+          <div class="swiper-wrapper px-[2rem] md:px-0">
+            <!-- Testimonial Slide -->
+            <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+                Payal Bankda
+              </div>
+              <small>Resident</small>
+              <p class="text-secondary py-10 font-normal">
+                Love the chair design &amp; detailing. The console was also
+                designed keeping in all the specifications &amp; detailing I
+                wanted. Very happy &amp; satisfied with my purchase.
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Juhu</div>
+            </div>
+
+            <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+                Shikha Khemka
+              </div>
+              <small>Resident</small>
+              <p class="text-secondary py-10 font-normal">
+                Arbor decor out did themselves. The finishing and the material
+                used is of superior quality. I have personally loved
+                their collection and have recommended to so many more.
+                 Its worth the price. Their collection is long lasting and since
+                they customise the order it’s a perfect fit for those looking
+                for compact , multi purpose furniture, which makes it user
+                friendly. <br />
+                <br />
+
+                Definitely money well spent :)
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Pune</div>
+            </div>
+
+            <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+                Anushikha Shah
+              </div>
+              <small>Resident</small>
+              <p class="text-secondary py-10 font-normal">
+                Arbor Decor has been a delight to work with! From design to
+                finish each step of the process has been exceptional! We’ve made
+                a lot of our furniture from them and there is no second guessing
+                the impeccable style and comfort
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Worli</div>
+            </div>
+
+            <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+                Prachi Kothari - Interior Designer
+              </div>
+              <small>Interior Designer, Prachi Kothari Design</small>
+              <p class="text-secondary py-10 font-normal">
+                We worked with Arbor Decor and team for the golden door project.
+                We worked in sync from the word go and created a mammoth of a
+                piece. We appreciate their understanding of client requirement
+                and commitment to quality.
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Mumbai</div>
+            </div>
+
+            <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+                Payal Bankda
+              </div>
+              <small>Resident</small>
+              <p class="text-secondary py-10 font-normal">
+                Love the chair design &amp; detailing. The console was also
+                designed keeping in all the specifications &amp; detailing I
+                wanted. Very happy &amp; satisfied with my purchase.
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Juhu</div>
+            </div>
+          </div>
+
+          <span
+            class="absolute left-0 top-0 h-full w-30 swiper-custom-prev z-20"
+          ></span>
+          <span
+            class="absolute right-0 top-0 h-full w-30 swiper-custom-next z-20"
+          ></span>
+        </div>
+      </section>
+
+
+
+      
+      <section
+        class="relative w-full pb-[10rem] pt-[10rem] md:pt-[18rem] bg-img bg-[url('../images/white-textture-bg.png')]"
+      >
+        <div class="px-[3rem] md:px-[10rem] relative mb-15" data-scroll>
+          <small class="text-olive-drab mb-[3rem] block">Social</small>
+
+          <div class="flex justify-between items-start">
+            <h2 class="heading-1 text-olive-drab">Follow us</h2>
+
+            <div class="flex space-x-6 mt-8">
+              <a
+                href="#"
+                class="group relative w-16 h-16 border border-olive-drab rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-3 "
+              >
+                <span
+                  class="absolute inset-0 bg-olive-drab scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                ></span>
+                <svg
+                  class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-white fill-olive-drab"
+                  viewBox="0 0 8 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.61367 16V8.0011H0V5.32888H2.61367V3.9022C2.61367 1.19091 3.90889 0.00102087 6.11751 0.00102087C6.74701 -0.00702974 7.37623 0.0325443 8 0.119418V2.66732H6.49122C5.55346 2.66732 5.22617 3.17169 5.22617 4.19464V5.32888H7.97447L7.60075 7.99518H5.22269V15.9953L2.61367 16Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="group relative w-16 h-16 border border-olive-drab rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:-rotate-3 "
+              >
+                <span
+                  class="absolute inset-0 bg-olive-drab scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                ></span>
+                <svg
+                  class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-white fill-olive-drab"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.84211 0C2.17532 0 0 2.17532 0 4.84211V11.1579C0 13.8243 2.17525 16 4.84211 16H11.1579C13.8244 16 16 13.8244 16 11.1579V4.84211C16 2.17525 13.8243 0 11.1579 0H4.84211ZM4.84211 1.26316H11.1579C13.1416 1.26316 14.7368 2.85802 14.7368 4.84211V11.1579C14.7368 13.1415 13.1415 14.7368 11.1579 14.7368H4.84211C2.85802 14.7368 1.26316 13.1416 1.26316 11.1579V4.84211C1.26316 2.85794 2.85794 1.26316 4.84211 1.26316ZM12.2105 2.94737C11.7453 2.94737 11.3684 3.32421 11.3684 3.78947C11.3684 4.25474 11.7453 4.63158 12.2105 4.63158C12.6758 4.63158 13.0526 4.25474 13.0526 3.78947C13.0526 3.32421 12.6758 2.94737 12.2105 2.94737ZM8 3.78947C5.68218 3.78947 3.78947 5.68218 3.78947 8C3.78947 10.3178 5.68218 12.2105 8 12.2105C10.3178 12.2105 12.2105 10.3178 12.2105 8C12.2105 5.68218 10.3178 3.78947 8 3.78947ZM8 5.05263C9.63502 5.05263 10.9474 6.36498 10.9474 8C10.9474 9.63502 9.63502 10.9474 8 10.9474C6.36498 10.9474 5.05263 9.63502 5.05263 8C5.05263 6.36498 6.36498 5.05263 8 5.05263Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="group relative w-16 h-16 border border-olive-drab rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-1 "
+              >
+                <span
+                  class="absolute inset-0 bg-olive-drab scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                ></span>
+                <svg
+                  class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-white fill-olive-drab"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.47696 16H5.84899e-07V5.09736H3.47696V16ZM1.74346 3.64376C1.39864 3.64376 1.06156 3.53691 0.774847 3.33672C0.488136 3.13653 0.264672 2.85199 0.132714 2.51908C0.000755413 2.18618 -0.033771 1.81986 0.0335009 1.46645C0.100773 1.11304 0.266821 0.788411 0.510649 0.533617C0.754476 0.278822 1.06513 0.105305 1.40333 0.0350077C1.74153 -0.0352899 2.09208 0.000789389 2.41066 0.138683C2.72923 0.276577 3.00152 0.510092 3.1931 0.809698C3.38467 1.1093 3.48693 1.46155 3.48693 1.82188C3.48693 2.30507 3.30324 2.76847 2.97628 3.11014C2.64931 3.45181 2.20586 3.64376 1.74346 3.64376ZM16 15.9987H12.6538V10.6944C12.6538 9.42952 12.6314 7.80155 10.9103 7.80155C9.16687 7.80155 8.90162 9.17967 8.90162 10.602V15.9987H5.56414V5.08565H8.77335V6.58089H8.81818C9.14749 6.01884 9.61468 5.55907 10.1713 5.24925C10.7279 4.93943 11.3537 4.79083 11.9838 4.81887C15.3711 4.81887 15.9963 7.078 15.9963 10.0164L16 15.9987Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+
+        <div
+          class="elfsight-app-3a46c95c-ab66-41a9-a5a1-3834ef20b202"
+          data-elfsight-app-lazy
+        ></div>
+      </section>
+  
+
+       <?php include 'footer.php';?>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script
+      src="https://static.elfsight.com/platform/platform.js"
+      async
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+
+   
+  </body>
+</html>

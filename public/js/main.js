@@ -1292,3 +1292,44 @@ document.getElementById("menu-close").addEventListener("click", (e) => {
       });
 
     })();
+
+
+
+
+
+
+    document.getElementById('getinTouchForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = this;
+  const formData = new FormData(form);
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  // Disable button + show loading text
+  submitBtn.disabled = true;
+  submitBtn.innerText = 'Submitting...';
+
+  fetch('submit.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(result => {
+    Swal.fire({
+      title: 'Result',
+      html: result,
+      icon: result.includes('Thank you') ? 'success' : 
+            (result.includes('saved') ? 'warning' : 'error')
+    });
+    form.reset();
+  })
+  .catch(error => {
+    Swal.fire('Error', 'Something went wrong.', 'error');
+    console.error('Error:', error);
+  })
+  .finally(() => {
+    // Re-enable button + reset text
+    submitBtn.disabled = false;
+    submitBtn.innerText = 'Submit';
+  });
+});

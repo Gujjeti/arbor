@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html class="overflow-hidden">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Arbor | Bespoke Handmade Interiors & Joinery</title>
+
+<meta name="description" content="Arbor specialises in bespoke handmade interiors and architectural joinery, offering premium fitted furniture and craftsmanship for luxury spaces in Yorkshire and London." />
+
+<link rel="canonical" href="https://www.arbor.com/" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Arbor | Bespoke Handmade Interiors & Joinery" />
+<meta property="og:description" content="Arbor crafts luxury handmade interiors and architectural joinery for high-end homes and commercial spaces across the UK." />
+<meta property="og:url" content="https://www.arbor.com/" />
+<meta property="og:site_name" content="Arbor" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Arbor | Handmade Interiors & Joinery for Luxury Homes | Yorkshire & London" />
+<meta name="twitter:description" content="Experience refined craftsmanship with Arbor – creators of bespoke fitted interiors and joinery for timeless, elegant spaces." />
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <!-- Google Fonts: Custom + Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=YourCustomFontName&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link href="./css/output.css" rel="stylesheet" />
+  <link href="./css/responsive.css" rel="stylesheet" />
+      <!-- Masonry + imagesLoaded -->
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+  </head>
+
+  <body class="index headerScroll innerPage">
+    <button
+      id="scrollTopBtn"
+      class="fixed bottom-20 right-10 w-17 h-17 rounded-full bg-white shadow-lg flex items-center justify-center z-50"
+    >
+      <svg
+        width="14"
+        height="8"
+        viewBox="0 0 14 8"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 7L7 1L13 7"
+          stroke="#7B7458"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <div class="c-cursor js-cursor hidden md:block ">
+      <div class="c-cursor__arrows">
+        <div class="c-cursor__arrows__right">
+          <svg viewBox="0 0 22 10">
+            <polygon
+              class="fill-secondary"
+              points="17,0.65 16.29,1.35 19.44,4.5 0.65,4.5 0.65,5.5 19.44,5.5 16.29,8.65 17,9.35 21.35,5"
+            ></polygon>
+          </svg>
+        </div>
+        <div class="c-cursor__arrows__left">
+          <svg viewBox="0 0 22 10">
+            <polygon
+              class="fill-secondary"
+              points="5,9.35 5.71,8.65 2.56,5.5 21.35,5.5 21.35,4.5 2.56,4.5 5.71,1.35 5,0.65 0.65,5"
+            ></polygon>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class=" overflow-hidden intro fixed w-full h-screen  items-center justify-center top-0 left-0 z-30 bg-img bg-[url(../images/white-textture-bg.png)]"
+    >
+      <div class="intro__fader"></div>
+      <ul class="intro__hold relative">
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/6.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/1.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/5.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/IMG_0068 1.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/2.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/3.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/4.jpg" alt="" />
+          </div>
+        </li>
+      </ul>
+
+      <div
+        class="introl__logo absolute top-1/2 left-1/2 w-[8rem] transition-all duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2"
+      >
+        <img src="images/logo.svg" alt="Logo" class="w-full h-full" />
+      </div>
+    </div>
+
+    <header class="header" data-scroll>
+      <nav
+        class="w-full flex items-center justify-between relative py-4 px-[2rem] md:px-4 navbar"
+      >
+        <!-- Left: Menu Icon & Menu Items -->
+        <div class="flex items-center gap-6">
+          <!-- Menu Icon -->
+          <button
+            id="menu-toggle"
+            class="text-2xl md:hidden focus:outline-none text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#fff"
+            >
+              <path
+                d="M160-680v-40h640v40H160Zm0 440v-40h640v40H160Zm0-220v-40h640v40H160Z"
+              />
+            </svg>
+          </button>
+
+          <!-- Menu List -->
+
+          <nav
+            id="mobile-menu"
+            class="fixed top-0 left-0 w-full h-screen bg-white overflow-hidden gap-15 font-normal items-center justify-start md:items-start md:justify-start pt-40 md:pt-auto p-12 md:p-6 z-50 md:static md:w-auto md:h-auto md:bg-transparent md:overflow-visible flex flex-col md:flex-row md:gap-[1.3rem] xl:gap-[3rem] md:text-lg md:font-medium"
+          >
+            <!-- Close Icon -->
+            <button
+              id="menu-close"
+              class="text-3xl mb-4 md:hidden focus:outline-none fixed top-6 right-6"
+            >
+              ✕
+            </button>
+       <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link ">About Us</a>
+            <a href="collections.html" class="nav-link active">Collection</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+
+            <div class="flex gap-6 md:hidden flex-col">
+              <a
+                href="#"
+                class="hidden sm:inline-block btn btn-primary px-2 btn-small"
+              >
+                <span>Download Catalogue</span>
+              </a>
+              <a
+                 href="contact.html#contactForm"
+                class="hidden lg:inline-block btn btn-primary-outline btn-small"
+              >
+                Enquire Now
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Center: Logo -->
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+          <img
+            src="images/logo.svg"
+            alt="Logo"
+            class="w-[8rem] logo transition-all duration-300 ease-in-out"
+          />
+        </div>
+
+        <!-- Right: CTAs -->
+        <div class="hidden items-center gap-4 md:flex">
+          <a
+            href="#"
+            class="hidden sm:inline-block btn btn-primary px-2 btn-small"
+          >
+            <span> Download Catalogue</span>
+          </a>
+          <a
+              href="contact.html"
+            class="hidden lg:inline-block btn btn-primary-outline btn-small"
+          >
+            Enquire Now
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main data-scroll-container>
+
+
+
+
+
+      <div class="flex items-center justify-center mt-50 md:mt-[25vh] mb-[12vh] font-[600] flex-col relative">
+  <nav class="text-sm text-olive-drab" aria-label="Breadcrumb" >
+    <ol class="inline-flex items-center space-x-1 text-[1rem]">
+      <li>
+        <a href="index.html" class="hover:text-gray-700">Home</a>
+      </li>
+        <li class="flex items-center space-x-1">
+             <span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 9L7.5 6L4.5 3" stroke="#7B7458"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <a href="collections.html" class="hover:text-gray-700">Collection</a>
+      </li>
+      <li class="flex items-center space-x-1">
+        <span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 9L7.5 6L4.5 3" stroke="#7B7458"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <a href="product-details.html" class="text-olive-drab font-[600] opacity-50">Pearl of East</a>
+      </li>
+    </ol>
+  </nav>
+
+  <div class="flex justify-center text-center mt-20" >
+     <div class="text-clipath">
+            <h1 class="heading-1 text-olive-drab text-center px-[2rem] md:px-0">
+           Explore Our<br/> Signature Collection
+            </h1>
+          </div>
+  </div>
+
+
+      <span
+            class="absolute left-[5%] top-50  md:-top-20 z-20 leftEle hidden lg:block"
+            data-scroll
+            data-scroll-speed="-2"
+             data-scroll-direction="horizontal"
+          >
+            <img src="images/singleChair.png" alt="" class="w-20 md:w-50 " />
+          </span>
+
+    <span
+            class="absolute right-[5%] -bottom-10 z-20 RightEle  hidden lg:block"
+            data-scroll
+            data-scroll-speed="2.5"
+            data-scroll-delay="0.3"
+             data-scroll-direction="horizontal"
+          >
+            <img src="images/soft-chair.png" alt="" class="w-20 md:w-40" />
+          </span>
+
+</div>
+
+
+
+
+  <section
+        class="pt-[8rem] pb-[8rem] relative bg-img bg-[url('../images/white-textture-bg.png')]"
+      >
+        <div
+          class="mb-5 lg:mb-0 px-[3rem] md:px-[10rem] relative text-center"
+          data-scroll
+        >
+          <small class="text-olive-drab mb-[3rem] block">Catalogue</small>
+          <h2 class="heading-1 text-olive-drab mb-15">
+            Scelerisque libero<br />
+            sit amet
+          </h2>
+
+          <button
+            class="btn btn-primary btn-large cursor-pointer m-auto"
+            type="button"
+          >
+            <span>Download Catalogue</span>
+          </button>
+        </div>
+
+        <div
+          class="hidden sm:grid gap-[1.5vw] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[10vw_20vw_35vw_20vw_10vw]"
+        >
+          <!-- Column 1 (stacked 2) -->
+          <div class="flex flex-col gap-[1.5vw]">
+            <div class="w-full h-[300px] md:h-[50vh]">
+              <img
+                src="images/asymmetric grid/Frame 1597885720.jpg"
+                data-scroll
+                data-scroll-speed="0.6"
+                data-scroll-delay="0.1"
+                class="block w-full object-cover h-full"
+              />
+            </div>
+            <div class="w-full h-[300px] md:h-[50vh]">
+              <img
+                src="images/asymmetric grid/Frame 1597885721.jpg"
+                data-scroll
+                data-scroll-speed="0.5"
+                data-scroll-delay="0.2"
+                class="block w-full object-cover h-full"
+              />
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="flex items-center">
+            <div class="h-[300px] md:h-[60vh] w-full">
+              <img
+                src="images/asymmetric grid/Frame 1597885722.jpg"
+                data-scroll
+                data-scroll-speed="-2"
+                data-scroll-delay="0.3"
+                class="block w-full object-cover h-full"
+              />
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="flex items-end">
+            <div class="h-[300px] md:h-[70vh] w-full">
+              <img
+                src="images/asymmetric grid/Frame 1597885723.jpg"
+                data-scroll
+                data-scroll-speed="-3.0"
+                data-scroll-delay="0.1"
+                class="block w-full object-cover h-full"
+              />
+            </div>
+          </div>
+
+          <!-- Column 4 (stacked 2) -->
+          <div class="flex flex-col gap-[1.5vw] justify-end">
+            <div class="w-full h-[300px] md:h-[50vh]">
+              <img
+                src="images/asymmetric grid/Frame 1597885724.jpg"
+                data-scroll
+                data-scroll-speed="0.5"
+                data-scroll-delay="0.2"
+                class="block w-full object-cover h-full"
+              />
+            </div>
+            <div class="w-full h-[300px] md:h-[40vh]">
+              <img
+                src="images/asymmetric grid/Frame 1597885725.jpg"
+                data-scroll
+                data-scroll-speed="0.8"
+                data-scroll-delay="0.4"
+                class="block w-full object-cover h-full"
+              />
+            </div>
+          </div>
+
+          <!-- Column 5 (stacked 2) -->
+          <div class="flex flex-col gap-[1.5vw]">
+            <div class="w-full h-[300px] md:h-[30vh]">
+              <img
+                src="images/asymmetric grid/Frame 1597885726.jpg"
+                data-scroll
+                data-scroll-speed="0.5"
+                data-scroll-delay="0.1"
+                class="block w-full object-cover h-full"
+              />
+            </div>
+            <div class="w-full h-[300px] md:h-[70vh]">
+              <img
+                src="images/asymmetric grid/Frame 1597885727.jpg"
+                data-scroll
+                data-scroll-speed="0.5"
+                data-scroll-delay="0.4"
+                class="block w-full object-cover h-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="block sm:hidden p-[2rem]">
+          <div class="swiper gallerySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="images/asymmetric grid/Frame 1597885720.jpg"
+                  class="w-full object-cover h-[300px]"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="images/asymmetric grid/Frame 1597885721.jpg"
+                  class="w-full object-cover h-[300px]"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="images/asymmetric grid/Frame 1597885722.jpg"
+                  class="w-full object-cover h-[300px]"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="images/asymmetric grid/Frame 1597885723.jpg"
+                  class="w-full object-cover h-[300px]"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="images/asymmetric grid/Frame 1597885724.jpg"
+                  class="w-full object-cover h-[300px]"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="images/asymmetric grid/Frame 1597885725.jpg"
+                  class="w-full object-cover h-[300px]"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="images/asymmetric grid/Frame 1597885726.jpg"
+                  class="w-full object-cover h-[300px]"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="images/asymmetric grid/Frame 1597885727.jpg"
+                  class="w-full object-cover h-[300px]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+       <section
+        class="relative w-full bg-img bg-[url('../images/white-textture-bg.png')] pt-[10rem] pb-[8rem]"
+      >
+        <div class="px-[3rem] md:px-[10rem] relative">
+
+          <!-- Header: Left title, Right button -->
+          <div class="flex justify-between items-start" data-scroll>
+            <h2 class="heading-1 text-olive-drab">Suggested Pairings</h2>
+
+           
+
+          
+          </div>
+
+          <span
+            class="absolute right-[20%] -top-15 z-20"
+            data-scroll
+            data-scroll-speed="-2"
+          >
+            <img src="images/wood.png" alt="" class="w-50" />
+          </span>
+        </div>
+
+        <!-- Swiper Slider -->
+        <div class="pt-[5rem] px-[2rem] md:px-0">
+          <div class="swiper ProductsSlider">
+            <div class="swiper-wrapper">
+              <!-- Single Card Slide -->
+              <div class="swiper-slide scroll-reveal" data-scroll>
+                <img
+                  src="images/products/1.jpg"
+                  data-hover="images/products/2.jpg"
+                  alt="Product"
+                  class="w-full object-cover h-full product-img"
+                />
+                
+              </div>
+
+              <div
+                class="swiper-slide scroll-reveal"
+                data-scroll
+                style="transition-delay: 0.1s"
+              >
+                <img
+                  src="images/products/2.jpg"
+                  data-hover="images/products/1.jpg"
+                  alt="Product"
+                  class="w-full object-cover h-full product-img"
+                />
+                
+              </div>
+
+              <div
+                class="swiper-slide scroll-reveal"
+                data-scroll
+                style="transition-delay: 0.2s"
+              >
+                <img
+                  src="images/products/3.jpg"
+                  data-hover="images/products/1.jpg"
+                  alt="Product"
+                  class="w-full object-cover h-full product-img"
+                />
+               
+              </div>
+
+              <div
+                class="swiper-slide scroll-reveal"
+                data-scroll
+                style="transition-delay: 0.4s"
+              >
+                <img
+                  src="images/products/1.jpg"
+                  data-hover="images/products/2.jpg"
+                  alt="Product"
+                  class="w-full object-cover h-full product-img"
+                />
+                
+              </div>
+
+              <div
+                class="swiper-slide scroll-reveal"
+                data-scroll
+                style="transition-delay: 0.6s"
+              >
+                <img
+                  src="images/products/2.jpg"
+                  data-hover="images/products/1.jpg"
+                  alt="Product"
+                  class="w-full object-cover h-full product-img"
+                />
+                
+              </div>
+
+              <div
+                class="swiper-slide scroll-reveal"
+                data-scroll
+                style="transition-delay: 0.8s"
+              >
+                <img
+                  src="images/products/3.jpg"
+                  data-hover="images/products/1.jpg"
+                  alt="Product"
+                  class="w-full object-cover h-full product-img"
+                />
+                
+              </div>
+            </div>
+
+            <span
+              class="absolute left-0 top-0 h-full w-30 swiper-custom-prev z-20"
+            ></span>
+            <span
+              class="absolute right-0 top-0 h-full w-30 swiper-custom-next z-20"
+            ></span>
+          </div>
+        </div>
+      </section>
+
+
+
+        <section
+        class="relative w-full bg-[#F2E7DC] pt-[3rem] md:pt-[8rem] pb-[8rem]"
+      >
+        <div class="px-[3rem] md:px-[10rem] relative text-center" data-scroll>
+          <small class="text-olive-drab mb-[3rem] block">Testimonials</small>
+          <h2 class="heading-1 text-olive-drab">Duis ultrices augue</h2>
+        </div>
+
+        <div class="swiper mt-30" id="testimonialSlider">
+          <div class="swiper-wrapper px-[2rem] md:px-0">
+            <!-- Testimonial Slide -->
+            <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+                Payal Bankda
+              </div>
+              <small>Resident</small>
+              <p class="text-secondary py-10 font-normal">
+                Love the chair design &amp; detailing. The console was also
+                designed keeping in all the specifications &amp; detailing I
+                wanted. Very happy &amp; satisfied with my purchase.
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Juhu</div>
+            </div>
+
+            <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+                Shikha Khemka
+              </div>
+              <small>Resident</small>
+              <p class="text-secondary py-10 font-normal">
+                Arbor decor out did themselves. The finishing and the material
+                used is of superior quality. I have personally loved
+                their collection and have recommended to so many more.
+                 Its worth the price. Their collection is long lasting and since
+                they customise the order it’s a perfect fit for those looking
+                for compact , multi purpose furniture, which makes it user
+                friendly. <br />
+                <br />
+
+                Definitely money well spent :)
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Pune</div>
+            </div>
+
+            <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+                Anushikha Shah
+              </div>
+              <small>Resident</small>
+              <p class="text-secondary py-10 font-normal">
+                Arbor Decor has been a delight to work with! From design to
+                finish each step of the process has been exceptional! We’ve made
+                a lot of our furniture from them and there is no second guessing
+                the impeccable style and comfort
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Worli</div>
+            </div>
+
+            <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+                Prachi Kothari - Interior Designer
+              </div>
+              <small>Interior Designer, Prachi Kothari Design</small>
+              <p class="text-secondary py-10 font-normal">
+                We worked with Arbor Decor and team for the golden door project.
+                We worked in sync from the word go and created a mammoth of a
+                piece. We appreciate their understanding of client requirement
+                and commitment to quality.
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Mumbai</div>
+            </div>
+
+            <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+                Payal Bankda
+              </div>
+              <small>Resident</small>
+              <p class="text-secondary py-10 font-normal">
+                Love the chair design &amp; detailing. The console was also
+                designed keeping in all the specifications &amp; detailing I
+                wanted. Very happy &amp; satisfied with my purchase.
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Juhu</div>
+            </div>
+          </div>
+
+          <span
+            class="absolute left-0 top-0 h-full w-30 swiper-custom-prev z-20"
+          ></span>
+          <span
+            class="absolute right-0 top-0 h-full w-30 swiper-custom-next z-20"
+          ></span>
+        </div>
+      </section>
+
+
+
+        <section
+        class="relative w-full pb-[10rem] pt-[10rem] md:pt-[18rem] bg-img bg-[url('../images/white-textture-bg.png')]"
+      >
+        <div class="px-[3rem] md:px-[10rem] relative mb-15" data-scroll>
+          <small class="text-olive-drab mb-[3rem] block">Social</small>
+
+          <div class="flex justify-between items-start">
+            <h2 class="heading-1 text-olive-drab">Follow us</h2>
+
+            <div class="flex space-x-6 mt-8">
+              <a
+                href="#"
+                class="group relative w-16 h-16 border border-olive-drab rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-3 "
+              >
+                <span
+                  class="absolute inset-0 bg-olive-drab scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                ></span>
+                <svg
+                  class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-white fill-olive-drab"
+                  viewBox="0 0 8 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.61367 16V8.0011H0V5.32888H2.61367V3.9022C2.61367 1.19091 3.90889 0.00102087 6.11751 0.00102087C6.74701 -0.00702974 7.37623 0.0325443 8 0.119418V2.66732H6.49122C5.55346 2.66732 5.22617 3.17169 5.22617 4.19464V5.32888H7.97447L7.60075 7.99518H5.22269V15.9953L2.61367 16Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="group relative w-16 h-16 border border-olive-drab rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:-rotate-3 "
+              >
+                <span
+                  class="absolute inset-0 bg-olive-drab scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                ></span>
+                <svg
+                  class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-white fill-olive-drab"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.84211 0C2.17532 0 0 2.17532 0 4.84211V11.1579C0 13.8243 2.17525 16 4.84211 16H11.1579C13.8244 16 16 13.8244 16 11.1579V4.84211C16 2.17525 13.8243 0 11.1579 0H4.84211ZM4.84211 1.26316H11.1579C13.1416 1.26316 14.7368 2.85802 14.7368 4.84211V11.1579C14.7368 13.1415 13.1415 14.7368 11.1579 14.7368H4.84211C2.85802 14.7368 1.26316 13.1416 1.26316 11.1579V4.84211C1.26316 2.85794 2.85794 1.26316 4.84211 1.26316ZM12.2105 2.94737C11.7453 2.94737 11.3684 3.32421 11.3684 3.78947C11.3684 4.25474 11.7453 4.63158 12.2105 4.63158C12.6758 4.63158 13.0526 4.25474 13.0526 3.78947C13.0526 3.32421 12.6758 2.94737 12.2105 2.94737ZM8 3.78947C5.68218 3.78947 3.78947 5.68218 3.78947 8C3.78947 10.3178 5.68218 12.2105 8 12.2105C10.3178 12.2105 12.2105 10.3178 12.2105 8C12.2105 5.68218 10.3178 3.78947 8 3.78947ZM8 5.05263C9.63502 5.05263 10.9474 6.36498 10.9474 8C10.9474 9.63502 9.63502 10.9474 8 10.9474C6.36498 10.9474 5.05263 9.63502 5.05263 8C5.05263 6.36498 6.36498 5.05263 8 5.05263Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="group relative w-16 h-16 border border-olive-drab rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-1 "
+              >
+                <span
+                  class="absolute inset-0 bg-olive-drab scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                ></span>
+                <svg
+                  class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-white fill-olive-drab"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.47696 16H5.84899e-07V5.09736H3.47696V16ZM1.74346 3.64376C1.39864 3.64376 1.06156 3.53691 0.774847 3.33672C0.488136 3.13653 0.264672 2.85199 0.132714 2.51908C0.000755413 2.18618 -0.033771 1.81986 0.0335009 1.46645C0.100773 1.11304 0.266821 0.788411 0.510649 0.533617C0.754476 0.278822 1.06513 0.105305 1.40333 0.0350077C1.74153 -0.0352899 2.09208 0.000789389 2.41066 0.138683C2.72923 0.276577 3.00152 0.510092 3.1931 0.809698C3.38467 1.1093 3.48693 1.46155 3.48693 1.82188C3.48693 2.30507 3.30324 2.76847 2.97628 3.11014C2.64931 3.45181 2.20586 3.64376 1.74346 3.64376ZM16 15.9987H12.6538V10.6944C12.6538 9.42952 12.6314 7.80155 10.9103 7.80155C9.16687 7.80155 8.90162 9.17967 8.90162 10.602V15.9987H5.56414V5.08565H8.77335V6.58089H8.81818C9.14749 6.01884 9.61468 5.55907 10.1713 5.24925C10.7279 4.93943 11.3537 4.79083 11.9838 4.81887C15.3711 4.81887 15.9963 7.078 15.9963 10.0164L16 15.9987Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+
+        <div
+          class="elfsight-app-3a46c95c-ab66-41a9-a5a1-3834ef20b202"
+          data-elfsight-app-lazy
+        ></div>
+      </section>
+
+
+      <footer class="bg-[#7B7458] text-white relative">
+        <div
+          class="px-[3rem] lg:px-[10rem] py-[6rem] md:py-[10rem] footer_wrapper"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-50">
+            <!-- Left Column -->
+            <div>
+              <small class="text-white mb-[1rem] block">Contact</small>
+              <h2 class="text-white heading-1">Get in Touch</h2>
+
+              <form class="space-y-[4rem] mt-20">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="w-full bg-transparent border-b border-[rgba(255,255,255,0.2)] focus:outline-none pb-5 placeholder-white font-normal"
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="w-full bg-transparent border-b border-[rgba(255,255,255,0.2)] focus:outline-none pb-5 placeholder-white font-normal"
+                />
+
+                <select
+                  class="w-full bg-olive-drab border-b border-[rgba(255,255,255,0.2)] focus:outline-none pb-5 text-white font-normal"
+                >
+                  <option disabled selected class="text-white">
+                    Select Enquiry
+                  </option>
+                  <option>General</option>
+                  <option>Product</option>
+                  <option>Support</option>
+                </select>
+
+                <button
+                  class="btn btn-primary btn-large mt-4 cursor-pointer"
+                  type="submit"
+                >
+                  <span>Submit</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+              <ul class="space-y-8 mb-15">
+                 <li>
+                  <a
+                    href="index.html"
+                    class="hover:underline uppercase font-medium text-[1rem]"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="hover:underline uppercase font-medium text-[1rem]"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="collections.html"
+                    class="hover:underline uppercase font-medium text-[1rem]"
+                    >Collection</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    class="hover:underline uppercase font-medium text-[1rem]"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+
+              <h4 class="text-[3rem] font-light leading-tight address-text">
+                Arbor Decor,<br />
+                E/15, 5th floor, Commerce Center,<br />
+                Tardeo Road, Above ICICI Bank,<br />
+                Mumbai-400034
+              </h4>
+
+              <div class="flex space-x-6 mt-8">
+                <a
+                  href="#"
+                  class="group relative w-16 h-16 border border-white rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-3 "
+                >
+                  <span
+                    class="absolute inset-0 bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                  ></span>
+                  <svg
+                    class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-olive-drab fill-white"
+                    viewBox="0 0 8 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.61367 16V8.0011H0V5.32888H2.61367V3.9022C2.61367 1.19091 3.90889 0.00102087 6.11751 0.00102087C6.74701 -0.00702974 7.37623 0.0325443 8 0.119418V2.66732H6.49122C5.55346 2.66732 5.22617 3.17169 5.22617 4.19464V5.32888H7.97447L7.60075 7.99518H5.22269V15.9953L2.61367 16Z"
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  href="#"
+                  class="group relative w-16 h-16 border border-white rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:-rotate-3 "
+                >
+                  <span
+                    class="absolute inset-0 bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                  ></span>
+                  <svg
+                    class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-olive-drab fill-white"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.84211 0C2.17532 0 0 2.17532 0 4.84211V11.1579C0 13.8243 2.17525 16 4.84211 16H11.1579C13.8244 16 16 13.8244 16 11.1579V4.84211C16 2.17525 13.8243 0 11.1579 0H4.84211ZM4.84211 1.26316H11.1579C13.1416 1.26316 14.7368 2.85802 14.7368 4.84211V11.1579C14.7368 13.1415 13.1415 14.7368 11.1579 14.7368H4.84211C2.85802 14.7368 1.26316 13.1416 1.26316 11.1579V4.84211C1.26316 2.85794 2.85794 1.26316 4.84211 1.26316ZM12.2105 2.94737C11.7453 2.94737 11.3684 3.32421 11.3684 3.78947C11.3684 4.25474 11.7453 4.63158 12.2105 4.63158C12.6758 4.63158 13.0526 4.25474 13.0526 3.78947C13.0526 3.32421 12.6758 2.94737 12.2105 2.94737ZM8 3.78947C5.68218 3.78947 3.78947 5.68218 3.78947 8C3.78947 10.3178 5.68218 12.2105 8 12.2105C10.3178 12.2105 12.2105 10.3178 12.2105 8C12.2105 5.68218 10.3178 3.78947 8 3.78947ZM8 5.05263C9.63502 5.05263 10.9474 6.36498 10.9474 8C10.9474 9.63502 9.63502 10.9474 8 10.9474C6.36498 10.9474 5.05263 9.63502 5.05263 8C5.05263 6.36498 6.36498 5.05263 8 5.05263Z"
+                    />
+                  </svg>
+                </a>
+
+                <a
+                  href="#"
+                  class="group relative w-16 h-16 border border-white rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-1 "
+                >
+                  <span
+                    class="absolute inset-0 bg-white scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                  ></span>
+                  <svg
+                    class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-olive-drab fill-white"
+                    viewBox="0 0 16 16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.47696 16H5.84899e-07V5.09736H3.47696V16ZM1.74346 3.64376C1.39864 3.64376 1.06156 3.53691 0.774847 3.33672C0.488136 3.13653 0.264672 2.85199 0.132714 2.51908C0.000755413 2.18618 -0.033771 1.81986 0.0335009 1.46645C0.100773 1.11304 0.266821 0.788411 0.510649 0.533617C0.754476 0.278822 1.06513 0.105305 1.40333 0.0350077C1.74153 -0.0352899 2.09208 0.000789389 2.41066 0.138683C2.72923 0.276577 3.00152 0.510092 3.1931 0.809698C3.38467 1.1093 3.48693 1.46155 3.48693 1.82188C3.48693 2.30507 3.30324 2.76847 2.97628 3.11014C2.64931 3.45181 2.20586 3.64376 1.74346 3.64376ZM16 15.9987H12.6538V10.6944C12.6538 9.42952 12.6314 7.80155 10.9103 7.80155C9.16687 7.80155 8.90162 9.17967 8.90162 10.602V15.9987H5.56414V5.08565H8.77335V6.58089H8.81818C9.14749 6.01884 9.61468 5.55907 10.1713 5.24925C10.7279 4.93943 11.3537 4.79083 11.9838 4.81887C15.3711 4.81887 15.9963 7.078 15.9963 10.0164L16 15.9987Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subfooter -->
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mt-10 md:mt-45 px-[6rem] py-[2.5rem]"
+        >
+          <div class="space-x-4 mb-2 md:mb-0">
+            <a href="#" class="hover:underline font-medium">Cookies</a>
+            <a href="#" class="hover:underline font-medium">Privacy Policy</a>
+          </div>
+          <div class="font-medium">© 2025 All rights reserved.</div>
+        </div>
+
+        <div
+          class="arbor-typo absolute -bottom-20 w-screen pointer-events-none hidden md:block"
+        >
+          <h4 class="text-[19.8vw] text-center font-medium">Arbor Decor</h4>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script
+      src="https://static.elfsight.com/platform/platform.js"
+      async
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="js/main.js"></script>
+
+   
+  </body>
+</html>

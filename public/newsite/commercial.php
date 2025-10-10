@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html class="overflow-hidden">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Arbor | Bespoke Handmade Interiors & Joinery</title>
+
+<meta name="description" content="Arbor specialises in bespoke handmade interiors and architectural joinery, offering premium fitted furniture and craftsmanship for luxury spaces in Yorkshire and London." />
+
+<link rel="canonical" href="https://www.arbor.com/" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Arbor | Bespoke Handmade Interiors & Joinery" />
+<meta property="og:description" content="Arbor crafts luxury handmade interiors and architectural joinery for high-end homes and commercial spaces across the UK." />
+<meta property="og:url" content="https://www.arbor.com/" />
+<meta property="og:site_name" content="Arbor" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Arbor | Handmade Interiors & Joinery for Luxury Homes | Yorkshire & London" />
+<meta name="twitter:description" content="Experience refined craftsmanship with Arbor – creators of bespoke fitted interiors and joinery for timeless, elegant spaces." />
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <!-- Google Fonts: Custom + Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=YourCustomFontName&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
+    <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+ <!-- Magnific Popup CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup/dist/magnific-popup.css">
+    <link href="./css/output.css" rel="stylesheet" />
+  <link href="./css/responsive.css" rel="stylesheet" />
+      <!-- Masonry + imagesLoaded -->
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+  </head>
+
+  <body class="index headerScroll ">
+    <button
+      id="scrollTopBtn"
+      class="fixed bottom-20 right-10 w-17 h-17 rounded-full bg-white shadow-lg flex items-center justify-center z-50"
+    >
+      <svg
+        width="14"
+        height="8"
+        viewBox="0 0 14 8"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 7L7 1L13 7"
+          stroke="#7B7458"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <div class="c-cursor js-cursor hidden md:block ">
+      <div class="c-cursor__arrows">
+        <div class="c-cursor__arrows__right">
+          <svg viewBox="0 0 22 10">
+            <polygon
+              class="fill-secondary"
+              points="17,0.65 16.29,1.35 19.44,4.5 0.65,4.5 0.65,5.5 19.44,5.5 16.29,8.65 17,9.35 21.35,5"
+            ></polygon>
+          </svg>
+        </div>
+        <div class="c-cursor__arrows__left">
+          <svg viewBox="0 0 22 10">
+            <polygon
+              class="fill-secondary"
+              points="5,9.35 5.71,8.65 2.56,5.5 21.35,5.5 21.35,4.5 2.56,4.5 5.71,1.35 5,0.65 0.65,5"
+            ></polygon>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+   <div
+      class=" overflow-hidden intro fixed w-full h-screen  items-center justify-center top-0 left-0 z-30 bg-img bg-[url(../images/white-textture-bg.png)]"
+    >
+      <div class="intro__fader"></div>
+      <ul class="intro__hold relative">
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/6.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/1.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/5.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/IMG_0068 1.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/2.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/3.jpg" alt="" />
+          </div>
+        </li>
+        <li class="intro__img">
+          <div class="intro__img__hold">
+            <img class="img-load" src="images/intro/4.jpg" alt="" />
+          </div>
+        </li>
+      </ul>
+
+      <div
+        class="introl__logo absolute top-1/2 left-1/2 w-[8rem] transition-all duration-300 ease-in-out transform -translate-x-1/2 -translate-y-1/2"
+      >
+        <img src="images/logo.svg" alt="Logo" class="w-full h-full" />
+      </div>
+    </div> 
+    
+    <header class="header" data-scroll>
+      <nav
+        class="w-full flex items-center justify-between relative py-4 px-[2rem] md:px-4 navbar"
+      >
+        <!-- Left: Menu Icon & Menu Items -->
+        <div class="flex items-center gap-6">
+          <!-- Menu Icon -->
+          <button
+            id="menu-toggle"
+            class="text-2xl md:hidden focus:outline-none text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="40px"
+              fill="#fff"
+            >
+              <path
+                d="M160-680v-40h640v40H160Zm0 440v-40h640v40H160Zm0-220v-40h640v40H160Z"
+              />
+            </svg>
+          </button>
+
+          <!-- Menu List -->
+
+          <nav
+            id="mobile-menu"
+            class="fixed top-0 left-0 w-full h-screen  overflow-hidden gap-15 font-normal items-center justify-start md:items-start md:justify-start pt-40 md:pt-auto p-12 md:p-6 z-50 md:static md:w-auto md:h-auto md:bg-transparent md:overflow-visible flex flex-col md:flex-row md:gap-[1.3rem] xl:gap-[3rem] md:text-lg md:font-medium"
+          >
+            <!-- Close Icon -->
+            <button
+              id="menu-close"
+              class="text-3xl mb-4 md:hidden focus:outline-none fixed top-6 right-6"
+            >
+              ✕
+            </button>
+               <a href="index.php" class="nav-link">Home</a>
+            <a href="about.php" class="nav-link ">About Us</a>
+           <a href="commercial.php" class="nav-link ">Commercial</a>
+              <a href="residential.php" class="nav-link ">Residential</a>
+            <a href="contact.php" class="nav-link active">Contact Us</a>
+
+            <div class="flex gap-6 md:hidden flex-col grp-btn">
+                <a
+      href="#"
+      class="hidden sm:inline-block btn btn-primary px-2 btn-small dropdown-toggle"
+    >
+      <span class="flex items-center justify-center">Download Catalogue
+
+        <span class="ml-2" style="margin-left: 3px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+        </span>
+      </span>
+  </a>
+              <a
+                href="contact.php#contactForm"
+                class="hidden lg:inline-block btn btn-primary-outline btn-small"
+              >
+                Enquire Now
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Center: Logo -->
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+          <img
+            src="images/logo.svg"
+            alt="Logo"
+            class="w-[8rem] logo transition-all duration-300 ease-in-out"
+          />
+        </div>
+
+        <!-- Right: CTAs -->
+        <div class="hidden items-center gap-4 md:flex">
+         <!-- Dropdown Wrapper -->
+  <div class="relative dropdown">
+    <a
+      href="#"
+      class="hidden sm:inline-block btn btn-primary px-2 btn-small dropdown-toggle"
+    >
+      <span class="flex items-center justify-center">Download Catalogue
+
+        <span class="ml-2" style="margin-left: 3px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+</svg>
+        </span>
+      </span>
+  </a>
+
+    <!-- Dropdown Menu -->
+    <div
+      class="absolute left-0 mt-0 w-full border-t-2 border-white border-white bg-primary shadow-lg  z-50 rounded-lg text-center p-5 hidden dropdown-menu"
+    >
+      <a
+        href="pdf/Commercial-Catalogue.pdf" download="pdf/Commercial-Catalogue.pdf"
+        class="block px-4 py-2 text-white"
+        download
+      >
+        Commercial
+      </a>
+      <a
+       href="pdf/Commercial-Catalogue.pdf" download="pdf/Commercial-Catalogue.pdf"
+        class="block px-4 py-2 text-white"
+        download
+      >
+        Residential
+      </a>
+    </div>
+  </div>
+
+  <!-- Enquire Now -->
+  <a
+    href="contact.php#contactForm"
+    class="hidden lg:inline-block btn btn-primary-outline btn-small"
+  >
+    Enquire Now
+  </a>
+        </div>
+      </nav>
+    </header>
+
+    <main data-scroll-container>
+
+
+
+
+
+      <div class="flex items-center justify-center h-[45rem]  font-[600] flex-col relative">
+        <div class="absolute w-full h-full top-0 left-0 ">
+                    <div class="bg-[#51483F] opacity-70 absolute top-0 w-full h-full"></div>
+
+            <img src="images/Commercial-banner.jpg" class=" w-full h-full" />
+        </div>
+  <nav class="text-sm text-white relative" aria-label="Breadcrumb" >
+    <ol class="inline-flex items-center space-x-1 text-[1rem]">
+      <li>
+        <a href="index.php" class="hover:text-white text-white">Home</a>
+      </li>
+      <li class="flex items-center space-x-1">
+        <span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 9L7.5 6L4.5 3" stroke="#fff"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <a href="collections.php" class="text-white font-[600] opacity-50">Commercial</a>
+      </li>
+    </ol>
+  </nav>
+
+  <div class="flex justify-center text-center mt-20" >
+     <div class="text-clipath">
+            <h1 class="heading-1 text-white text-center px-[2rem] md:px-0">
+          Commercial
+            </h1>
+          </div>
+  </div>
+
+
+      <span
+            class="absolute left-[5%] top-50  z-20 leftEle hidden lg:block"
+            data-scroll
+            data-scroll-speed="-2"
+             data-scroll-direction="horizontal"
+          >
+            <img src="images/singleChair.png" alt="" class="w-20 md:w-50 " />
+          </span>
+
+    <span
+            class="absolute right-[5%] bottom-20 z-20 RightEle  hidden lg:block"
+            data-scroll
+            data-scroll-speed="2.5"
+            data-scroll-delay="0.3"
+             data-scroll-direction="horizontal"
+          >
+            <img src="images/soft-chair-light.png" alt="" class="w-20 md:w-40" />
+          </span>
+
+</div>
+
+
+
+<section class="overview-sec px-[2rem] lg:px-[20rem]  py-12 md:py-20 lg:py-50 bg-img-2 bg-[url('../images/white-textture-bg.png')]">
+  <!-- First Grid -->
+<div class="flex flex-col md:flex-row justify-between items-start gap-20 md:gap-40 lg:gap-80 reveal-card">
+    <!-- Left Side Content -->
+    <div data-scroll class="md:w-1/2 content-left">
+      <small class="text-olive-drab block text-sm mb-12">Overview</small>
+      <h2 class="text-olive-drab heading-2 leading-tight">
+        Custom solutions for<br/> work, collaboration<br/> & beyond
+      </h2>
+
+
+        
+      <p class="text-olive-drab text-[1.2rem] mb-2 mt-20">
+        Functional, Flexible, Tailored for<br/> Workspaces that WORK
+      </p>
+      <p class="text-secondary font-normal leading-relaxed mt-8">
+        With today's modern workplace scenery, corporate spaces are more than a place of work. They have become a sacred space for collaborations, productivity, well-being and functionality. From startup's, co-working spaces, corporate buildings, boardrooms, experience and retail centres, legacy work spaces; we partner with businesses to create furniture that is modern, tactile, ergonomic and distinctly custom reflecting your brand identity.
+      </p>
+     
+   
+
+    </div>
+
+    <!-- Right Side Content -->
+    <div class="flex flex-col gap-6 mt-20 md:mt-0 md:w-1/2 lg:w-[30%] image-right">
+     
+      <img src="images/Image321.jpg" alt="Vision Image" class="mt-10 object-cover " />
+    </div>
+  </div>
+
+
+  <div class="flex flex-col md:flex-row justify-between items-center gap-20 md:gap-40 lg:gap-80 mt-20 reveal-card">
+    <!-- Left Side Content -->
+
+        <div class="flex flex-col gap-6 mt-20 md:mt-0 md:w-1/2 lg:w-[30%] content-left">
+     
+      <img src="images/Image222.jpg" alt="Vision Image" class="mt-10 object-cover " />
+    </div>
+
+  
+
+    <!-- Right Side Content -->
+    
+      <div data-scroll class="md:w-1/2 image-right">
+      
+      <p class="text-olive-drab text-[1.2rem] mb-2 mt-20">
+        Functional, Flexible, Tailored for<br/> Workspaces that WORK
+      </p>
+      <p class="text-secondary font-normal leading-relaxed mt-8">
+        With today's modern workplace scenery, corporate spaces are more than a place of work. They have become a sacred space for collaborations, productivity, well-being and functionality. From startup's, co-working spaces, corporate buildings, boardrooms, experience and retail centres, legacy work spaces; we partner with businesses to create furniture that is modern, tactile, ergonomic and distinctly custom reflecting your brand identity.
+      </p>
+     
+   
+
+    </div>
+
+  </div>
+
+ 
+</section>
+
+
+
+
+
+<section  class="relative w-full px-[2rem] lg:px-[10rem] py-20 bg-img bg-[url('../images/white-textture-bg.png')] popup-gallery">
+
+
+<div  class="clearfix masonry-grid"  data-scroll>
+  <!-- Grid Sizer must match item width -->
+   <div class="grid-sizer"></div>
+
+  <!-- Masonry Items -->
+    
+     <div class="masonry-item"  data-scroll >
+    <a href="images/commercial/1.jpg" class="block">
+      <img src="images/commercial/1.jpg" class="w-full" />
+    </a>
+  </div>
+  <div class="masonry-item"  data-scroll >
+      <a href="images/commercial/2.jpg" class="block">
+    <img src="images/commercial/2.jpg" class="w-full" />
+   </a>
+  </div>
+  <div class="masonry-item"  data-scroll >
+    <a href="images/commercial/3.jpg" class="block">
+    <img src="images/commercial/3.jpg" class="w-full" />
+   </a>
+  </div>
+  <div class="masonry-item"  data-scroll >
+     <a href="images/commercial/4.jpg" class="block">
+    <img src="images/commercial/4.jpg" class="w-full" />
+   </a>
+  </div>
+  <div class="masonry-item"  data-scroll >
+     <a href="images/commercial/5.jpg" class="block">
+    <img src="images/commercial/5.jpg" class="w-full" />
+   
+  </div>
+  <div class="masonry-item"  data-scroll >
+     <a href="images/commercial/6.jpg" class="block">
+    <img src="images/commercial/6.jpg" class="w-full" />
+   </a>
+  </div>
+  <div class="masonry-item"  data-scroll >
+     <a href="images/commercial/7.jpg" class="block">
+    <img src="images/commercial/7.jpg" class="w-full" />
+   </a>
+  </div>
+  <div class="masonry-item"  data-scroll >
+     <a href="images/commercial/8.jpg" class="block">
+    <img src="images/commercial/8.jpg" class="w-full" />
+   </a>
+  </div>
+
+
+    <div class="masonry-item"  data-scroll >
+       <a href="images/commercial/9.jpg" class="block">
+    <img src="images/commercial/9.jpg" class="w-full" />
+   
+  </div>
+  
+  <div class="masonry-item" data-scroll >
+  <a href="images/commercial/10.jpg" class="block">
+    <img src="images/commercial/10.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/11.jpg" class="block">
+    <img src="images/commercial/11.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/12.jpg" class="block">
+    <img src="images/commercial/12.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/13.jpg" class="block">
+    <img src="images/commercial/13.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/14.jpg" class="block">
+    <img src="images/commercial/14.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/15.jpg" class="block">
+    <img src="images/commercial/15.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/16.jpg" class="block">
+    <img src="images/commercial/16.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/17.jpg" class="block">
+    <img src="images/commercial/17.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/18.jpg" class="block">
+    <img src="images/commercial/18.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/19.jpg" class="block">
+    <img src="images/commercial/19.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/20.jpg" class="block">
+    <img src="images/commercial/20.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/21.jpg" class="block">
+    <img src="images/commercial/21.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/22.jpg" class="block">
+    <img src="images/commercial/22.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/23.jpg" class="block">
+    <img src="images/commercial/23.jpg" class="w-full" />
+  </a>
+</div>
+
+<div class="masonry-item" data-scroll >
+  <a href="images/commercial/24.jpg" class="block">
+    <img src="images/commercial/24.jpg" class="w-full" />
+  </a>
+</div>
+
+</div>
+
+
+<div  class="flex justify-center mt-10">
+  <button id="loadMore" class="btn btn-primary btn-large cursor-pointer">
+    <span>Load More</span>
+  </button>
+
+</div>
+
+
+</section>
+
+
+
+
+
+        
+<!--     <section-->
+<!--        class="relative w-full bg-olive-drab py-12 md:py-20 lg:py-50 "-->
+<!--      >-->
+<!--        <div class="px-[3rem] md:px-[10rem] relative text-center" data-scroll>-->
+<!--          <small class="text-white mb-[3rem] block">Brands</small>-->
+<!--          <h2 class="heading-2 text-white">Trusted by Leading Brands</h2>-->
+<!--        </div>-->
+
+
+<!--             <div class="swiper  w-full brandsSwiper mt-20" id="">-->
+<!--  <div class="swiper-wrapper">-->
+<!--    <div class="swiper-slide">-->
+<!--      <img-->
+<!--        src="images/brandsSwiper/1.jpg"-->
+<!--        class="w-full h-auto object-cover"-->
+<!--      />-->
+<!--      <div class="cat-name text-[3rem] font-normal text-white absolute top-0 left-0 w-full h-full flex items-center justify-center">-->
+<!--        <h3>Seating1</h3>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--       <div class="swiper-slide">-->
+<!--      <img-->
+<!--        src="images/brandsSwiper/1.jpg"-->
+<!--        class="w-full h-auto object-cover"-->
+<!--      />-->
+<!--      <div class="cat-name text-[3rem] font-normal text-white absolute top-0 left-0 w-full h-full flex items-center justify-center">-->
+<!--        <h3>Seating</h3>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--       <div class="swiper-slide">-->
+<!--      <img-->
+<!--        src="images/brandsSwiper/1.jpg"-->
+<!--        class="w-full h-auto object-cover"-->
+<!--      />-->
+<!--      <div class="cat-name text-[3rem] font-normal text-white absolute top-0 left-0 w-full h-full flex items-center justify-center">-->
+<!--        <h3>Seating</h3>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--       <div class="swiper-slide">-->
+<!--      <img-->
+<!--        src="images/brandsSwiper/1.jpg"-->
+<!--        class="w-full h-auto object-cover"-->
+<!--      />-->
+<!--      <div class="cat-name text-[3rem] font-normal text-white absolute top-0 left-0 w-full h-full flex items-center justify-center">-->
+<!--        <h3>Seating</h3>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--       <div class="swiper-slide">-->
+<!--      <img-->
+<!--        src="images/brandsSwiper/1.jpg"-->
+<!--        class="w-full h-auto object-cover"-->
+<!--      />-->
+<!--      <div class="cat-name text-[3rem] font-normal text-white absolute top-0 left-0 w-full h-full flex items-center justify-center">-->
+<!--        <h3>Seating</h3>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--       <div class="swiper-slide">-->
+<!--      <img-->
+<!--        src="images/brandsSwiper/1.jpg"-->
+<!--        class="w-full h-auto object-cover"-->
+<!--      />-->
+<!--      <div class="cat-name text-[3rem] font-normal text-white absolute top-0 left-0 w-full h-full flex items-center justify-center">-->
+<!--        <h3>Seating</h3>-->
+<!--      </div>-->
+<!--    </div>-->
+    <!-- Repeat -->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--        </section>-->
+
+
+        <section class="px-[2rem] lg:px-[10rem]  py-12  lg:py-50 pb-0 bg-img-1 bg-[url('../images/white-textture-bg.png')]">
+              <div class="px-[3rem] md:px-[10rem] relative text-center" data-scroll>
+          <small class="text-olive-drab mb-[3rem] block">Collaborate</small>
+          <h2 class="heading-2 text-olive-drab">Why Collaborate with Arbor Decor</h2>
+          <p class="font-normal mt-10">We're more than just furniture makers—we're strategic partners in shaping<br/> spaces that perform as beautifully as they look. Our end-to-end solutions are<br/> designed to support your scale, creativity, and timelines.</p>
+        </div>
+
+
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-10 p-4 mt-20">
+  <!-- Item 1 -->
+  <div class="flex flex-col items-center text-center p-4 ">
+    <img src="images/icons/StrategicManufacturingHubs.svg" alt="Icon" class="mb-3 w-18 h-18">
+    <h6 class="text-[1.2rem] mt-5 font-semibold mb-5 text-secondary">Workspace  <br/> Assessment</h6>
+    <p class="font-normal">We understand your complete vision and requirement</p>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="flex flex-col items-center text-center p-4 ">
+    <img src="images/icons/LegacyofCraftsmanship.svg" alt="Icon" class="mb-3 w-18 h-18">
+    <h6 class="text-[1.2rem] mt-5 font-semibold mb-5">Custom Design and <br/> Prototyping</h6>
+    <p class="font-normal">Collaborating with design team to create tailored furniture and finishes</p>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="flex flex-col items-center text-center p-4 ">
+    <img src="images/icons/Builttoscale.svg" alt="Icon" class="mb-3 w-18 h-18">
+    <h6 class="text-[1.2rem] mt-5 font-semibold mb-5">Precision <br/> Manufacturing</h6>
+    <p class="font-normal">Made-to-order in our factories with quality checks at every step</p>
+  </div>
+
+  <!-- Item 4 -->
+  <div class="flex flex-col items-center text-center p-4 ">
+    <img src="images/icons/Material_exce.svg" alt="Icon" class="mb-3 w-18 h-18">
+    <h6 class="text-[1.2rem] mt-5 font-semibold mb-5">Ready for
+<br/>
+Scale</h6>
+    <p class="font-normal">Our factory and team are optimised to handle project timelines and delivery</p>
+  </div>
+
+
+    <!-- Item 5 -->
+  <div class="flex flex-col items-center text-center p-4 ">
+    <img src="images/icons/Material_exce.svg" alt="Icon" class="mb-3 w-18 h-18">
+    <h6 class="text-[1.2rem] mt-5 font-semibold mb-5">On Time Delivery & 
+<br/>
+Installation</h6>
+    <p class="font-normal">Pan India delivery with installation as well as post-project
+assistance</p>
+  </div>
+
+
+</div>
+
+
+        </section>
+
+
+
+         <section class="h-screen bg-[#F2E7DC] flex items-center justify-center py-20" data-scroll>
+     
+        <h2 class="heading-1 text-olive-drab text-center">Design is not just what<br/> it looks like, Design is<br/> also how its works.</h2>
+        </section>
+ 
+
+         
+
+
+
+         <section 
+        class="relative h-[120vh] w-full overflow-hidden parallax-section"
+      >
+        <!-- Parallax Image -->
+        <div data-scroll data-scroll-speed="-2" class="absolute inset-0 z-0">
+          <img
+            src="images/sofa.jpg"
+            alt=""
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+
+        <div class="card bg-transparent p-4 w-140 h-180 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center flex-col items-center">
+
+            <div class="w-full h-80 bg-transparent border-10 border-white"></div>
+
+            <div class="pt-0 pb-10 px-10 text-center bg-white ">
+                          <h2 class="font-normal text-[3rem] text-olive-drab py-3">Ready to get started?</h2>
+            <p class="font-normal text-olive-drab text-center">Through years of experience, we know construction, fabrication, and the suitability of various materials for specific uses. We listen, evaluate, propose and collaborate to create and deliver unique solutions – on time and on budget. </p>
+
+            <div class="inline-block  text-center mt-0">
+            <a href="contact.php" class="btn btn-primary btn-large inline-block  text-left mt-10">
+              <span>Get In Touch</span>
+            </a>
+</div>
+            </div>
+        </div>
+    
+</section>
+
+
+<section
+        class="relative w-full pb-[10rem] pt-[10rem] md:pt-[10rem] bg-img bg-[url('../images/white-textture-bg.png')]"
+      >
+        <div class="px-[3rem] md:px-[10rem] relative mb-15" data-scroll>
+          <small class="text-olive-drab mb-[3rem] block">Social</small>
+
+          <div class="flex justify-between items-start">
+            <h2 class="heading-1 text-olive-drab">Follow us</h2>
+
+            <div class="flex space-x-6 mt-8">
+              <a
+                href="#"
+                class="group relative w-16 h-16 border border-olive-drab rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-3 "
+              >
+                <span
+                  class="absolute inset-0 bg-olive-drab scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                ></span>
+                <svg
+                  class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-white fill-olive-drab"
+                  viewBox="0 0 8 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.61367 16V8.0011H0V5.32888H2.61367V3.9022C2.61367 1.19091 3.90889 0.00102087 6.11751 0.00102087C6.74701 -0.00702974 7.37623 0.0325443 8 0.119418V2.66732H6.49122C5.55346 2.66732 5.22617 3.17169 5.22617 4.19464V5.32888H7.97447L7.60075 7.99518H5.22269V15.9953L2.61367 16Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="group relative w-16 h-16 border border-olive-drab rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:-rotate-3 "
+              >
+                <span
+                  class="absolute inset-0 bg-olive-drab scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                ></span>
+                <svg
+                  class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-white fill-olive-drab"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.84211 0C2.17532 0 0 2.17532 0 4.84211V11.1579C0 13.8243 2.17525 16 4.84211 16H11.1579C13.8244 16 16 13.8244 16 11.1579V4.84211C16 2.17525 13.8243 0 11.1579 0H4.84211ZM4.84211 1.26316H11.1579C13.1416 1.26316 14.7368 2.85802 14.7368 4.84211V11.1579C14.7368 13.1415 13.1415 14.7368 11.1579 14.7368H4.84211C2.85802 14.7368 1.26316 13.1416 1.26316 11.1579V4.84211C1.26316 2.85794 2.85794 1.26316 4.84211 1.26316ZM12.2105 2.94737C11.7453 2.94737 11.3684 3.32421 11.3684 3.78947C11.3684 4.25474 11.7453 4.63158 12.2105 4.63158C12.6758 4.63158 13.0526 4.25474 13.0526 3.78947C13.0526 3.32421 12.6758 2.94737 12.2105 2.94737ZM8 3.78947C5.68218 3.78947 3.78947 5.68218 3.78947 8C3.78947 10.3178 5.68218 12.2105 8 12.2105C10.3178 12.2105 12.2105 10.3178 12.2105 8C12.2105 5.68218 10.3178 3.78947 8 3.78947ZM8 5.05263C9.63502 5.05263 10.9474 6.36498 10.9474 8C10.9474 9.63502 9.63502 10.9474 8 10.9474C6.36498 10.9474 5.05263 9.63502 5.05263 8C5.05263 6.36498 6.36498 5.05263 8 5.05263Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="group relative w-16 h-16 border border-olive-drab rounded-full flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-1 "
+              >
+                <span
+                  class="absolute inset-0 bg-olive-drab scale-0 group-hover:scale-100 transition-transform duration-300 ease-out z-0 rounded-full origin-center"
+                ></span>
+                <svg
+                  class="w-5 h-5 z-10 transition-colors duration-300 ease-in-out group-hover:fill-white fill-olive-drab"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.47696 16H5.84899e-07V5.09736H3.47696V16ZM1.74346 3.64376C1.39864 3.64376 1.06156 3.53691 0.774847 3.33672C0.488136 3.13653 0.264672 2.85199 0.132714 2.51908C0.000755413 2.18618 -0.033771 1.81986 0.0335009 1.46645C0.100773 1.11304 0.266821 0.788411 0.510649 0.533617C0.754476 0.278822 1.06513 0.105305 1.40333 0.0350077C1.74153 -0.0352899 2.09208 0.000789389 2.41066 0.138683C2.72923 0.276577 3.00152 0.510092 3.1931 0.809698C3.38467 1.1093 3.48693 1.46155 3.48693 1.82188C3.48693 2.30507 3.30324 2.76847 2.97628 3.11014C2.64931 3.45181 2.20586 3.64376 1.74346 3.64376ZM16 15.9987H12.6538V10.6944C12.6538 9.42952 12.6314 7.80155 10.9103 7.80155C9.16687 7.80155 8.90162 9.17967 8.90162 10.602V15.9987H5.56414V5.08565H8.77335V6.58089H8.81818C9.14749 6.01884 9.61468 5.55907 10.1713 5.24925C10.7279 4.93943 11.3537 4.79083 11.9838 4.81887C15.3711 4.81887 15.9963 7.078 15.9963 10.0164L16 15.9987Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+
+        <div
+          class="elfsight-app-3a46c95c-ab66-41a9-a5a1-3834ef20b202"
+          data-elfsight-app-lazy
+        ></div>
+      </section>
+
+       <?php include 'footer.php';?>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script
+      src="https://static.elfsight.com/platform/platform.js"
+      async
+    ></script>
+
+
+  <!-- Magnific Popup JS -->
+  <script src="https://cdn.jsdelivr.net/npm/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+
+   
+  </body>
+</html>
