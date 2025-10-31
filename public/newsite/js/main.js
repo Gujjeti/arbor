@@ -923,6 +923,9 @@ const testimonialSlider = new Swiper('#testimonialSlider', {
   spaceBetween: 60,
   slidesOffsetBefore: 0, 
   allowTouchMove: true,
+   autoplay: {
+    delay: 3000,
+  },
   breakpoints: {
     640: {
       slidesPerView: 3,

@@ -275,7 +275,7 @@
         <div class="absolute w-full h-full top-0 left-0 ">
                     <div class="bg-[#51483F] opacity-70 absolute top-0 w-full h-full"></div>
 
-            <img src="images/Commercial-banner.jpg" class=" w-full h-full" />
+            <img src="images/Commercial-banner.jpg" class=" w-full h-full object-cover" />
         </div>
   <nav class="text-sm text-white relative" aria-label="Breadcrumb" >
     <ol class="inline-flex items-center space-x-1 text-[1rem]">
@@ -694,7 +694,7 @@ assistance</p>
 
          <section class="h-screen bg-[#F2E7DC] flex items-center justify-center py-20" data-scroll>
      
-        <h2 class="heading-1 text-olive-drab text-center">Design is not just what<br/> it looks like, Design is<br/> also how its works.</h2>
+        <h2 class="heading-1 text-olive-drab text-center">Design is not just what<br/> it looks like, Design is<br/> also how it works.</h2>
         </section>
  
 

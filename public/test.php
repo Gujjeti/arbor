@@ -16,7 +16,7 @@ document.getElementById('enquiryForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
   const form = this;
-  const formData = new FormData(form);
+  const formData = new FormData(form);  
   const submitBtn = form.querySelector('button[type="submit"]');
 
   // Disable button + show loading text

@@ -283,7 +283,7 @@
             <h1 class="heading-1 text-white text-center px-[2rem] md:px-0">
               Redefine your <br />
               space with classic <br />
-              Timeless decor
+              timeless decor
             </h1>
           </div>
 
@@ -370,7 +370,7 @@
             <h2 class="heading-1 text-olive-drab">
               <span> Design is not just what</span>
               <span>it looks like, Design is</span>
-              <span> also how it's works.</span>
+              <span> also how it works.</span>
             </h2>
 
            <div class="inline-block">
@@ -748,6 +748,21 @@ that matter</h2>
 
               <div class="py-1">Mumbai</div>
             </div>
+
+             <div class="swiper-slide p-4">
+              <div class="font-semibold text-secondary text-[1.4rem]">
+             Nishita Sanghvi
+              </div>
+              <small>Interior Designer, Elevate : Redefining Lifestyles</small>
+              <p class="text-secondary py-10 font-normal">
+              The whole process from the first conversation to the last minute detail, everything was worth it with Arbor Decor. Alisha has a very good team, equally amazing reference images & delivers almost exactly as discussed. The finishing of products is something to boast about, which is of very high quality and suiting every budget requirements of the clients per say.  I'm very happy working with Alisha and I look forward to working with Arbor Decor in the future too
+              </p>
+
+              <div class="border-t-1 border-t-olive-drab mb-8 block"></div>
+
+              <div class="py-1">Mumbai</div>
+            </div>
+
           </div>
 
           <span
@@ -769,7 +784,7 @@ that matter</h2>
           <small class="text-olive-drab mb-[3rem] block">Catalogue</small>
           <h2 class="heading-1 text-olive-drab mb-15">
           
-            Indian craft meets<br/> Modern design
+            Indian craft meets<br/> modern design
           </h2>
 
           <div class="flex gap-4 flex-row justify-center">
@@ -784,7 +799,7 @@ that matter</h2>
             class="btn btn-primary btn-large cursor-pointer"
            href="pdf/Residential Deck x Arbor Decor.pdf" download="pdf/Residential Deck x Arbor Decor.pdf"
           >
-            <span>rResidential Catalogue</span>
+            <span>Residential Catalogue</span>
         </a>
           </div>
         </div>
